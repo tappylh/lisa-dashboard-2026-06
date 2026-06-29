@@ -1,1 +1,2977 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>登顶视频号六月运营数据汇总</title><style>:root{--bg:#f4efe6;--panel:#fffaf2;--ink:#211f1b;--muted:#817a70;--line:#e3dacd;--accent:#9b6b55;--warn:#c66a4a;--good:#6f8d6a}*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#f7f1e8,#efe6d9);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}.shell{width:min(1180px,calc(100vw - 28px));margin:0 auto;padding:24px 0 52px}.hero,.card,.section{border:1px solid var(--line);border-radius:18px;background:rgba(255,250,242,.92);box-shadow:0 18px 45px rgba(84,68,48,.08)}.hero{display:flex;justify-content:space-between;gap:22px;align-items:center;padding:30px}.eyebrow{margin:0 0 10px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}h1{margin:0 0 10px;font-size:clamp(38px,5vw,68px);line-height:1}h2{margin:0 0 8px;font-size:28px}.copy{margin:0;color:var(--muted);line-height:1.7}.publish{min-width:150px;text-align:center}.publish strong{display:block;font-size:52px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.card{padding:18px}.label{color:var(--muted);font-size:13px;font-weight:700}.value{font-size:32px;font-weight:850;margin:7px 0}.hint{color:var(--muted);font-size:12px;line-height:1.5}.section{padding:26px;margin-top:18px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.bars{display:grid;gap:10px;margin-top:18px}.bar-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center}.track{height:16px;background:#eee5d8;border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#bd8f76,#8d6655);border-radius:inherit}.top-list{display:grid;gap:12px;margin-top:18px}.top{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fffdfa;padding:14px}.rank{width:36px;height:36px;border-radius:50%;background:#1f1d19;color:#fff;display:grid;place-items:center;font-weight:900}.title{font-weight:850}.meta{color:var(--muted);font-size:12px;margin-top:5px}.pill{display:inline-block;border:1px solid var(--line);background:#f8f0e6;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;color:#5d4035}.chart{height:240px;display:flex;align-items:end;gap:4px;border:1px solid var(--line);border-radius:14px;background:#fffdfa;padding:16px 12px 28px;position:relative;overflow:hidden}.col{flex:1;min-width:5px;background:#9b6b55;border-radius:8px 8px 0 0;position:relative}.col.share{background:#c66a4a}.col:hover:after{content:attr(data-tip);position:absolute;left:50%;bottom:100%;transform:translateX(-50%);white-space:nowrap;background:#211f1b;color:#fff;padding:6px 8px;border-radius:8px;font-size:12px;z-index:2}.note{color:var(--muted);line-height:1.8}.footer{margin-top:18px;color:var(--muted);font-size:12px;text-align:center}@media(max-width:900px){.hero,.two{grid-template-columns:1fr;display:grid}.grid{grid-template-columns:repeat(2,1fr)}.bar-row{grid-template-columns:1fr}.top{grid-template-columns:1fr}.publish{text-align:left}}@media(max-width:620px){.grid{grid-template-columns:1fr}h1{font-size:36px}}</style></head><body><main class="shell"><section class="hero"><div><p class="eyebrow">WECHAT CHANNELS DATA COCKPIT</p><h1>登顶视频号六月运营数据汇总</h1><p class="copy">数据区间 2026-06-01 至 2026-06-28。公开版用于月数据复盘和下个月运营建议，数据来自用户提供的视频号官方 CSV 导出。</p></div><aside class="publish"><span class="label">总发布视频数量</span><strong>37</strong><span class="hint">已发布 / 已复盘视频</span></aside></section><section class="grid" id="metrics"></section><section class="section"><p class="eyebrow">KEY TAKEAWAYS</p><h2>老板最该看的 3 个结论</h2><div class="two"><article class="card"><div class="label">1. 流量被强冲突选题拉起</div><p class="note">发布视频播放量 1,528,728，其中惠灵顿学费、校服、幼儿园财商等学费/身份感内容承担主要爆发。</p></article><article class="card"><div class="label">2. 转发价值很突出</div><p class="note">发布视频分享 10,947，账号日级分享 12,345，说明内容适合家长群讨论，但仍要把传播转成咨询动作。</p></article><article class="card"><div class="label">3. 关注增长有效但承接要补</div><p class="note">关注者净增 1,649，期末关注者 10,793。下月重点补评论区关键词、预算清单、择校诊断入口。</p></article><article class="card"><div class="label">4. 口径说明</div><p class="note">作品明细是本月发布视频口径；账号日级趋势是账号整体日级口径，两者已分开展示，不混算。</p></article></div></section><section class="section"><p class="eyebrow">ACCOUNT DAILY</p><h2>账号日级趋势</h2><div class="two"><div><div class="label">每日账号播放</div><div class="chart" id="viewsChart"></div></div><div><div class="label">每日分享与净增关注</div><div class="chart" id="shareFollowChart"></div></div></div></section><section class="section"><p class="eyebrow">TOP VIDEOS</p><h2>表现最好的视频</h2><div class="top-list" id="topVideos"></div></section><section class="section"><p class="eyebrow">CONTENT TYPE</p><h2>内容方向表现</h2><div class="bars" id="types"></div></section><section class="section"><p class="eyebrow">NEXT MONTH</p><h2>下个月运营建议</h2><div class="two"><article class="card"><div class="label">保留爆款模型</div><p class="note">继续做“名校标签 + 学费成本 + 家长身份焦虑”的组合，重点复用惠灵顿、SAS、上中国际等高识别学校。</p></article><article class="card"><div class="label">补转化链路</div><p class="note">每条高播放视频结尾统一加入“预算/择校/清单/规划”关键词，并在评论区置顶承接动作。</p></article><article class="card"><div class="label">增加 Sam 老师判断</div><p class="note">把纯展示内容升级成“老师判断 + 家庭适配 + 风险提醒”，提高专业信任和私信理由。</p></article><article class="card"><div class="label">重点选题</div><p class="note">上海国际学校隐形成本、摇号失败转轨、上中国际筛选逻辑、外籍学校身份门槛、平和/包玉刚/星河湾对比。</p></article></div></section><p class="footer">公开版 GitHub Pages 页面。数据截至 2026-06-28。</p></main><script>const fmt=n=>Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');const metrics=[['发布视频播放量',1528728,'37 条发布视频明细合计'],['发布视频点赞',10290,'平均每条 278'],['发布视频评论',2144,'平均每条 58'],['发布视频分享',10947,'平均每条 296'],['发布视频新增关注',1421,'明细归因关注'],['账号日级播放',1775131,'28 天账号整体口径'],['净增关注',1649,'新增 1696，取关 47'],['期末关注者',10793,'截至 2026-06-28']];document.getElementById('metrics').innerHTML=metrics.map(m=>`<article class="card"><div class="label">${m[0]}</div><div class="value">${fmt(m[1])}</div><div class="hint">${m[2]}</div></article>`).join('');const daily=[['06-01',12228,58,13],['06-02',13695,74,12],['06-03',22383,109,15],['06-04',14107,82,8],['06-05',33685,298,24],['06-06',55166,356,21],['06-07',53069,236,26],['06-08',26674,158,13],['06-09',17713,100,9],['06-10',24428,131,30],['06-11',47791,444,51],['06-12',42939,282,39],['06-13',106964,429,69],['06-14',78099,332,35],['06-15',53044,348,42],['06-16',102456,816,140],['06-17',55850,474,84],['06-18',56714,431,70],['06-19',150804,1175,146],['06-20',203615,1376,189],['06-21',213242,1267,199],['06-22',149349,1264,152],['06-23',40749,403,40],['06-24',45403,373,45],['06-25',50587,370,45],['06-26',36600,315,38],['06-27',35263,354,51],['06-28',32514,290,43]];function chart(id,rows,key,cls=''){const max=Math.max(...rows.map(r=>r[key]));document.getElementById(id).innerHTML=rows.map(r=>`<div class="col ${cls}" style="height:${Math.max(4,r[key]/max*100)}%" data-tip="${r[0]}：${fmt(r[key])}"></div>`).join('')}chart('viewsChart',daily,1);document.getElementById('shareFollowChart').innerHTML=daily.map(r=>`<div class="col share" style="height:${Math.max(4,r[2]/1376*100)}%" data-tip="${r[0]} 分享：${fmt(r[2])} / 净增关注：${fmt(r[3])}"></div>`).join('');const tops=[['惠灵顿学费一天仅需2285.71块，少爷们可以冲了！',380766,2554,202,'学费 / 成本焦虑'],['这里是上海惠灵顿幼儿园，孩子从小就接触财商，一年也仅需40W!',233555,1843,261,'学费 / 成本焦虑'],['这就是校服比LV还贵的上海惠灵顿国际学校！',167929,2017,437,'学费 / 成本焦虑'],['这里是上海惠灵顿国际学校，一年仅需40W！',132165,365,57,'学费 / 成本焦虑'],['真的没想到上海国际学校已经到这个地步了....',108181,476,86,'观点争议 / 家长焦虑']];document.getElementById('topVideos').innerHTML=tops.map((v,i)=>`<article class="top"><div class="rank">${i+1}</div><div><div class="title">${v[0]}</div><div class="meta">${v[4]} · 播放 ${fmt(v[1])} · 分享 ${fmt(v[2])} · 关注 ${fmt(v[3])}</div></div><span class="pill">TOP ${i+1}</span></article>`).join('');const types=[['学费 / 成本焦虑',957357,8032],['名校 / 学校标签',246860,1541],['毕业季 / 校园氛围',182830,1281],['升学排名 / 名校结果',22801,168],['观点争议 / 家长焦虑',98972,603],['转轨 / 择校决策',19808,44]];const maxType=Math.max(...types.map(t=>t[1]));document.getElementById('types').innerHTML=types.map(t=>`<div class="bar-row"><strong>${t[0]}</strong><div class="track"><div class="fill" style="width:${Math.max(4,t[1]/maxType*100)}%"></div></div><span class="meta">${fmt(t[1])} 播放 / ${fmt(t[2])} 分享</span></div>`).join('');</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>登顶视频号六月运营数据汇总</title>
+  <style>
+:root {
+  --bg: #f4efe6;
+  --panel: #fffaf2;
+  --panel-2: #fbf5ea;
+  --ink: #211f1b;
+  --muted: #817a70;
+  --line: #e3dacd;
+  --accent: #9b6b55;
+  --accent-dark: #5d4035;
+  --accent-soft: #ead7c8;
+  --good: #6f8d6a;
+  --warn: #c66a4a;
+  --shadow: 0 18px 45px rgba(84, 68, 48, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.75), transparent 28rem),
+    linear-gradient(135deg, #f7f1e8 0%, #efe6d9 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.shell {
+  width: min(1440px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
+.hero,
+.section,
+.metric-card,
+.publish-card,
+.top-item,
+.video-card,
+.review-card,
+.topic-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 250, 242, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 34px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(44px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.hero-copy {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.publish-card {
+  flex: 0 0 170px;
+  min-height: 132px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  text-align: center;
+  background: linear-gradient(180deg, #fffaf5, #f7ecdf);
+}
+
+.publish-card span {
+  color: var(--warn);
+  font-weight: 800;
+}
+
+.publish-card strong {
+  display: block;
+  font-size: 52px;
+  line-height: 1;
+}
+
+.publish-card em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 12px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin: 18px 0 22px;
+}
+
+.account-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-card {
+  min-height: 114px;
+  padding: 18px 20px;
+}
+
+.metric-card .label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.metric-card .value {
+  margin: 8px 0 7px;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.metric-card .hint {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 28px 30px;
+}
+
+.section h2 {
+  margin-bottom: 6px;
+  font-size: 30px;
+}
+
+.section-note {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.takeaway-grid,
+.review-grid,
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.takeaway-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  background: #fffdfa;
+}
+
+.takeaway-card strong {
+  color: var(--warn);
+}
+
+.takeaway-card p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.chart-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: #fffdfa;
+}
+
+.chart-card h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.chart {
+  height: 260px;
+}
+
+.wide-chart {
+  grid-column: 1 / -1;
+}
+
+svg text {
+  fill: #7b7167;
+  font-size: 11px;
+}
+
+.axis {
+  stroke: #d7ccbe;
+}
+
+.grid-line {
+  stroke: #e9e0d3;
+  stroke-dasharray: 4 4;
+}
+
+.line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.line.secondary {
+  stroke: #c98b78;
+}
+
+.dot {
+  fill: #f5dfd4;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.bar {
+  fill: #b88a72;
+}
+
+.video-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 16px 0 2px;
+}
+
+.tab-chip,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f8f0e6;
+  color: var(--accent-dark);
+  padding: 8px 12px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.top-list,
+.video-card-list {
+  display: grid;
+  gap: 14px;
+}
+
+.top-item {
+  display: grid;
+  grid-template-columns: 52px 1.2fr 3fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+}
+
+.rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #1f1d19;
+  color: white;
+  font-weight: 850;
+}
+
+.top-meta {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.top-title {
+  margin-top: 5px;
+  font-weight: 850;
+}
+
+.mini-metrics {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(74px, 1fr));
+  gap: 8px;
+}
+
+.mini {
+  border-radius: 12px;
+  background: #f6eee5;
+  padding: 8px 10px;
+}
+
+.mini span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.mini strong {
+  font-size: 15px;
+}
+
+.type-layout {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 20px;
+}
+
+.type-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 190px;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.bar-track {
+  height: 16px;
+  border-radius: 999px;
+  background: #eee5d8;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #bd8f76, #8d6655);
+}
+
+.type-num {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.type-summary {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  background: #fffdfa;
+  line-height: 1.7;
+}
+
+.video-card {
+  padding: 18px;
+}
+
+.video-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: start;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: 850;
+  margin: 4px 0 12px;
+}
+
+.video-stats {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.toggle {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fffdfa;
+  color: var(--accent-dark);
+  cursor: pointer;
+  font-weight: 800;
+  padding: 10px 14px;
+}
+
+.details {
+  display: none;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.video-card.open .details {
+  display: block;
+}
+
+.edit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fffdfa;
+  color: var(--ink);
+  padding: 10px 11px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.detail-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.small-panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fffdfa;
+  padding: 14px;
+}
+
+.review-card,
+.topic-card {
+  padding: 18px;
+  background: #fffdfa;
+}
+
+.review-card h3,
+.topic-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.review-card p,
+.topic-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.topic-card .goal {
+  margin-top: 10px;
+  color: var(--warn);
+  font-weight: 850;
+}
+
+.strong {
+  color: var(--warn);
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .metric-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .account-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chart-grid,
+  .type-layout,
+  .takeaway-grid,
+  .review-grid,
+  .topic-grid,
+  .detail-charts {
+    grid-template-columns: 1fr;
+  }
+  .top-item,
+  .video-head {
+    grid-template-columns: 1fr;
+  }
+  .mini-metrics,
+  .video-stats,
+  .edit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: calc(100vw - 18px);
+  }
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+  .account-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">WECHAT CHANNELS DATA COCKPIT</p>
+        <h1 id="pageTitle">登顶视频号六月运营数据汇总</h1>
+        <p class="hero-copy">把当月的视频号数据、爆款内容、转发表现、停留情况和下月优化方向，整理成一个清晰专业的视频号运营驾驶舱。</p>
+      </div>
+      <aside class="publish-card">
+        <span>总发布视频数量</span>
+        <strong id="publishCount">0</strong>
+        <em>已发布 / 已复盘视频</em>
+      </aside>
+    </section>
+
+    <section class="metric-grid" id="metricGrid"></section>
+
+    <section class="section key-section">
+      <p class="eyebrow">KEY TAKEAWAYS</p>
+      <h2>老板最该看的 3 个结论</h2>
+      <div class="takeaway-grid" id="takeaways"></div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">TREND</p>
+      <h2>整体趋势图</h2>
+      <p class="section-note">按发布时间查看每条视频的数据变化，每个节点对应一条已发布视频。</p>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>浏览量 / 播放量趋势</h3>
+          <div class="chart" id="viewsTrend"></div>
+        </article>
+        <article class="chart-card">
+          <h3>平均播放时长趋势</h3>
+          <div class="chart" id="watchTrend"></div>
+        </article>
+        <article class="chart-card">
+          <h3>转发 / 分享趋势</h3>
+          <div class="chart" id="shareTrend"></div>
+        </article>
+        <article class="chart-card">
+          <h3>互动率 / 完播率趋势</h3>
+          <div class="chart" id="rateTrend"></div>
+        </article>
+      </div>
+      <div class="video-tabs" id="videoTabs"></div>
+    </section>
+
+    <section class="section" id="accountDailySection">
+      <p class="eyebrow">ACCOUNT DAILY</p>
+      <h2>账号日级数据</h2>
+      <p class="section-note">来自视频号后台日级导出，用于观察账号整体播放、互动和关注增长；与本月发布视频明细分开展示。</p>
+      <div class="account-summary" id="accountSummary"></div>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>账号每日播放</h3>
+          <div class="chart" id="dailyViewsChart"></div>
+        </article>
+        <article class="chart-card">
+          <h3>账号每日互动</h3>
+          <div class="chart" id="dailyEngagementChart"></div>
+        </article>
+        <article class="chart-card wide-chart">
+          <h3>关注者增长</h3>
+          <div class="chart" id="followerGrowthChart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">DEEP CHARTS</p>
+      <h2>重点数据排行图</h2>
+      <p class="section-note">用更直观的柱状图 / 条形图查看播放、转发、停留和内容类型表现，鼠标悬停可查看完整视频数据。</p>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>TOP10 视频播放量</h3>
+          <div class="chart" id="topViewsChart"></div>
+        </article>
+        <article class="chart-card">
+          <h3>TOP10 视频转发量</h3>
+          <div class="chart" id="topSharesChart"></div>
+        </article>
+        <article class="chart-card">
+          <h3>TOP10 平均播放时长</h3>
+          <div class="chart" id="topWatchChart"></div>
+        </article>
+        <article class="chart-card">
+          <h3>内容类型平均播放量</h3>
+          <div class="chart" id="typeAvgViewsChart"></div>
+        </article>
+        <article class="chart-card wide-chart">
+          <h3>内容类型总转发</h3>
+          <div class="chart" id="typeTotalSharesChart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">TOP 5</p>
+      <h2>表现最好的视频</h2>
+      <p class="section-note">按播放、停留、转发和互动表现综合排序。</p>
+      <div class="top-list" id="topList"></div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">CONTENT TYPE</p>
+      <h2>内容类型表现</h2>
+      <p class="section-note">根据标题和标签自动归类，观察哪类选题值得继续加码。</p>
+      <div class="type-layout">
+        <div class="type-bars" id="typeBars"></div>
+        <aside class="type-summary" id="typeSummary"></aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">NOTES</p>
+      <h2>每条视频数据卡片</h2>
+      <p class="section-note">折叠看结果，展开编辑数据、查看图表和复盘建议。</p>
+      <div class="video-card-list" id="videoCards"></div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">REVIEW</p>
+      <h2>月数据复盘</h2>
+      <div class="review-grid" id="reviewGrid"></div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">NEXT TOPICS</p>
+      <h2>下个月运营建议</h2>
+      <div class="topic-grid" id="topicGrid"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  <script>window.DASHBOARD_DATA = {
+  "meta": {
+    "account": "登顶升学圈",
+    "platform": "视频号",
+    "month": "2026-06",
+    "period_start": "2026-06-01",
+    "period_end": "2026-06-28",
+    "generated_at": "2026-06-29T15:00:38+08:00",
+    "data_note": "数据来自用户提供的视频号官方 CSV 导出；作品明细为本月发布视频口径，日级视频详情和关注增长为账号整体日级口径。",
+    "source_files": [
+      "/Users/YANG/Downloads/视频号动态数据明细 (4).csv",
+      "/Users/YANG/Downloads/视频号视频详情数据.csv",
+      "/Users/YANG/Downloads/视频号关注者增长详情数据 (3).csv"
+    ]
+  },
+  "videos": [
+    {
+      "date": "2026-06-01",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "pov：当你在民办学校读书时，毕业典礼是这样的...",
+      "views": 23594,
+      "likes": 136,
+      "comments": 17,
+      "favorites": 0,
+      "shares": 97,
+      "followers": 13,
+      "recommendations": 140,
+      "chat_moments_shares": 97,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 8.77,
+      "completion_rate": 0.3247,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNOhRAgbZRzFjMzT4DCas_oveLhpyv9xJIOxHIW4Ig",
+      "source_description": "pov：当你在民办学校读书时，毕业典礼是这样的...#择校#国际生#民办学校#国际课程#毕业生#高中部#小升初#家长必知#上海惠立民办双语学校#上海惠灵顿外籍人员子女学校"
+    },
+    {
+      "date": "2026-06-02",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "恭喜上海SAS国际学校2026年毕业快乐！！",
+      "views": 36000,
+      "likes": 261,
+      "comments": 4,
+      "favorites": 0,
+      "shares": 119,
+      "followers": 21,
+      "recommendations": 149,
+      "chat_moments_shares": 119,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3348,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJqiQAQfSDjEjMzT4DCawgPWdfO_1Y7k2n5VoBNb-A",
+      "source_description": "恭喜上海SAS国际学校2026年毕业快乐！！#择校#国际生#国际学校#国际教育#毕业生#上海sas外籍人员子女学校#家长必知#毕业季"
+    },
+    {
+      "date": "2026-06-03",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "pov：当你在长宁国际学校参加30周年校区时",
+      "views": 9406,
+      "likes": 84,
+      "comments": 5,
+      "favorites": 0,
+      "shares": 50,
+      "followers": 5,
+      "recommendations": 108,
+      "chat_moments_shares": 50,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.38,
+      "completion_rate": 0.253,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNWhHF8xflfGjMzT4DCaObZ6AWp7LzkOmhNGp2-FWw",
+      "source_description": "pov：当你在长宁国际学校参加30周年校区时#择校#国际生#国际学校#国际教育#家长必知#国际部#上海长宁外籍人员子女学校#学费#校庆"
+    },
+    {
+      "date": "2026-06-04",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "当你在国际学校上学时....",
+      "views": 19697,
+      "likes": 333,
+      "comments": 78,
+      "favorites": 0,
+      "shares": 64,
+      "followers": 5,
+      "recommendations": 207,
+      "chat_moments_shares": 63,
+      "ringtone_sets": 0,
+      "status_sets": 1,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 8.3,
+      "completion_rate": 0.2622,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNKhWA8MV2PBjMzT4DCawZX3vznXaSzM1Vtk-r70NA",
+      "source_description": "当你在国际学校上学时....#择校#国际生#国际学校#国际教育#礼仪#家长必知#上海哈罗外籍人员子女学校#上海惠灵顿外籍人员子女学校"
+    },
+    {
+      "date": "2026-06-05",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "毕业季 / 校园氛围",
+      "title": "高考！必胜！！",
+      "views": 803,
+      "likes": 8,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 0,
+      "followers": 0,
+      "recommendations": 5,
+      "chat_moments_shares": 0,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 4.11,
+      "completion_rate": 0.0336,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKWiWClsdznAjMzT4DCaUA8SEeG6LEI-oCZg7jm7LA",
+      "source_description": "高考！必胜！！#择校#国际生#国际学校#国际教育#家长必知#高考#毕业生"
+    },
+    {
+      "date": "2026-06-05",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "这就是上海国际学校毕业的牌面吗！",
+      "views": 49590,
+      "likes": 312,
+      "comments": 33,
+      "favorites": 0,
+      "shares": 544,
+      "followers": 32,
+      "recommendations": 202,
+      "chat_moments_shares": 544,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 20.53,
+      "completion_rate": 0.2516,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKeiHE8vbQvAjMzT4DCaKHDUumr-MFxfjWJ315t-Wg",
+      "source_description": "这就是上海国际学校毕业的牌面吗！#择校#国际生#国际学校#国际教育#国际部#家长必知#上海SAS美国学校#毕业典礼"
+    },
+    {
+      "date": "2026-06-06",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "有没有人告诉我这是不是真的啊？",
+      "views": 67583,
+      "likes": 370,
+      "comments": 176,
+      "favorites": 0,
+      "shares": 409,
+      "followers": 12,
+      "recommendations": 326,
+      "chat_moments_shares": 409,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.85,
+      "completion_rate": 0.4515,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKqiZDRpZCHDjMzT4DCazjN8DS9BJobVR76CP98ukQ",
+      "source_description": "有没有人告诉我这是不是真的啊？#择校#教育#小升初#食堂#国际生#国际学校#国际教育#学费#民办学校"
+    },
+    {
+      "date": "2026-06-07",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "真的没想到上海国际学校已经到这个地步了....",
+      "views": 108181,
+      "likes": 1511,
+      "comments": 208,
+      "favorites": 0,
+      "shares": 476,
+      "followers": 86,
+      "recommendations": 1156,
+      "chat_moments_shares": 476,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.47,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIWiYEIvBUzNjMzT4DCacIT6ZaAajP9dJOgUz-_iZg",
+      "source_description": "真的没想到上海国际学校已经到这个地步了....#择校#国际生#国际学校#国际教育#学费#家长必知#上海惠灵顿外籍人员子女学校#上海哈罗外籍人员子女学校#上海德威外籍人员子女学校"
+    },
+    {
+      "date": "2026-06-08",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "上海SAS国际学校又在外滩亮灯了！羡慕哦",
+      "views": 1691,
+      "likes": 17,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 9,
+      "followers": 0,
+      "recommendations": 10,
+      "chat_moments_shares": 9,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.22,
+      "completion_rate": 0.1035,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNShNCF8FR_MjMzT4DCa6gsSqfinuEVnPmy6cIXImg",
+      "source_description": "上海SAS国际学校又在外滩亮灯了！羡慕哦#择校#国际生#国际学校#国际教育#国际部#家长必知#高中生#毕业典礼#学费#外滩"
+    },
+    {
+      "date": "2026-06-09",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "这里是 上海哈罗国际学校！",
+      "views": 994,
+      "likes": 4,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 9,
+      "followers": 1,
+      "recommendations": 4,
+      "chat_moments_shares": 7,
+      "ringtone_sets": 0,
+      "status_sets": 2,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 8.65,
+      "completion_rate": 0.1127,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJenVGcNMCjPjMzT4DCaNZHNwagYI-PNnT0Ig6QcgQ",
+      "source_description": "这里是 上海哈罗国际学校！#择校#国际生#国际学校#国际教育#家长必知#上海哈罗外籍人员子女学校#学费#活动"
+    },
+    {
+      "date": "2026-06-10",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "2026上海惠灵顿国际学校的学生们毕业啦！",
+      "views": 36029,
+      "likes": 200,
+      "comments": 35,
+      "favorites": 0,
+      "shares": 282,
+      "followers": 48,
+      "recommendations": 116,
+      "chat_moments_shares": 281,
+      "ringtone_sets": 0,
+      "status_sets": 1,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 19.21,
+      "completion_rate": 0.2233,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxO2nPBY9UVTJjMzT4DCa1GC6KtoQIF9CMkYSuoD5VA",
+      "source_description": "2026上海惠灵顿国际学校的学生们毕业啦！#择校#国际生#国际学校#国际教育#上海惠灵顿外籍人员学校#学费#家长必知#毕业生"
+    },
+    {
+      "date": "2026-06-11",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "Angelababy儿子就读的上中国际，到底有多恐怖？！",
+      "views": 34147,
+      "likes": 117,
+      "comments": 13,
+      "favorites": 0,
+      "shares": 561,
+      "followers": 70,
+      "recommendations": 59,
+      "chat_moments_shares": 561,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 32.26,
+      "completion_rate": 0.0595,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxOOnVCh-enbIjMzT4DCaRhf5u2UeoUAAFsMigko42A",
+      "source_description": "Angelababy儿子就读的上中国际，到底有多恐怖？！#上中国际#择校#国际生#国际学校#家长必知#黄晓明#杨颖#上海#教育"
+    },
+    {
+      "date": "2026-06-12",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "进包校就开挂？别想多了。。",
+      "views": 4929,
+      "likes": 34,
+      "comments": 5,
+      "favorites": 0,
+      "shares": 73,
+      "followers": 12,
+      "recommendations": 13,
+      "chat_moments_shares": 73,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 27.59,
+      "completion_rate": 0.1146,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJCnZEglUw3LjMzT4DCamJ9W5D1AyqMOy0WlatFZuw",
+      "source_description": "进包校就开挂？别想多了。。#择校#包玉刚国际学校#家长必知#学费#国际学校#国际教育#教育"
+    },
+    {
+      "date": "2026-06-13",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "这里是上海惠灵顿国际学校，一年仅需40W！",
+      "views": 132165,
+      "likes": 559,
+      "comments": 143,
+      "favorites": 0,
+      "shares": 365,
+      "followers": 57,
+      "recommendations": 261,
+      "chat_moments_shares": 365,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.5027,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxPOnNCc8SSbKjMzT4DCalA3rVYJBmLgcuc-_46hB8w",
+      "source_description": "这里是上海惠灵顿国际学校，一年仅需40W！#择校#国际生#国际学校#家长必知#学费#上海惠灵顿外籍人员子女学校"
+    },
+    {
+      "date": "2026-06-14",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "这事你怎么看？",
+      "views": 26162,
+      "likes": 240,
+      "comments": 63,
+      "favorites": 0,
+      "shares": 126,
+      "followers": 9,
+      "recommendations": 192,
+      "chat_moments_shares": 126,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 11.76,
+      "completion_rate": 0.2736,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxOKnKCMta1fUjMzT4DCaKegDvh1U6gefktLyq1jL8g",
+      "source_description": "这事你怎么看？#择校#国际生#国际学校#国际教育#家长必知"
+    },
+    {
+      "date": "2026-06-15",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "毕业季 / 校园氛围",
+      "title": "？你装监控了吗",
+      "views": 18092,
+      "likes": 261,
+      "comments": 62,
+      "favorites": 0,
+      "shares": 54,
+      "followers": 6,
+      "recommendations": 182,
+      "chat_moments_shares": 54,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 10.39,
+      "completion_rate": 0.4015,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJ2nbHt1YSrXjMzT4DCaaW407hPR2eDK-WKQ1RW4hw",
+      "source_description": "？你装监控了吗#择校#国际生#国际学校#国际教育#家长必知#普高日常"
+    },
+    {
+      "date": "2026-06-15",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "这就是校服比LV还贵的上海惠灵顿国际学校！",
+      "views": 167929,
+      "likes": 1161,
+      "comments": 529,
+      "favorites": 0,
+      "shares": 2017,
+      "followers": 437,
+      "recommendations": 754,
+      "chat_moments_shares": 2017,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 22.52,
+      "completion_rate": 0.2764,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxPqndCtNJhzXjMzT4DCaIz771X1CORg5WgYRCNkYdA",
+      "source_description": "这就是校服比LV还贵的上海惠灵顿国际学校！#择校#国际生#国际学校#上海惠灵顿外籍人员子女学校#学费#校服#家长必知"
+    },
+    {
+      "date": "2026-06-16",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "升学排名 / 名校结果",
+      "title": "2026-2027年US.News世界大学排名，清华大学进入前十行列！",
+      "views": 20565,
+      "likes": 131,
+      "comments": 39,
+      "favorites": 0,
+      "shares": 156,
+      "followers": 16,
+      "recommendations": 30,
+      "chat_moments_shares": 156,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 6.5,
+      "completion_rate": 0.1951,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIGnOGh-IjvWjMzT4DCasbgotpdoUf35Qm-agYsLAA",
+      "source_description": "2026-2027年US.News世界大学排名，清华大学进入前十行列！#大学#排行#清华大学#世界排名#择校#北京大学#上海#家长必知"
+    },
+    {
+      "date": "2026-06-16",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "一年40万，孩子过成这样？",
+      "views": 20836,
+      "likes": 278,
+      "comments": 55,
+      "favorites": 0,
+      "shares": 78,
+      "followers": 13,
+      "recommendations": 168,
+      "chat_moments_shares": 78,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 9.51,
+      "completion_rate": 0.3102,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJinFEM3IB_WjMzT4DCa7MlP5UfrAJBhsNM29TVv8w",
+      "source_description": "一年40万，孩子过成这样？#择校#国际生#国际学校#国际教育#哈罗国际学校#家长必知#学费"
+    },
+    {
+      "date": "2026-06-16",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "为什么顶尖家庭，都把孩子送去国际学校了？",
+      "views": 5315,
+      "likes": 46,
+      "comments": 11,
+      "favorites": 0,
+      "shares": 66,
+      "followers": 7,
+      "recommendations": 29,
+      "chat_moments_shares": 66,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 23.83,
+      "completion_rate": 0.0549,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxOGnMGsHaijWjMzT4DCa_TcdMtRZitotyvZU2fLlgw",
+      "source_description": "为什么顶尖家庭，都把孩子送去国际学校了？#择校#国际生#国际学校#国际教育#家长必知#上海哈罗外籍人员子女学校#上海惠灵顿外籍人员子女学校#学费#国际#教育"
+    },
+    {
+      "date": "2026-06-17",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "别看他们现在过的舒服，以后还得给他们打工！！",
+      "views": 19391,
+      "likes": 101,
+      "comments": 33,
+      "favorites": 0,
+      "shares": 238,
+      "followers": 17,
+      "recommendations": 63,
+      "chat_moments_shares": 238,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 19.93,
+      "completion_rate": 0.3357,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJ6nGBt1GlXQjMzT4DCafibLWX54zSo_im7yeTarEg",
+      "source_description": "别看他们现在过的舒服，以后还得给他们打工！！#择校#国际学校#国际教育#国际生#上海sas国际学校#学费"
+    },
+    {
+      "date": "2026-06-17",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "毕业季 / 校园氛围",
+      "title": "这就是你们国际生的日常吗，好羡慕！",
+      "views": 11296,
+      "likes": 53,
+      "comments": 53,
+      "favorites": 0,
+      "shares": 19,
+      "followers": 1,
+      "recommendations": 35,
+      "chat_moments_shares": 19,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.8,
+      "completion_rate": 0.3325,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJinLHY_eTTRjMzT4DCaf4kRW4u_OoS3nV1Y6o0EaQ",
+      "source_description": "这就是你们国际生的日常吗，好羡慕！#择校#国际学校#国际教育#国际生#日常"
+    },
+    {
+      "date": "2026-06-18",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "上中国际到底在筛什么孩子？",
+      "views": 11391,
+      "likes": 83,
+      "comments": 11,
+      "favorites": 0,
+      "shares": 349,
+      "followers": 45,
+      "recommendations": 49,
+      "chat_moments_shares": 349,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 35.57,
+      "completion_rate": 0.1647,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIWnZBYzB27TjMzT4DCae1rKwYXXwTq3qIdhKbQ-og",
+      "source_description": "上中国际到底在筛什么孩子？#择校#国际部#国际学校#上海中学#家长必知#升学#sam择校"
+    },
+    {
+      "date": "2026-06-18",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "当你在上海英国学校读书：",
+      "views": 13812,
+      "likes": 122,
+      "comments": 8,
+      "favorites": 0,
+      "shares": 48,
+      "followers": 9,
+      "recommendations": 143,
+      "chat_moments_shares": 48,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.7,
+      "completion_rate": 0.2574,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxO-nBHg-VkLTjMzT4DCaLmC8UFlbb45T0NICAkehng",
+      "source_description": "当你在上海英国学校读书：#择校#国际生#国际学校#国际部#上海英国外籍人员子女学校#家长必知#学费"
+    },
+    {
+      "date": "2026-06-18",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "升学排名 / 名校结果",
+      "title": "2027QS世界大学排名出炉！港前五集体升咖！",
+      "views": 2236,
+      "likes": 9,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 12,
+      "followers": 3,
+      "recommendations": 3,
+      "chat_moments_shares": 12,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 6.5,
+      "completion_rate": 0.165,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxOSnOGMdb1XTjMzT4DCaCKD9BEDFnBGbSWBhbgg3Sw",
+      "source_description": "2027QS世界大学排名出炉！港前五集体升咖！#择校#国际生#qs排名#世界大学排名#家长必知#港前五#对比"
+    },
+    {
+      "date": "2026-06-19",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "惠灵顿学费一天仅需2285.71块，少爷们可以冲了！",
+      "views": 380766,
+      "likes": 2392,
+      "comments": 291,
+      "favorites": 0,
+      "shares": 2554,
+      "followers": 202,
+      "recommendations": 1472,
+      "chat_moments_shares": 2553,
+      "ringtone_sets": 1,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.4794,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIOnKHJHEAPSjMzT4DCat0f0YhXXgYnXyrsWmMmubQ",
+      "source_description": "惠灵顿学费一天仅需2285.71块，少爷们可以冲了！#择校#国际生#国际学校#国际教育#上海惠灵顿外籍人员子女学校#学费"
+    },
+    {
+      "date": "2026-06-19",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "毕业季 / 校园氛围",
+      "title": "国际生得课外活动真的太丰富了！",
+      "views": 2390,
+      "likes": 25,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 19,
+      "followers": 2,
+      "recommendations": 12,
+      "chat_moments_shares": 19,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 6.74,
+      "completion_rate": 0.3356,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxOanGGYqfWfSjMzT4DCaXPZ6NzN3u0H2DTPJ-DJSKg",
+      "source_description": "国际生得课外活动真的太丰富了！#国际生#国际部#国际学校#国际教育#择校#家长必知#课外活动#小升初"
+    },
+    {
+      "date": "2026-06-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "当你在惠灵顿上学，你会获得....",
+      "views": 14616,
+      "likes": 102,
+      "comments": 16,
+      "favorites": 0,
+      "shares": 29,
+      "followers": 5,
+      "recommendations": 81,
+      "chat_moments_shares": 29,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.45,
+      "completion_rate": 0.2453,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxPOnDGBDJyLdjMzT4DCa4zbppngvVbZqoYYwTXZDRQ",
+      "source_description": "当你在惠灵顿上学，你会获得....#择校#国际生#国际学校#国际教育#上海惠灵顿外籍人员子女学校#家长必知"
+    },
+    {
+      "date": "2026-06-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "这里是上海惠灵顿幼儿园，孩子从小就接触财商，一年也仅需40W!",
+      "views": 233555,
+      "likes": 838,
+      "comments": 187,
+      "favorites": 0,
+      "shares": 1843,
+      "followers": 261,
+      "recommendations": 537,
+      "chat_moments_shares": 1842,
+      "ringtone_sets": 1,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3438,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJGnBCsMLnPfjMzT4DCaLUXYnTw1Yiw2HiGJQeleBg",
+      "source_description": "这里是上海惠灵顿幼儿园，孩子从小就接触财商，一年也仅需40W!#择校#国际生#国际学校#国际幼儿园#小升初#学费#上海惠灵顿外籍人员子女学校#财商"
+    },
+    {
+      "date": "2026-06-22",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "当你在上海哈罗读书时：",
+      "views": 3367,
+      "likes": 43,
+      "comments": 3,
+      "favorites": 0,
+      "shares": 21,
+      "followers": 3,
+      "recommendations": 43,
+      "chat_moments_shares": 21,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 9.29,
+      "completion_rate": 0.261,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxPOnKE8iGhjejMzT4DCanr9FcZo-erDluV0eP8V-lA",
+      "source_description": "当你在上海哈罗读书时：#择校#国际生#国际学校#上海哈罗外籍人员子女学校#家长必知#学费#课外活动"
+    },
+    {
+      "date": "2026-06-23",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "谁才是外籍学校天花板？？！",
+      "views": 23465,
+      "likes": 334,
+      "comments": 52,
+      "favorites": 0,
+      "shares": 128,
+      "followers": 10,
+      "recommendations": 279,
+      "chat_moments_shares": 127,
+      "ringtone_sets": 1,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 10.56,
+      "completion_rate": 0.3723,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJanaFUTOCTZjMzT4DCavGSBEu1DbtW_qDzQt5GPng",
+      "source_description": "谁才是外籍学校天花板？？！#择校#国际生#国际学校#国际教育#学费#家长必知#小升初#外籍学校"
+    },
+    {
+      "date": "2026-06-24",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "这里是上海惠灵顿国际幼儿园，从小读到到仅需431W!",
+      "views": 16900,
+      "likes": 40,
+      "comments": 10,
+      "favorites": 0,
+      "shares": 66,
+      "followers": 5,
+      "recommendations": 28,
+      "chat_moments_shares": 66,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.4331,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxPKnSG8dU0vbjMzT4DCaxOrbmm5QIvD5Hr34Nl6I8Q",
+      "source_description": "这里是上海惠灵顿国际幼儿园，从小读到到仅需431W!#择校#国际生#国际学校#上海惠灵顿外籍人员子女学校#学费#幼儿园#小升初"
+    },
+    {
+      "date": "2026-06-25",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "协和古北居然要开A-Level ？",
+      "views": 650,
+      "likes": 8,
+      "comments": 1,
+      "favorites": 0,
+      "shares": 9,
+      "followers": 0,
+      "recommendations": 4,
+      "chat_moments_shares": 9,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 9.31,
+      "completion_rate": 0.0431,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIKnKCsRM0vajMzT4DCaKDN4J6DIE-L15vZNOdlw_A",
+      "source_description": "协和古北居然要开A-Level ？#择校#国际生#国际学校#国际教育#协和古北#协和系#双语学校"
+    },
+    {
+      "date": "2026-06-25",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "当你在上中国际毕业，你会得到...",
+      "views": 4244,
+      "likes": 48,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 34,
+      "followers": 2,
+      "recommendations": 28,
+      "chat_moments_shares": 34,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.95,
+      "completion_rate": 0.2853,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxPinEFI4NGLajMzT4DCaujA69S5AC7UEp6sV0HfoNw",
+      "source_description": "当你在上中国际毕业，你会得到...#择校#国际生#国际学校#国际部#升学#上中国际"
+    },
+    {
+      "date": "2026-06-26",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "进了SAS，名校大学就稳了？",
+      "views": 932,
+      "likes": 12,
+      "comments": 1,
+      "favorites": 0,
+      "shares": 8,
+      "followers": 5,
+      "recommendations": 5,
+      "chat_moments_shares": 8,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 18.27,
+      "completion_rate": 0.074,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxOGnFDgXKQGljMzT4DCa2wDomT5Wf84zYlS8VQ3V-g",
+      "source_description": "进了SAS，名校大学就稳了？#择校#国际生#国际学校#上海sas美国学校#家长必知#名校#升学"
+    },
+    {
+      "date": "2026-06-27",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "这里是上海SAS国际学校，一年学费仅需33W",
+      "views": 2005,
+      "likes": 10,
+      "comments": 1,
+      "favorites": 0,
+      "shares": 2,
+      "followers": 1,
+      "recommendations": 3,
+      "chat_moments_shares": 2,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3918,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxP-nYFoHHCWkjMzT4DCaf6AfLKf2KJFQXRz_Svh5kw",
+      "source_description": "这里是上海SAS国际学校，一年学费仅需33W#择校#国际生#国际学校#家长必知#学费"
+    },
+    {
+      "date": "2026-06-28",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "不用高考的学校你心动了吗！",
+      "views": 4004,
+      "likes": 7,
+      "comments": 1,
+      "favorites": 0,
+      "shares": 13,
+      "followers": 0,
+      "recommendations": 7,
+      "chat_moments_shares": 13,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 3.9,
+      "completion_rate": 0.4608,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJenECZLI3CmjMzT4DCaatdE8ZXGcrVBo4B1IeFrgg",
+      "source_description": "不用高考的学校你心动了吗！#择校#国际生#国际学校#国际教育#学费"
+    }
+  ],
+  "daily_account": [
+    {
+      "date": "2026-06-01",
+      "views": 12228,
+      "recommendations": 90,
+      "likes": 92,
+      "comments": 13,
+      "shares": 58,
+      "followers": 13
+    },
+    {
+      "date": "2026-06-02",
+      "views": 13695,
+      "recommendations": 106,
+      "likes": 134,
+      "comments": 19,
+      "shares": 74,
+      "followers": 12
+    },
+    {
+      "date": "2026-06-03",
+      "views": 22383,
+      "recommendations": 112,
+      "likes": 167,
+      "comments": 11,
+      "shares": 109,
+      "followers": 15
+    },
+    {
+      "date": "2026-06-04",
+      "views": 14107,
+      "recommendations": 105,
+      "likes": 119,
+      "comments": 25,
+      "shares": 82,
+      "followers": 8
+    },
+    {
+      "date": "2026-06-05",
+      "views": 33685,
+      "recommendations": 233,
+      "likes": 330,
+      "comments": 45,
+      "shares": 298,
+      "followers": 24
+    },
+    {
+      "date": "2026-06-06",
+      "views": 55166,
+      "recommendations": 240,
+      "likes": 355,
+      "comments": 81,
+      "shares": 356,
+      "followers": 21
+    },
+    {
+      "date": "2026-06-07",
+      "views": 53069,
+      "recommendations": 292,
+      "likes": 363,
+      "comments": 98,
+      "shares": 236,
+      "followers": 26
+    },
+    {
+      "date": "2026-06-08",
+      "views": 26674,
+      "recommendations": 131,
+      "likes": 214,
+      "comments": 33,
+      "shares": 158,
+      "followers": 13
+    },
+    {
+      "date": "2026-06-09",
+      "views": 17713,
+      "recommendations": 95,
+      "likes": 144,
+      "comments": 14,
+      "shares": 100,
+      "followers": 9
+    },
+    {
+      "date": "2026-06-10",
+      "views": 24428,
+      "recommendations": 112,
+      "likes": 180,
+      "comments": 17,
+      "shares": 131,
+      "followers": 30
+    },
+    {
+      "date": "2026-06-11",
+      "views": 47791,
+      "recommendations": 164,
+      "likes": 253,
+      "comments": 40,
+      "shares": 444,
+      "followers": 51
+    },
+    {
+      "date": "2026-06-12",
+      "views": 42939,
+      "recommendations": 326,
+      "likes": 418,
+      "comments": 100,
+      "shares": 282,
+      "followers": 39
+    },
+    {
+      "date": "2026-06-13",
+      "views": 106964,
+      "recommendations": 587,
+      "likes": 938,
+      "comments": 92,
+      "shares": 429,
+      "followers": 69
+    },
+    {
+      "date": "2026-06-14",
+      "views": 78099,
+      "recommendations": 432,
+      "likes": 671,
+      "comments": 87,
+      "shares": 332,
+      "followers": 35
+    },
+    {
+      "date": "2026-06-15",
+      "views": 53044,
+      "recommendations": 235,
+      "likes": 336,
+      "comments": 72,
+      "shares": 348,
+      "followers": 42
+    },
+    {
+      "date": "2026-06-16",
+      "views": 102456,
+      "recommendations": 505,
+      "likes": 887,
+      "comments": 403,
+      "shares": 816,
+      "followers": 140
+    },
+    {
+      "date": "2026-06-17",
+      "views": 55850,
+      "recommendations": 285,
+      "likes": 488,
+      "comments": 187,
+      "shares": 474,
+      "followers": 84
+    },
+    {
+      "date": "2026-06-18",
+      "views": 56714,
+      "recommendations": 397,
+      "likes": 600,
+      "comments": 67,
+      "shares": 431,
+      "followers": 70
+    },
+    {
+      "date": "2026-06-19",
+      "views": 150804,
+      "recommendations": 693,
+      "likes": 979,
+      "comments": 195,
+      "shares": 1175,
+      "followers": 146
+    },
+    {
+      "date": "2026-06-20",
+      "views": 203615,
+      "recommendations": 972,
+      "likes": 1529,
+      "comments": 311,
+      "shares": 1376,
+      "followers": 189
+    },
+    {
+      "date": "2026-06-21",
+      "views": 213242,
+      "recommendations": 746,
+      "likes": 1263,
+      "comments": 170,
+      "shares": 1267,
+      "followers": 199
+    },
+    {
+      "date": "2026-06-22",
+      "views": 149349,
+      "recommendations": 434,
+      "likes": 590,
+      "comments": 180,
+      "shares": 1264,
+      "followers": 152
+    },
+    {
+      "date": "2026-06-23",
+      "views": 40749,
+      "recommendations": 209,
+      "likes": 319,
+      "comments": 45,
+      "shares": 403,
+      "followers": 40
+    },
+    {
+      "date": "2026-06-24",
+      "views": 45403,
+      "recommendations": 237,
+      "likes": 304,
+      "comments": 57,
+      "shares": 373,
+      "followers": 45
+    },
+    {
+      "date": "2026-06-25",
+      "views": 50587,
+      "recommendations": 280,
+      "likes": 369,
+      "comments": 77,
+      "shares": 370,
+      "followers": 45
+    },
+    {
+      "date": "2026-06-26",
+      "views": 36600,
+      "recommendations": 272,
+      "likes": 383,
+      "comments": 48,
+      "shares": 315,
+      "followers": 38
+    },
+    {
+      "date": "2026-06-27",
+      "views": 35263,
+      "recommendations": 257,
+      "likes": 373,
+      "comments": 40,
+      "shares": 354,
+      "followers": 51
+    },
+    {
+      "date": "2026-06-28",
+      "views": 32514,
+      "recommendations": 196,
+      "likes": 318,
+      "comments": 39,
+      "shares": 290,
+      "followers": 43
+    }
+  ],
+  "follower_growth": [
+    {
+      "date": "2026-06-01",
+      "net_followers": 13,
+      "new_followers": 13,
+      "unfollows": 0,
+      "total_followers": 9157
+    },
+    {
+      "date": "2026-06-02",
+      "net_followers": 12,
+      "new_followers": 12,
+      "unfollows": 0,
+      "total_followers": 9169
+    },
+    {
+      "date": "2026-06-03",
+      "net_followers": 15,
+      "new_followers": 15,
+      "unfollows": 0,
+      "total_followers": 9184
+    },
+    {
+      "date": "2026-06-04",
+      "net_followers": 8,
+      "new_followers": 8,
+      "unfollows": 0,
+      "total_followers": 9192
+    },
+    {
+      "date": "2026-06-05",
+      "net_followers": 24,
+      "new_followers": 25,
+      "unfollows": 1,
+      "total_followers": 9216
+    },
+    {
+      "date": "2026-06-06",
+      "net_followers": 21,
+      "new_followers": 24,
+      "unfollows": 3,
+      "total_followers": 9237
+    },
+    {
+      "date": "2026-06-07",
+      "net_followers": 26,
+      "new_followers": 28,
+      "unfollows": 2,
+      "total_followers": 9263
+    },
+    {
+      "date": "2026-06-08",
+      "net_followers": 13,
+      "new_followers": 14,
+      "unfollows": 1,
+      "total_followers": 9276
+    },
+    {
+      "date": "2026-06-09",
+      "net_followers": 9,
+      "new_followers": 11,
+      "unfollows": 2,
+      "total_followers": 9285
+    },
+    {
+      "date": "2026-06-10",
+      "net_followers": 30,
+      "new_followers": 30,
+      "unfollows": 0,
+      "total_followers": 9315
+    },
+    {
+      "date": "2026-06-11",
+      "net_followers": 51,
+      "new_followers": 53,
+      "unfollows": 2,
+      "total_followers": 9366
+    },
+    {
+      "date": "2026-06-12",
+      "net_followers": 39,
+      "new_followers": 40,
+      "unfollows": 1,
+      "total_followers": 9405
+    },
+    {
+      "date": "2026-06-13",
+      "net_followers": 69,
+      "new_followers": 72,
+      "unfollows": 3,
+      "total_followers": 9474
+    },
+    {
+      "date": "2026-06-14",
+      "net_followers": 35,
+      "new_followers": 37,
+      "unfollows": 2,
+      "total_followers": 9509
+    },
+    {
+      "date": "2026-06-15",
+      "net_followers": 42,
+      "new_followers": 44,
+      "unfollows": 2,
+      "total_followers": 9551
+    },
+    {
+      "date": "2026-06-16",
+      "net_followers": 140,
+      "new_followers": 142,
+      "unfollows": 2,
+      "total_followers": 9691
+    },
+    {
+      "date": "2026-06-17",
+      "net_followers": 84,
+      "new_followers": 85,
+      "unfollows": 1,
+      "total_followers": 9775
+    },
+    {
+      "date": "2026-06-18",
+      "net_followers": 70,
+      "new_followers": 70,
+      "unfollows": 0,
+      "total_followers": 9845
+    },
+    {
+      "date": "2026-06-19",
+      "net_followers": 146,
+      "new_followers": 150,
+      "unfollows": 4,
+      "total_followers": 9991
+    },
+    {
+      "date": "2026-06-20",
+      "net_followers": 189,
+      "new_followers": 193,
+      "unfollows": 4,
+      "total_followers": 10180
+    },
+    {
+      "date": "2026-06-21",
+      "net_followers": 199,
+      "new_followers": 204,
+      "unfollows": 5,
+      "total_followers": 10379
+    },
+    {
+      "date": "2026-06-22",
+      "net_followers": 152,
+      "new_followers": 154,
+      "unfollows": 2,
+      "total_followers": 10531
+    },
+    {
+      "date": "2026-06-23",
+      "net_followers": 40,
+      "new_followers": 42,
+      "unfollows": 2,
+      "total_followers": 10571
+    },
+    {
+      "date": "2026-06-24",
+      "net_followers": 45,
+      "new_followers": 48,
+      "unfollows": 3,
+      "total_followers": 10616
+    },
+    {
+      "date": "2026-06-25",
+      "net_followers": 45,
+      "new_followers": 45,
+      "unfollows": 0,
+      "total_followers": 10661
+    },
+    {
+      "date": "2026-06-26",
+      "net_followers": 38,
+      "new_followers": 40,
+      "unfollows": 2,
+      "total_followers": 10699
+    },
+    {
+      "date": "2026-06-27",
+      "net_followers": 51,
+      "new_followers": 52,
+      "unfollows": 1,
+      "total_followers": 10750
+    },
+    {
+      "date": "2026-06-28",
+      "net_followers": 43,
+      "new_followers": 45,
+      "unfollows": 2,
+      "total_followers": 10793
+    }
+  ]
+}
+;</script>
+  <script>
+const fmt = { format: (n) => Math.round(safe(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") };
+const pct = (n) => `${(Number.isFinite(n) ? n * 100 : 0).toFixed(1)}%`;
+const safe = (n) => Number.isFinite(+n) ? +n : 0;
+
+function formatWatch(seconds) {
+  const s = Math.round(safe(seconds));
+  if (s >= 60) return `${Math.floor(s / 60)}分${String(s % 60).padStart(2, "0")}秒`;
+  return `${s}秒`;
+}
+
+function shortTitle(title, max = 16) {
+  return title.length > max ? `${title.slice(0, max)}…` : title;
+}
+
+function rate(video, key) {
+  const views = Math.max(safe(video.views), 1);
+  if (key === "like") return safe(video.likes) / views;
+  if (key === "comment") return safe(video.comments) / views;
+  if (key === "share") return safe(video.shares) / views;
+  return (safe(video.likes) + safe(video.comments) + safe(video.shares)) / views;
+}
+
+function score(video) {
+  return safe(video.views) * 0.35
+    + safe(video.shares) * 20
+    + safe(video.comments) * 10
+    + safe(video.likes) * 5
+    + safe(video.avg_watch_time) * 3
+}
+
+function tagFor(video) {
+  const views = safe(video.views);
+  const shareRate = rate(video, "share");
+  const interact = rate(video, "interact");
+  if (shareRate >= 0.012) return "转发强";
+  if (safe(video.avg_watch_time) >= 20) return "停留强";
+  if (views >= 50000) return "播放不错";
+  if (interact < 0.005) return "需要优化";
+  return "互动强";
+}
+
+function sum(data, key) {
+  return data.reduce((acc, item) => acc + safe(item[key]), 0);
+}
+
+function avg(data, key) {
+  return data.length ? sum(data, key) / data.length : 0;
+}
+
+function makeMetric(label, value, hint) {
+  return `<article class="metric-card"><div class="label">${label}</div><div class="value">${value}</div><div class="hint">${hint || "暂无对比"}</div></article>`;
+}
+
+function normalize(data) {
+  return data.map((item, index) => ({
+    favorites: 0,
+    consultations: 0,
+    leads: 0,
+    exposure: 0,
+    profile_visits: 0,
+    ...item,
+    index: index + 1,
+    views: safe(item.views),
+    likes: safe(item.likes),
+    comments: safe(item.comments),
+    favorites: safe(item.favorites),
+    shares: safe(item.shares),
+    followers: safe(item.followers),
+    avg_watch_time: safe(item.avg_watch_time),
+    completion_rate: safe(item.completion_rate),
+    consultations: safe(item.consultations),
+    leads: safe(item.leads),
+  })).sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+function extractVideos(raw) {
+  return Array.isArray(raw) ? raw : (raw.videos || []);
+}
+
+function extractMeta(raw) {
+  return Array.isArray(raw) ? {} : (raw.meta || {});
+}
+
+function extractDaily(raw) {
+  return Array.isArray(raw) ? [] : (raw.daily_account || []);
+}
+
+function extractFollowerGrowth(raw) {
+  return Array.isArray(raw) ? [] : (raw.follower_growth || []);
+}
+
+function normalizeDaily(data) {
+  return (data || []).map((item) => ({
+    ...item,
+    date: item.date,
+    views: safe(item.views),
+    recommendations: safe(item.recommendations),
+    likes: safe(item.likes),
+    comments: safe(item.comments),
+    shares: safe(item.shares),
+    followers: safe(item.followers),
+  })).sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+function normalizeFollowerGrowth(data) {
+  return (data || []).map((item) => ({
+    ...item,
+    date: item.date,
+    net_followers: safe(item.net_followers),
+    new_followers: safe(item.new_followers),
+    unfollows: safe(item.unfollows),
+    total_followers: safe(item.total_followers),
+  })).sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+function monthName(data, meta = {}) {
+  const months = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"];
+  const dateSource = meta.period_end || ([...data].sort((a, b) => new Date(b.date) - new Date(a.date))[0] || {}).date;
+  const monthIndex = dateSource ? new Date(dateSource).getMonth() : new Date().getMonth();
+  return months[monthIndex] || "";
+}
+
+function renderTitle(data, meta = {}) {
+  const title = `登顶视频号${monthName(data, meta)}运营数据汇总`;
+  document.title = title;
+  const pageTitle = document.getElementById("pageTitle");
+  if (pageTitle) pageTitle.textContent = title;
+  const copy = document.querySelector(".hero-copy");
+  if (copy && meta.period_start && meta.period_end) {
+    copy.textContent = `数据区间 ${meta.period_start} 至 ${meta.period_end}。本页把本月发布视频明细、账号日级趋势、关注增长和下月优化方向整理成一个本地交互 dashboard。`;
+  }
+}
+
+function renderMetrics(data, meta = {}) {
+  const strongest = [...data].sort((a, b) => b.views - a.views)[0];
+  const strongestShare = [...data].sort((a, b) => b.shares - a.shares)[0];
+  const strongestWatch = [...data].sort((a, b) => b.avg_watch_time - a.avg_watch_time)[0];
+  const totalInteractions = sum(data, "likes") + sum(data, "comments") + sum(data, "shares");
+  const totalViews = Math.max(sum(data, "views"), 1);
+  const periodHint = meta.period_start && meta.period_end ? `${meta.period_start} 至 ${meta.period_end}` : "本月发布视频";
+  const cards = [
+    ["发布视频播放量", fmt.format(sum(data, "views")), `平均每条 ${fmt.format(Math.round(avg(data, "views")))} · ${periodHint}`],
+    ["总点赞", fmt.format(sum(data, "likes")), `平均每条 ${Math.round(avg(data, "likes"))} · 暂无对比`],
+    ["总评论", fmt.format(sum(data, "comments")), `平均每条 ${Math.round(avg(data, "comments"))} · 暂无对比`],
+    ["总转发 / 分享", fmt.format(sum(data, "shares")), `平均每条 ${Math.round(avg(data, "shares"))} · 重点指标`],
+    ["总新增关注", fmt.format(sum(data, "followers")), `平均每条 ${Math.round(avg(data, "followers"))} · 暂无对比`],
+    ["平均浏览量", fmt.format(Math.round(avg(data, "views"))), "播放效率参考"],
+    ["平均播放时长", formatWatch(avg(data, "avg_watch_time")), "停留质量参考"],
+    ["平均完播率", pct(avg(data, "completion_rate")), "直接读取原始完播率"],
+    ["平均互动率", pct(totalInteractions / totalViews), "点赞+评论+转发 / 播放"],
+    ["平均转发率", pct(sum(data, "shares") / totalViews), "视频号传播重点"],
+    ["最强单条视频", shortTitle(strongest.title, 8), `${fmt.format(strongest.views)} 播放`],
+    ["最强转发视频", shortTitle(strongestShare.title, 8), `${fmt.format(strongestShare.shares)} 分享`],
+    ["最强停留视频", shortTitle(strongestWatch.title, 8), `${formatWatch(strongestWatch.avg_watch_time)} 平均播放时长`],
+  ];
+  document.getElementById("publishCount").textContent = data.length;
+  document.getElementById("metricGrid").innerHTML = cards.map(([a, b, c]) => makeMetric(a, b, c)).join("");
+}
+
+function pointsFor(data, key) {
+  return data.map((item) => {
+    if (key === "interact") return rate(item, "interact");
+    if (key === "completion") return item.completion_rate;
+    return safe(item[key]);
+  });
+}
+
+function renderLineChart(el, labels, series, options = {}) {
+  const width = 640;
+  const height = 260;
+  const pad = { l: 46, r: 18, t: 18, b: 42 };
+  const innerW = width - pad.l - pad.r;
+  const innerH = height - pad.t - pad.b;
+  const allVals = series.flatMap((s) => s.values);
+  const max = Math.max(...allVals, 1) * 1.08;
+  const min = options.min ?? 0;
+  const x = (i) => pad.l + (series[0].values.length <= 1 ? innerW / 2 : i * innerW / (series[0].values.length - 1));
+  const y = (v) => pad.t + innerH - ((v - min) / (max - min || 1)) * innerH;
+  const grid = [0, 0.25, 0.5, 0.75, 1].map((g) => {
+    const gy = pad.t + innerH * g;
+    return `<line class="grid-line" x1="${pad.l}" y1="${gy}" x2="${width - pad.r}" y2="${gy}"/>`;
+  }).join("");
+  const lines = series.map((s, idx) => {
+    const d = s.values.map((v, i) => `${i ? "L" : "M"} ${x(i)} ${y(v)}`).join(" ");
+    const dots = s.values.map((v, i) => `<circle class="dot" cx="${x(i)}" cy="${y(v)}" r="4"><title>${labels[i]} · ${s.name}: ${options.percent ? pct(v) : fmt.format(Math.round(v))}</title></circle>`).join("");
+    return `<path class="line ${idx ? "secondary" : ""}" d="${d}"/>${dots}`;
+  }).join("");
+  const ticks = labels.map((label, i) => i % Math.ceil(labels.length / 7) === 0
+    ? `<text x="${x(i)}" y="${height - 16}" text-anchor="middle">${shortTitle(label, 8)}</text>`
+    : "").join("");
+  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" width="100%" height="100%" role="img">${grid}<line class="axis" x1="${pad.l}" y1="${height - pad.b}" x2="${width - pad.r}" y2="${height - pad.b}"/><line class="axis" x1="${pad.l}" y1="${pad.t}" x2="${pad.l}" y2="${height - pad.b}"/>${lines}${ticks}</svg>`;
+}
+
+function renderBarChart(el, labels, values, options = {}) {
+  const width = 640;
+  const height = 260;
+  const pad = { l: 46, r: 18, t: 18, b: 42 };
+  const innerW = width - pad.l - pad.r;
+  const innerH = height - pad.t - pad.b;
+  const max = Math.max(...values, 1) * 1.12;
+  const barW = innerW / values.length * 0.58;
+  const bars = values.map((v, i) => {
+    const x = pad.l + i * innerW / values.length + (innerW / values.length - barW) / 2;
+    const h = (v / max) * innerH;
+    const y = pad.t + innerH - h;
+    return `<rect class="bar" x="${x}" y="${y}" width="${barW}" height="${h}" rx="7"><title>${labels[i]} · ${options.percent ? pct(v) : fmt.format(Math.round(v))}</title></rect>`;
+  }).join("");
+  const ticks = labels.map((label, i) => i % Math.ceil(labels.length / 7) === 0
+    ? `<text x="${pad.l + i * innerW / values.length + innerW / values.length / 2}" y="${height - 16}" text-anchor="middle">${shortTitle(label, 8)}</text>`
+    : "").join("");
+  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" width="100%" height="100%" role="img"><line class="axis" x1="${pad.l}" y1="${height - pad.b}" x2="${width - pad.r}" y2="${height - pad.b}"/>${bars}${ticks}</svg>`;
+}
+
+function chartTheme() {
+  return {
+    textStyle: { fontFamily: getComputedStyle(document.body).fontFamily, color: "#5f574f" },
+    color: ["#9b6b55", "#c98b78", "#6f8d6a", "#d2a36d"],
+    grid: { left: 48, right: 28, top: 34, bottom: 56, containLabel: true },
+    tooltip: {
+      trigger: "axis",
+      axisPointer: { type: "cross", label: { backgroundColor: "#5d4035" } },
+      backgroundColor: "rgba(255,250,242,.98)",
+      borderColor: "#e3dacd",
+      borderWidth: 1,
+      textStyle: { color: "#211f1b" },
+      extraCssText: "box-shadow:0 12px 30px rgba(84,68,48,.12);border-radius:12px;padding:10px 12px;"
+    },
+    xAxis: {
+      axisLine: { lineStyle: { color: "#d7ccbe" } },
+      axisTick: { show: false },
+      axisLabel: { color: "#7b7167", hideOverlap: true },
+    },
+    yAxis: {
+      axisLine: { show: false },
+      splitLine: { lineStyle: { color: "#eadfd2", type: "dashed" } },
+      axisLabel: { color: "#7b7167" },
+    }
+  };
+}
+
+function metricValue(video, key) {
+  if (key === "interact_rate") return rate(video, "interact");
+  return safe(video[key]);
+}
+
+function fullTooltip(video, extras = "") {
+  return `
+    <div style="max-width:360px">
+      <div style="font-weight:800;margin-bottom:6px;">${video.title}</div>
+      <div style="color:#817a70;margin-bottom:8px;">${video.date} · ${video.content_type}</div>
+      <div>播放量：<b>${fmt.format(video.views)}</b></div>
+      <div>点赞：${fmt.format(video.likes)} ｜ 评论：${fmt.format(video.comments)} ｜ 转发：${fmt.format(video.shares)}</div>
+      <div>平均播放时长：${formatWatch(video.avg_watch_time)} ｜ 完播率：${pct(video.completion_rate)}</div>
+      <div>互动率：${pct(rate(video, "interact"))} ｜ 新增关注：${fmt.format(video.followers)}</div>
+      ${extras}
+    </div>
+  `;
+}
+
+function makeChart(id) {
+  const el = document.getElementById(id);
+  const chart = echarts.init(el, null, { renderer: "canvas" });
+  window.addEventListener("resize", () => chart.resize());
+  return chart;
+}
+
+function renderTrendChart(id, data, config) {
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  const labels = data.map((v, i) => `第${i + 1}条\n${v.date.slice(5)} · ${shortTitle(v.title, 8)}`);
+  const maxIndex = data.reduce((best, v, i) => metricValue(v, config.markMaxKey) > metricValue(data[best], config.markMaxKey) ? i : best, 0);
+  const series = config.series.map((s) => ({
+    name: s.name,
+    type: s.type,
+    smooth: s.type === "line",
+    symbolSize: 8,
+    barWidth: s.type === "bar" ? 16 : undefined,
+    data: data.map((v, i) => ({
+      value: metricValue(v, s.key),
+      video: v,
+      itemStyle: i === maxIndex ? { color: "#d65f45" } : undefined,
+      symbolSize: i === maxIndex ? 14 : 8,
+    })),
+    lineStyle: { width: 3 },
+    markPoint: s.key === config.markMaxKey ? {
+      symbol: "pin",
+      symbolSize: 54,
+      itemStyle: { color: "#d65f45" },
+      label: { formatter: "最高", color: "#fff", fontWeight: 800 },
+      data: [{ type: "max", name: "最高" }]
+    } : undefined,
+  }));
+  chart.setOption({
+    ...theme,
+    tooltip: {
+      ...theme.tooltip,
+      formatter(params) {
+        const first = Array.isArray(params) ? params[0] : params;
+        const video = first.data.video;
+        const rows = (Array.isArray(params) ? params : [params]).map((p) => {
+          const value = config.valueFormatter ? config.valueFormatter(p.value) : fmt.format(p.value);
+          return `<div>${p.marker}${p.seriesName}：<b>${value}</b></div>`;
+        }).join("");
+        return fullTooltip(video, `<div style="margin-top:8px;">${rows}</div>`);
+      }
+    },
+    legend: { top: 0, right: 4, textStyle: { color: "#7b7167" } },
+    xAxis: { ...theme.xAxis, type: "category", data: labels },
+    yAxis: {
+      ...theme.yAxis,
+      type: "value",
+      axisLabel: { color: "#7b7167", formatter: config.percentAxis ? (v) => pct(v) : undefined },
+    },
+    dataZoom: [{ type: "inside", start: 0, end: 100 }],
+    series
+  });
+}
+
+function renderRankChart(id, data, valueKey, title, formatter = (v) => fmt.format(v)) {
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  const top = [...data].sort((a, b) => metricValue(b, valueKey) - metricValue(a, valueKey)).slice(0, 10).reverse();
+  chart.setOption({
+    ...theme,
+    grid: { left: 136, right: 28, top: 20, bottom: 30 },
+    tooltip: {
+      ...theme.tooltip,
+      trigger: "item",
+      formatter(param) {
+        return fullTooltip(param.data.video, `<div style="margin-top:8px;">${title}：<b>${formatter(param.value)}</b></div>`);
+      }
+    },
+    xAxis: { ...theme.xAxis, type: "value", axisLabel: { formatter } },
+    yAxis: { ...theme.yAxis, type: "category", data: top.map((v) => shortTitle(v.title, 10)) },
+    series: [{
+      name: title,
+      type: "bar",
+      barWidth: 15,
+      data: top.map((v, i) => ({ value: metricValue(v, valueKey), video: v, itemStyle: { color: i === top.length - 1 ? "#d65f45" : "#9b6b55" } })),
+      label: { show: true, position: "right", formatter: (p) => formatter(p.value), color: "#5f574f", fontWeight: 700 },
+    }]
+  });
+}
+
+function renderTypeChart(id, groups, key, title, formatter = (v) => fmt.format(v)) {
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  const sorted = [...groups].sort((a, b) => safe(b[key]) - safe(a[key])).reverse();
+  chart.setOption({
+    ...theme,
+    grid: { left: 160, right: 36, top: 22, bottom: 28 },
+    tooltip: {
+      ...theme.tooltip,
+      trigger: "item",
+      formatter(param) {
+        const g = param.data.group;
+        return `
+          <div style="font-weight:800;margin-bottom:6px;">${g.type}</div>
+          <div>发布条数：${g.count}</div>
+          <div>总播放：${fmt.format(g.views)} ｜ 平均播放：${fmt.format(g.avgViews)}</div>
+          <div>总转发：${fmt.format(g.shares)} ｜ 平均播放时长：${formatWatch(g.avgWatch)}</div>
+          <div>${title}：<b>${formatter(param.value)}</b></div>
+        `;
+      }
+    },
+    xAxis: { ...theme.xAxis, type: "value", axisLabel: { formatter } },
+    yAxis: { ...theme.yAxis, type: "category", data: sorted.map((g) => g.type) },
+    series: [{
+      name: title,
+      type: "bar",
+      barWidth: 16,
+      data: sorted.map((g) => ({ value: safe(g[key]), group: g })),
+      label: { show: true, position: "right", formatter: (p) => formatter(p.value), color: "#5f574f", fontWeight: 700 },
+    }]
+  });
+}
+
+function renderSmallMetricChart(id, labels, values, sourceVideo, percent = false) {
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  chart.setOption({
+    ...theme,
+    grid: { left: 70, right: 22, top: 12, bottom: 22 },
+    tooltip: {
+      ...theme.tooltip,
+      trigger: "item",
+      formatter(param) {
+        return fullTooltip(sourceVideo, `<div style="margin-top:8px;">${param.name}：<b>${percent ? pct(param.value) : fmt.format(param.value)}</b></div>`);
+      }
+    },
+    xAxis: { ...theme.xAxis, type: "value", axisLabel: { formatter: percent ? (v) => pct(v) : undefined } },
+    yAxis: { ...theme.yAxis, type: "category", data: labels },
+    series: [{
+      type: "bar",
+      barWidth: 13,
+      data: values,
+      label: { show: true, position: "right", formatter: (p) => percent ? pct(p.value) : fmt.format(p.value), color: "#5f574f" },
+    }]
+  });
+}
+
+function renderTrends(data) {
+  const labels = data.map((v) => `${v.date.slice(5)} · ${shortTitle(v.title, 8)}`);
+  renderTrendChart("viewsTrend", data, {
+    title: "播放量",
+    series: [{ name: "播放量", key: "views", type: "line" }],
+    markMaxKey: "views",
+    valueFormatter: (v) => fmt.format(v),
+  });
+  renderTrendChart("watchTrend", data, {
+    title: "平均播放时长",
+    series: [{ name: "平均播放时长", key: "avg_watch_time", type: "line" }],
+    markMaxKey: "avg_watch_time",
+    valueFormatter: (v) => formatWatch(v),
+  });
+  renderTrendChart("shareTrend", data, {
+    title: "转发 / 分享",
+    series: [{ name: "转发 / 分享", key: "shares", type: "bar" }],
+    markMaxKey: "shares",
+    valueFormatter: (v) => fmt.format(v),
+  });
+  renderTrendChart("rateTrend", data, {
+    title: "互动率 / 完播率",
+    series: [
+      { name: "互动率", key: "interact_rate", type: "line" },
+      { name: "完播率", key: "completion_rate", type: "line" },
+    ],
+    markMaxKey: "interact_rate",
+    valueFormatter: (v) => pct(v),
+    percentAxis: true,
+  });
+  document.getElementById("videoTabs").innerHTML = data.map((v, i) => `<span class="tab-chip">第${i + 1}条 ${v.date} · ${shortTitle(v.title, 14)}</span>`).join("");
+}
+
+function renderTop(data) {
+  const top = [...data].sort((a, b) => score(b) - score(a)).slice(0, 5);
+  document.getElementById("topList").innerHTML = top.map((v, i) => `
+    <article class="top-item">
+      <div class="rank">${i + 1}</div>
+      <div>
+        <div class="top-meta">${v.content_type} · ${v.date}</div>
+        <div class="top-title">${v.title}</div>
+      </div>
+      <div class="mini-metrics">
+        ${mini("播放", fmt.format(v.views))}
+        ${mini("点赞", fmt.format(v.likes))}
+        ${mini("评论", fmt.format(v.comments))}
+        ${mini("转发", fmt.format(v.shares))}
+        ${mini("时长", formatWatch(v.avg_watch_time))}
+        ${mini("综合分", fmt.format(Math.round(score(v))))}
+      </div>
+      <span class="badge">${tagFor(v)}</span>
+    </article>
+  `).join("");
+}
+
+function mini(label, value) {
+  return `<div class="mini"><span>${label}</span><strong>${value}</strong></div>`;
+}
+
+function groupTypes(data) {
+  const map = new Map();
+  data.forEach((v) => {
+    if (!map.has(v.content_type)) {
+      map.set(v.content_type, { type: v.content_type, count: 0, views: 0, shares: 0, watch: 0 });
+    }
+    const g = map.get(v.content_type);
+    g.count += 1;
+    g.views += v.views;
+    g.shares += v.shares;
+    g.watch += v.avg_watch_time;
+  });
+  return [...map.values()].map((g) => ({ ...g, avgViews: g.views / g.count, avgWatch: g.watch / g.count })).sort((a, b) => b.views - a.views);
+}
+
+function renderTypes(data) {
+  const groups = groupTypes(data);
+  const maxViews = Math.max(...groups.map((g) => g.views), 1);
+  const best = groups[0];
+  document.getElementById("typeBars").innerHTML = groups.map((g) => `
+    <div class="type-row">
+      <strong>${g.type}</strong>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.max(4, g.views / maxViews * 100)}%"></div></div>
+      <div class="type-num">${g.count}条 · ${fmt.format(g.views)}播放 · ${fmt.format(g.shares)}转发</div>
+    </div>
+  `).join("");
+  document.getElementById("typeSummary").innerHTML = `
+    <p class="eyebrow">BEST TYPE</p>
+    <h3>最值得加码：${best.type}</h3>
+    <p>该类型累计播放 <span class="strong">${fmt.format(best.views)}</span>，平均每条 ${fmt.format(Math.round(best.avgViews))}，累计转发 ${fmt.format(best.shares)}。</p>
+    <p>建议继续围绕高播放类型扩展，但要在结尾加入“预算 / 择校 / 清单 / 规划”承接，补足咨询转化。</p>
+  `;
+}
+
+function renderDeepCharts(data) {
+  const groups = groupTypes(data);
+  renderRankChart("topViewsChart", data, "views", "播放量", (v) => fmt.format(v));
+  renderRankChart("topSharesChart", data, "shares", "转发量", (v) => fmt.format(v));
+  renderRankChart("topWatchChart", data, "avg_watch_time", "平均播放时长", (v) => formatWatch(v));
+  renderTypeChart("typeAvgViewsChart", groups, "avgViews", "平均播放量", (v) => fmt.format(v));
+  renderTypeChart("typeTotalSharesChart", groups, "shares", "总转发", (v) => fmt.format(v));
+}
+
+function renderVideoCards(data) {
+  document.getElementById("videoCards").innerHTML = data.map((v, i) => `
+    <article class="video-card" data-card>
+      <div class="video-head">
+        <div>
+          <div class="top-meta">${v.content_type} · ${v.date}</div>
+          <div class="video-title">${v.title}</div>
+          <div class="video-stats">
+            ${mini("播放", fmt.format(v.views))}
+            ${mini("点赞", fmt.format(v.likes))}
+            ${mini("评论", fmt.format(v.comments))}
+            ${mini("转发", fmt.format(v.shares))}
+            ${mini("时长", formatWatch(v.avg_watch_time))}
+            ${mini("完播", pct(v.completion_rate))}
+            ${mini("关注", fmt.format(v.followers))}
+          </div>
+          <div class="video-tabs">
+            <span class="badge">${tagFor(v)}</span>
+            <span class="badge">点赞率 ${pct(rate(v, "like"))}</span>
+            <span class="badge">评论率 ${pct(rate(v, "comment"))}</span>
+            <span class="badge">转发率 ${pct(rate(v, "share"))}</span>
+            <span class="badge">互动率 ${pct(rate(v, "interact"))}</span>
+          </div>
+        </div>
+        <button class="toggle" data-toggle>展开复盘</button>
+      </div>
+      <div class="details">
+        <div class="edit-grid">
+          ${input("浏览量 / 播放量", v.views)}
+          ${input("点赞", v.likes)}
+          ${input("评论", v.comments)}
+          ${input("转发 / 分享", v.shares)}
+          ${input("平均播放时长", v.avg_watch_time)}
+          ${input("完播率", pct(v.completion_rate))}
+          ${input("新增关注", v.followers)}
+          ${area("评论质量备注", v.comment_note || "记录评论里有没有认可、争议或专业判断。")}
+          ${area("复盘备注", autoNote(v))}
+        </div>
+        <div class="detail-charts">
+          <div class="small-panel"><h3>单条互动构成</h3><div id="mix-${i}" class="chart"></div></div>
+          <div class="small-panel"><h3>效率指标</h3><div id="eff-${i}" class="chart"></div></div>
+        </div>
+      </div>
+    </article>
+  `).join("");
+  document.querySelectorAll("[data-toggle]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest("[data-card]");
+      card.classList.toggle("open");
+      btn.textContent = card.classList.contains("open") ? "收起" : "展开复盘";
+      card.querySelectorAll(".chart").forEach((el) => {
+        const chart = echarts.getInstanceByDom(el);
+        if (chart) setTimeout(() => chart.resize(), 40);
+      });
+    });
+  });
+  data.forEach((v, i) => {
+    renderSmallMetricChart(`mix-${i}`, ["关注", "转发", "评论", "点赞"], [v.followers, v.shares, v.comments, v.likes], v, false);
+    renderSmallMetricChart(`eff-${i}`, ["互动率", "完播率", "转发率", "评论率", "点赞率"], [rate(v, "interact"), v.completion_rate, rate(v, "share"), rate(v, "comment"), rate(v, "like")], v, true);
+  });
+}
+
+function input(label, value) {
+  return `<label>${label}<input value="${value}" /></label>`;
+}
+
+function area(label, value) {
+  return `<label>${label}<textarea>${value}</textarea></label>`;
+}
+
+function autoNote(v) {
+  const notes = [];
+  if (v.views >= 50000) notes.push("播放明显高，选题具备点击和围观价值。");
+  if (rate(v, "share") >= 0.012) notes.push("转发率高，说明内容有家长群传播价值。");
+  if (v.avg_watch_time >= 20) notes.push("平均播放时长较高，留人结构可以复用。");
+  if (v.views >= 50000) notes.push("播放高，需要补结尾钩子和评论区承接。");
+  if (v.avg_watch_time < 8) notes.push("停留偏短，开头节奏和信息密度需要优化。");
+  if (!notes.length) notes.push("表现平稳，可继续观察同类型选题。");
+  return notes.join("");
+}
+
+function renderReview(data) {
+  const topView = [...data].sort((a, b) => b.views - a.views)[0];
+  const topShare = [...data].sort((a, b) => b.shares - a.shares)[0];
+  const topWatch = [...data].sort((a, b) => b.avg_watch_time - a.avg_watch_time)[0];
+  const reviews = [
+    ["本月做对了什么", `最强播放视频《${topView.title}》达到 ${fmt.format(topView.views)} 播放，说明“名校标签 + 学费/身份/家长焦虑”的入口有效。`],
+    ["本月问题在哪里", "流量已经起来，但内容结尾和评论区承接还不够明确，需要把高播放转成可追踪的私域动作。"],
+    ["下月继续保留动作", `继续保留高转发模型。《${topShare.title}》转发 ${fmt.format(topShare.shares)}，适合作为传播型选题样板。`],
+    ["下月重点测试动作", `用《${topWatch.title}》这类停留表现较好的内容测试 Sam 老师口播承接，并加入“预算/择校/清单/规划”关键词。`],
+  ];
+  document.getElementById("reviewGrid").innerHTML = reviews.map(([title, body]) => `<article class="review-card"><h3>${title}</h3><p>${body}</p></article>`).join("");
+}
+
+function renderTakeaways(data) {
+  const topView = [...data].sort((a, b) => b.views - a.views)[0];
+  const topShare = [...data].sort((a, b) => b.shares - a.shares)[0];
+  const type = groupTypes(data)[0];
+  const cards = [
+    {
+      conclusion: "流量不是平均增长，而是被强冲突选题拉起来。",
+      evidence: `播放最高的《${topView.title}》达到 ${fmt.format(topView.views)} 播放。`,
+      action: "继续做名校、学费、身份和路径焦虑类选题。"
+    },
+    {
+      conclusion: "转发是当前最值得盯的指标。",
+      evidence: `《${topShare.title}》带来 ${fmt.format(topShare.shares)} 次转发，具备家长群传播性。`,
+      action: "每条爆款结尾加“清单/预算/规划”承接。"
+    },
+    {
+      conclusion: `${type.type} 是当前最值得加码的内容类型。`,
+      evidence: `该类型累计 ${fmt.format(type.views)} 播放，贡献最高。`,
+      action: "扩展同类型内容，同时增加 Sam 老师专业判断。"
+    },
+  ];
+  document.getElementById("takeaways").innerHTML = cards.map((c, i) => `
+    <article class="takeaway-card">
+      <h3>${i + 1}. 结论</h3>
+      <strong>${c.conclusion}</strong>
+      <p><b>证据：</b>${c.evidence}</p>
+      <p><b>下一步动作：</b>${c.action}</p>
+    </article>
+  `).join("");
+}
+
+function renderTopics() {
+  const topics = [
+    ["上海国际学校最贵的不是学费", "快闪/混剪", "隐形成本比学费更容易戳中家长焦虑", "一年40万只是开始", "上海国际学校真正烧钱的地方，很多家长看校前都没问清楚。", "学费,预算,隐形成本", "转发"],
+    ["摇号失败后，别急着冲国际学校", "Sam老师口播", "转轨焦虑强，适合专业判断承接后续沟通", "摇号失败的兜底误区", "不是每个孩子都适合立刻转国际路线，先看这3个条件。", "摇号失败,转轨,兜底", "评论/私域承接"],
+    ["上中国际到底在筛什么孩子", "图文视频", "入学资格和筛选逻辑是高意向家长问题", "上中国际不是只看成绩", "想冲上中国际，家长先别只盯英语。", "上中国际,入学资格", "评论"],
+    ["上海外籍学校到底谁能进", "口播", "身份要求信息差大，后续沟通意图强", "有钱也不一定能进", "外籍学校不是交学费就能读，身份门槛要先搞清楚。", "外籍学校,身份要求", "评论/私域承接"],
+    ["惠灵顿为什么这么容易爆", "热点二创", "复盘账号自身爆款，强化内容方法论", "惠灵顿爆的不是学校介绍", "同样讲学校，为什么这类标题更容易被家长转发？", "惠灵顿,爆款复盘", "播放"],
+    ["中考后转国际路线还来得及吗", "Sam老师口播", "初升高节点强，家长决策紧迫", "中考后转轨别乱冲", "初升高转轨不是换赛道这么简单，时间成本才最贵。", "中考,转轨,国际路线", "评论/私域承接"],
+    ["平和、包玉刚、星河湾怎么选", "图文视频", "学校对比天然有转发价值", "三类家庭别选错", "不是越贵越适合，先看孩子类型和家庭目标。", "平和,包玉刚,星河湾", "转发"],
+  ];
+  document.getElementById("topicGrid").innerHTML = topics.map(([title, form, why, cover, copy, keywords, goal]) => `
+    <article class="topic-card">
+      <h3>${title}</h3>
+      <p><b>适合形式：</b>${form}</p>
+      <p><b>爆点原因：</b>${why}</p>
+      <p><b>封面标题：</b>${cover}</p>
+      <p><b>发布文案：</b>${copy}</p>
+      <p><b>关键词：</b>${keywords}</p>
+      <div class="goal">预期目标：${goal}</div>
+    </article>
+  `).join("");
+}
+
+function renderDailyLineChart(id, rows, seriesConfig, percentAxis = false) {
+  const el = document.getElementById(id);
+  if (!el || !rows.length) return;
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  const labels = rows.map((r) => r.date.slice(5));
+  chart.setOption({
+    ...theme,
+    legend: { top: 0, right: 4, textStyle: { color: "#7b7167" } },
+    tooltip: {
+      ...theme.tooltip,
+      trigger: "axis",
+      formatter(params) {
+        const first = Array.isArray(params) ? params[0] : params;
+        const row = first.data.row;
+        const rowsHtml = (Array.isArray(params) ? params : [params]).map((p) => {
+          const config = seriesConfig.find((s) => s.name === p.seriesName);
+          const value = config && config.formatter ? config.formatter(p.value) : fmt.format(p.value);
+          return `<div>${p.marker}${p.seriesName}：<b>${value}</b></div>`;
+        }).join("");
+        return `<div style="font-weight:800;margin-bottom:6px;">${row.date}</div>${rowsHtml}`;
+      }
+    },
+    xAxis: { ...theme.xAxis, type: "category", data: labels },
+    yAxis: { ...theme.yAxis, type: "value", axisLabel: { formatter: percentAxis ? (v) => pct(v) : undefined } },
+    dataZoom: [{ type: "inside", start: 0, end: 100 }],
+    series: seriesConfig.map((s) => ({
+      name: s.name,
+      type: s.type || "line",
+      smooth: s.type !== "bar",
+      barWidth: s.type === "bar" ? 14 : undefined,
+      symbolSize: 7,
+      data: rows.map((row) => ({ value: safe(row[s.key]), row })),
+      lineStyle: { width: 3 },
+    }))
+  });
+}
+
+function renderAccountDaily(dailyRows, followerRows) {
+  const section = document.getElementById("accountDailySection");
+  if (!section) return;
+  const daily = normalizeDaily(dailyRows);
+  const followers = normalizeFollowerGrowth(followerRows);
+  if (!daily.length && !followers.length) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "";
+  const latestFollower = followers[followers.length - 1];
+  const accountCards = [
+    ["账号日级播放", fmt.format(sum(daily, "views")), "包含当日账号整体播放，不等同于本月发布视频合计"],
+    ["账号日级点赞", fmt.format(sum(daily, "likes")), "视频号视频详情数据"],
+    ["账号日级评论", fmt.format(sum(daily, "comments")), "视频号视频详情数据"],
+    ["账号日级分享", fmt.format(sum(daily, "shares")), "视频号视频详情数据"],
+    ["净增关注", fmt.format(sum(followers, "net_followers")), latestFollower ? `期末关注者 ${fmt.format(latestFollower.total_followers)}` : "关注者增长详情数据"],
+  ];
+  document.getElementById("accountSummary").innerHTML = accountCards.map(([a, b, c]) => makeMetric(a, b, c)).join("");
+  renderDailyLineChart("dailyViewsChart", daily, [
+    { name: "播放", key: "views", formatter: (v) => fmt.format(v) },
+    { name: "推荐", key: "recommendations", type: "bar", formatter: (v) => fmt.format(v) },
+  ]);
+  renderDailyLineChart("dailyEngagementChart", daily, [
+    { name: "点赞", key: "likes", formatter: (v) => fmt.format(v) },
+    { name: "评论", key: "comments", formatter: (v) => fmt.format(v) },
+    { name: "分享", key: "shares", formatter: (v) => fmt.format(v) },
+  ]);
+  renderDailyLineChart("followerGrowthChart", followers, [
+    { name: "净增关注", key: "net_followers", type: "bar", formatter: (v) => fmt.format(v) },
+    { name: "新增关注", key: "new_followers", formatter: (v) => fmt.format(v) },
+    { name: "取消关注", key: "unfollows", formatter: (v) => fmt.format(v) },
+  ]);
+}
+
+async function init() {
+  let raw;
+  try {
+    const response = await fetch("./data.json");
+    raw = await response.json();
+  } catch (error) {
+    raw = window.DASHBOARD_DATA;
+  }
+  if (!raw) throw new Error("没有读取到 data.json 或 data.js 数据");
+  const data = normalize(extractVideos(raw));
+  const meta = extractMeta(raw);
+  renderTitle(data, meta);
+  renderMetrics(data, meta);
+  renderTakeaways(data);
+  renderTrends(data);
+  renderAccountDaily(extractDaily(raw), extractFollowerGrowth(raw));
+  renderDeepCharts(data);
+  renderTop(data);
+  renderTypes(data);
+  renderVideoCards(data);
+  renderReview(data);
+  renderTopics();
+}
+
+init().catch((error) => {
+  document.body.innerHTML = `<main class="shell"><section class="section"><h1>数据加载失败</h1><p>请确认 dashboard.html 与 data.json 位于同一目录。错误：${error.message}</p></section></main>`;
+});
+
+  </script>
+</body>
+</html>
