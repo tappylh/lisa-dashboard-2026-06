@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lisa老师三平台数据中心</title>
+  <link rel="stylesheet" href="./style.css?v=20260629-avg">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero" id="overview">
+      <div>
+        <p class="eyebrow">LISA MULTI-PLATFORM DATA COCKPIT</p>
+        <h1>Lisa老师三平台数据中心</h1>
+        <p class="subtitle">小红书、视频号、抖音三平台内容表现与运营复盘</p>
+      </div>
+      <div class="month-card">
+        <span>账号月度运营驾驶舱</span>
+        <strong id="workCount">--</strong>
+        <small id="publishCount">--</small>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">MONTHLY OVERVIEW</p>
+        <h2>三平台本月核心数据总览</h2>
+      </div>
+      <div class="platform-grid" id="platformCards"></div>
+      <div class="chart-grid three">
+        <article class="chart-panel">
+          <h3>三平台总浏览量对比</h3>
+          <p>判断本月主要流量来自哪个平台。</p>
+          <div class="chart" id="viewsChart"></div>
+        </article>
+        <article class="chart-panel">
+          <h3>三平台总点赞对比</h3>
+          <p>观察内容被即时认可的强弱。</p>
+          <div class="chart" id="likesChart"></div>
+        </article>
+        <article class="chart-panel">
+          <h3>三平台新增关注对比</h3>
+          <p>只展示本月新增关注，不混入总粉丝。</p>
+          <div class="chart" id="conversionChart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">WORK PERFORMANCE</p>
+        <h2>每条作品三平台数据对比</h2>
+      </div>
+      <div class="metric-switch" id="metricSwitch"></div>
+      <article class="chart-panel wide">
+        <h3 id="workChartTitle">每条作品三平台浏览量 / 播放量</h3>
+        <p id="workChartNote">同一条内容按作品归并，底部支持横向滚动。</p>
+        <div class="wide-scroll">
+          <div class="chart work-chart" id="workCompareChart"></div>
+        </div>
+      </article>
+      <article class="raw-panel">
+        <div class="section-head inline">
+          <p class="eyebrow">RAW WORK DATA</p>
+          <h2>每条作品原数据明细</h2>
+        </div>
+        <div class="raw-table-wrap">
+          <table class="raw-table" id="rawDataTable"></table>
+        </div>
+      </article>
+      <article class="leaderboard">
+        <div class="section-head inline">
+          <p class="eyebrow">TOP 5 WORKS</p>
+          <h2>作品表现榜单</h2>
+        </div>
+        <div id="leaderboard"></div>
+      </article>
+    </section>
+
+    <section class="section analysis-section">
+      <div class="section-head">
+        <p class="eyebrow">MONTHLY REVIEW</p>
+        <h2>本月三平台账号运营分析</h2>
+      </div>
+      <div class="analysis-grid" id="monthlyReview"></div>
+    </section>
+
+    <section class="section plan-section">
+      <div class="section-head">
+        <p class="eyebrow">NEXT MONTH PLAN</p>
+        <h2>下个月账号优化计划</h2>
+      </div>
+      <div id="nextPlan"></div>
+    </section>
+  </main>
+  <script id="inlineData" type="application/json"></script>
+  <script src="./script.js?v=20260629-avg"></script>
+</body>
+</html>
