@@ -6,419 +6,536 @@
   <title>登顶视频号六月运营数据汇总</title>
   <style>
 :root {
-  --bg: #f6f0e6;
-  --paper: #fffaf2;
+  --bg: #f4efe6;
+  --panel: #fffaf2;
+  --panel-2: #fbf5ea;
   --ink: #211f1b;
   --muted: #817a70;
   --line: #e3dacd;
-  --brand: #9b6b55;
-  --brand-dark: #5d4035;
-  --accent: #6f8d6a;
-  --warn: #c2644d;
-  --shadow: 0 18px 40px rgba(84, 68, 48, 0.12);
+  --accent: #9b6b55;
+  --accent-dark: #5d4035;
+  --accent-soft: #ead7c8;
+  --good: #6f8d6a;
+  --warn: #c66a4a;
+  --shadow: 0 18px 45px rgba(84, 68, 48, 0.08);
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: radial-gradient(circle at top left, rgba(255,255,255,.95), transparent 30%), var(--bg);
   color: var(--ink);
-  letter-spacing: 0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.75), transparent 28rem),
+    linear-gradient(135deg, #f7f1e8 0%, #efe6d9 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
-button, input, textarea { font: inherit; }
+
 .shell {
-  max-width: 1480px;
+  width: min(1440px, calc(100vw - 32px));
   margin: 0 auto;
-  padding: 28px 24px 64px;
+  padding: 24px 0 56px;
 }
+
 .hero,
 .section,
 .metric-card,
 .publish-card,
-.review-card,
-.topic-card,
 .top-item,
 .video-card,
-.chart-card {
+.review-card,
+.topic-card {
   border: 1px solid var(--line);
-  background: rgba(255, 250, 242, 0.82);
+  border-radius: 22px;
+  background: rgba(255, 250, 242, 0.88);
   box-shadow: var(--shadow);
 }
+
 .hero {
-  min-height: 240px;
-  display: grid;
-  grid-template-columns: 1fr 180px;
-  gap: 24px;
+  min-height: 170px;
+  display: flex;
   align-items: center;
-  padding: 36px 40px;
-  border-radius: 0 0 28px 28px;
-  margin: -28px -24px 28px;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 34px;
 }
+
 .eyebrow {
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .26em;
-  text-transform: uppercase;
   margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
-h1, h2, h3, p { margin-top: 0; }
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
 h1 {
-  font-size: clamp(48px, 7vw, 92px);
-  line-height: .98;
-  margin-bottom: 18px;
-  max-width: 980px;
+  margin-bottom: 12px;
+  font-size: clamp(44px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
 }
+
 .hero-copy {
   max-width: 760px;
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1.7;
   margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
 }
+
 .publish-card {
-  border-radius: 26px;
-  padding: 24px 18px;
-  min-height: 142px;
+  flex: 0 0 170px;
+  min-height: 132px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: linear-gradient(180deg, #fffaf5, #f7ecdf);
 }
+
 .publish-card span {
   color: var(--warn);
   font-weight: 800;
-  font-size: 16px;
 }
+
 .publish-card strong {
+  display: block;
   font-size: 52px;
-  line-height: 1.05;
-  margin: 8px 0;
+  line-height: 1;
 }
+
 .publish-card em {
   color: var(--muted);
   font-style: normal;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 .metric-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin: 18px 0 22px;
 }
+
+.account-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 .metric-card {
-  border-radius: 20px;
-  min-height: 148px;
-  padding: 22px;
+  min-height: 114px;
+  padding: 18px 20px;
 }
-.metric-card .label,
-.top-meta,
-.video-meta,
-.hint {
-  color: var(--muted);
-}
+
 .metric-card .label {
-  font-size: 16px;
-  font-weight: 800;
-  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
 }
+
 .metric-card .value {
-  font-size: clamp(30px, 3.8vw, 50px);
-  line-height: 1.05;
-  font-weight: 900;
-  word-break: break-word;
+  margin: 8px 0 7px;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -0.02em;
 }
+
 .metric-card .hint {
-  margin-top: 10px;
-  font-size: 14px;
+  color: var(--muted);
+  font-size: 12px;
   line-height: 1.5;
 }
+
 .section {
-  border-radius: 24px;
-  padding: 28px;
-  margin: 24px 0;
+  margin-top: 20px;
+  padding: 28px 30px;
 }
+
 .section h2 {
+  margin-bottom: 6px;
   font-size: 30px;
-  margin-bottom: 8px;
 }
+
 .section-note {
   color: var(--muted);
-  margin-bottom: 20px;
   line-height: 1.7;
+  margin-bottom: 20px;
 }
-.chart-grid {
+
+.takeaway-grid,
+.review-grid,
+.topic-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-.chart-card {
+
+.takeaway-card {
+  border: 1px solid var(--line);
   border-radius: 18px;
   padding: 18px;
-  min-height: 350px;
+  background: #fffdfa;
 }
+
+.takeaway-card strong {
+  color: var(--warn);
+}
+
+.takeaway-card p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.chart-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: #fffdfa;
+}
+
 .chart-card h3 {
-  margin-bottom: 14px;
-  font-size: 18px;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
+
 .chart {
-  width: 100%;
-  height: 290px;
+  height: 260px;
 }
+
 .wide-chart {
   grid-column: 1 / -1;
 }
-.takeaway-grid,
-.review-grid,
-.topic-grid,
+
+svg text {
+  fill: #7b7167;
+  font-size: 11px;
+}
+
+.axis {
+  stroke: #d7ccbe;
+}
+
+.grid-line {
+  stroke: #e9e0d3;
+  stroke-dasharray: 4 4;
+}
+
+.line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+
+.line.secondary {
+  stroke: #c98b78;
+}
+
+.dot {
+  fill: #f5dfd4;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.bar {
+  fill: #b88a72;
+}
+
+.video-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 16px 0 2px;
+}
+
+.tab-chip,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f8f0e6;
+  color: var(--accent-dark);
+  padding: 8px 12px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .top-list,
 .video-card-list {
   display: grid;
-  gap: 16px;
-}
-.takeaway-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.takeaway-card,
-.review-card,
-.topic-card {
-  border-radius: 18px;
-  padding: 20px;
-  background: rgba(255, 255, 255, .46);
-  border: 1px solid var(--line);
-}
-.takeaway-card strong {
-  display: block;
-  font-size: 20px;
-  line-height: 1.45;
-  margin-bottom: 12px;
-}
-.takeaway-card p,
-.review-card p,
-.topic-card p {
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 8px;
-}
-.top-list {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-.top-item {
-  border-radius: 18px;
-  padding: 18px;
-}
-.top-rank {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--brand-dark);
-  color: white;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-.top-title {
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 1.45;
-  min-height: 78px;
-}
-.top-meta {
-  font-size: 13px;
-  margin: 8px 0 12px;
-}
-.top-metrics {
-  display: grid;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 14px;
-}
-.type-layout {
-  display: grid;
-  grid-template-columns: 1.5fr .8fr;
-  gap: 20px;
-}
-.type-bars {
-  display: grid;
   gap: 14px;
 }
+
+.top-item {
+  display: grid;
+  grid-template-columns: 52px 1.2fr 3fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+}
+
+.rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #1f1d19;
+  color: white;
+  font-weight: 850;
+}
+
+.top-meta {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.top-title {
+  margin-top: 5px;
+  font-weight: 850;
+}
+
+.mini-metrics {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(74px, 1fr));
+  gap: 8px;
+}
+
+.mini {
+  border-radius: 12px;
+  background: #f6eee5;
+  padding: 8px 10px;
+}
+
+.mini span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.mini strong {
+  font-size: 15px;
+}
+
+.type-layout {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 20px;
+}
+
 .type-row {
   display: grid;
-  grid-template-columns: 150px 1fr 100px;
-  gap: 12px;
+  grid-template-columns: 170px 1fr 190px;
   align-items: center;
+  gap: 12px;
+  margin: 12px 0;
 }
+
 .bar-track {
   height: 16px;
   border-radius: 999px;
-  background: rgba(155, 107, 85, .13);
+  background: #eee5d8;
   overflow: hidden;
 }
+
 .bar-fill {
   height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--brand), var(--accent));
+  border-radius: inherit;
+  background: linear-gradient(90deg, #bd8f76, #8d6655);
 }
-.type-summary {
-  border-left: 1px solid var(--line);
-  padding-left: 20px;
+
+.type-num {
   color: var(--muted);
-  line-height: 1.8;
+  font-size: 12px;
 }
-.video-card-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.video-card {
+
+.type-summary {
+  border: 1px solid var(--line);
   border-radius: 18px;
-  overflow: hidden;
-}
-.video-head {
-  width: 100%;
-  border: 0;
-  background: transparent;
   padding: 18px;
-  cursor: pointer;
-  text-align: left;
+  background: #fffdfa;
+  line-height: 1.7;
+}
+
+.video-card {
+  padding: 18px;
+}
+
+.video-head {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 12px;
-  align-items: center;
+  gap: 14px;
+  align-items: start;
 }
+
 .video-title {
-  font-size: 17px;
-  line-height: 1.45;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 850;
+  margin: 4px 0 12px;
 }
-.video-meta {
-  font-size: 13px;
-  margin-top: 6px;
-}
-.tag {
-  background: rgba(111, 141, 106, .15);
-  color: #496642;
-  border: 1px solid rgba(111, 141, 106, .24);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 13px;
-  font-weight: 800;
-  white-space: nowrap;
-}
-.video-body {
-  display: none;
-  padding: 0 18px 18px;
-}
-.video-card.open .video-body { display: block; }
+
 .video-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.video-stats div {
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.45);
-  border-radius: 14px;
-  padding: 10px;
-}
-.video-stats span {
-  display: block;
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 3px;
-}
-.video-mini-chart {
-  height: 210px;
-}
-.video-actions {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(8, 1fr);
   gap: 10px;
   margin-top: 12px;
 }
-.video-actions label {
+
+.toggle {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fffdfa;
+  color: var(--accent-dark);
+  cursor: pointer;
+  font-weight: 800;
+  padding: 10px 14px;
+}
+
+.details {
+  display: none;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.video-card.open .details {
+  display: block;
+}
+
+.edit-grid {
   display: grid;
-  gap: 6px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+label {
   color: var(--muted);
   font-size: 12px;
+  font-weight: 700;
 }
-.video-actions input,
-.video-actions textarea {
+
+input,
+textarea {
   width: 100%;
+  margin-top: 6px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 9px 10px;
-  background: rgba(255,255,255,.6);
+  background: #fffdfa;
   color: var(--ink);
+  padding: 10px 11px;
+  font: inherit;
 }
-.video-note {
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.detail-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.small-panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fffdfa;
+  padding: 14px;
+}
+
+.review-card,
+.topic-card {
+  padding: 18px;
+  background: #fffdfa;
+}
+
+.review-card h3,
+.topic-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.review-card p,
+.topic-card p {
   color: var(--muted);
-  line-height: 1.65;
-  margin: 10px 0 0;
+  line-height: 1.7;
 }
-.review-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+.topic-card .goal {
+  margin-top: 10px;
+  color: var(--warn);
+  font-weight: 850;
 }
-.topic-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.goal {
-  margin-top: 12px;
-  border-top: 1px solid var(--line);
-  padding-top: 10px;
-  color: var(--brand-dark);
+
+.strong {
+  color: var(--warn);
   font-weight: 900;
 }
-.video-tabs {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.video-tabs button {
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.45);
-  color: var(--muted);
-  border-radius: 999px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-.video-tabs button.active {
-  color: white;
-  background: var(--brand-dark);
-  border-color: var(--brand-dark);
-}
-.account-summary {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: 18px;
-}
-.axis { stroke: #bdb1a3; stroke-width: 1; }
-.grid-line { stroke: #eadfd2; stroke-width: 1; }
-.line { fill: none; stroke: var(--brand); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.line.secondary { stroke: var(--accent); }
-.dot { fill: var(--brand-dark); }
-.bar { fill: var(--brand); }
-text { fill: var(--muted); font-size: 11px; }
+
 @media (max-width: 1100px) {
-  .metric-grid, .top-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .account-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .takeaway-grid, .review-grid, .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .video-card-list { grid-template-columns: 1fr; }
-  .type-layout { grid-template-columns: 1fr; }
-  .type-summary { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+  .metric-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .account-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chart-grid,
+  .type-layout,
+  .takeaway-grid,
+  .review-grid,
+  .topic-grid,
+  .detail-charts {
+    grid-template-columns: 1fr;
+  }
+  .top-item,
+  .video-head {
+    grid-template-columns: 1fr;
+  }
+  .mini-metrics,
+  .video-stats,
+  .edit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 760px) {
-  .shell { padding: 20px 14px 48px; }
-  .hero { grid-template-columns: 1fr; padding: 28px 18px; margin: -20px -14px 20px; }
-  .metric-grid, .chart-grid, .takeaway-grid, .top-list, .review-grid, .topic-grid { grid-template-columns: 1fr; }
-  .account-summary { grid-template-columns: 1fr; }
-  .section { padding: 20px; }
-  .type-row { grid-template-columns: 1fr; gap: 6px; }
-  .video-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .video-actions { grid-template-columns: 1fr; }
-  h1 { font-size: 46px; }
+  .shell {
+    width: calc(100vw - 18px);
+  }
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+  .account-summary {
+    grid-template-columns: 1fr;
+  }
 }
 
 </style>
@@ -581,7 +698,7 @@ window.DASHBOARD_DATA = {
       "date": "2026-05-01",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
+      "content_type": "学费 / 成本焦虑",
       "title": "这里就是上海惠灵顿国际学校！",
       "views": 6368,
       "likes": 37,
@@ -607,53 +724,604 @@ window.DASHBOARD_DATA = {
       "source_description": "这里就是上海惠灵顿国际学校！#择校#国际生#学费#国际学校#家长必知#上海惠灵顿国际学校"
     },
     {
-      "date": "2026-05-01",
+      "date": "2026-05-04",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "虹桥国际强势建校，双线融合，开启智慧教育新范式",
-      "views": 26987,
-      "likes": 265,
-      "comments": 50,
+      "content_type": "学费 / 成本焦虑",
+      "title": "用色轮打开上海协和国际学校！",
+      "views": 1319,
+      "likes": 20,
+      "comments": 0,
       "favorites": 0,
-      "shares": 157,
-      "followers": 22,
-      "recommendations": 222,
-      "chat_moments_shares": 157,
+      "shares": 10,
+      "followers": 0,
+      "recommendations": 20,
+      "chat_moments_shares": 10,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 7.1,
-      "completion_rate": 0.2904,
+      "avg_watch_time": 8.65,
+      "completion_rate": 0.1811,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxIbiF0g-64wJjMzT4DCacfaNk6q8rUVr9sAClH7JGA",
-      "source_description": "虹桥国际强势建校，双线融合，开启智慧教育新范式#择校#国际生#国际学校#家长必知#教育#虹桥国际学校\n"
+      "source_video_id": "export/UzFfBgAAxI6iaEkFPWOZjczT4DCajctL4eD8pA9R9cCfuAihig",
+      "source_description": "用色轮打开上海协和国际学校！#择校#国际生#国际学校#上海协和国际学校#学费#色轮#家长必知"
     },
     {
-      "date": "2026-05-02",
+      "date": "2026-05-06",
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "学费 / 成本焦虑",
-      "title": "一年22w值得进的上海民办学校吗？",
-      "views": 3540,
-      "likes": 29,
-      "comments": 1,
+      "title": "用色轮打开上海德威国际学校~",
+      "views": 709,
+      "likes": 6,
+      "comments": 0,
       "favorites": 0,
-      "shares": 47,
-      "followers": 2,
-      "recommendations": 25,
-      "chat_moments_shares": 47,
+      "shares": 4,
+      "followers": 0,
+      "recommendations": 4,
+      "chat_moments_shares": 4,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 7.62,
+      "avg_watch_time": 9.01,
+      "completion_rate": 0.1453,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK6iLHc4KVyajczT4DCahfTpX_veJ9nJKh3tTteoUA",
+      "source_description": "用色轮打开上海德威国际学校~#择校#国际生#国际学校#国际教育#学费#上海德威国际学校#家长必知"
+    },
+    {
+      "date": "2026-05-07",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "用色轮打开上海哈罗国际学校~",
+      "views": 782,
+      "likes": 3,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 7,
+      "followers": 0,
+      "recommendations": 1,
+      "chat_moments_shares": 7,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.34,
+      "completion_rate": 0.1125,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJyiFABXQFPljMzT4DCaqixDp-ZAh9cBS01HslCh9g",
+      "source_description": "用色轮打开上海哈罗国际学校~#择校#国际生#国际学校#国际教育#家长必知#上海哈罗国际学校#教育"
+    },
+    {
+      "date": "2026-05-08",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "用色轮打开上海SAS美国学校~",
+      "views": 2134,
+      "likes": 34,
+      "comments": 2,
+      "favorites": 0,
+      "shares": 16,
+      "followers": 1,
+      "recommendations": 36,
+      "chat_moments_shares": 16,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.61,
+      "completion_rate": 0.2192,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIKiHCEfNgrkjMzT4DCadMTKiDidQxnyx0RGVPq0uQ",
+      "source_description": "用色轮打开上海SAS美国学校~#国际生#国际学校#国际教育#择校#国际课程#上海美国学校#sas#家长必知#学费"
+    },
+    {
+      "date": "2026-05-11",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "用色轮打开上海惠灵顿国际学校~",
+      "views": 1159,
+      "likes": 5,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 4,
+      "followers": 2,
+      "recommendations": 5,
+      "chat_moments_shares": 4,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 6.51,
+      "completion_rate": 0.17,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKeiWHEDcWbgjMzT4DCamNKzDg0_WaSb1_ba58SIFA",
+      "source_description": "用色轮打开上海惠灵顿国际学校~#择校#国际生#国际学校#国际教育#上海惠灵顿国际学校#学费#家长必知"
+    },
+    {
+      "date": "2026-05-12",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "国际学校，如何带孩子玩转经济思维？",
+      "views": 36,
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 0,
+      "followers": 0,
+      "recommendations": 0,
+      "chat_moments_shares": 0,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 18.89,
+      "completion_rate": 0,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxLauREYoGFvijMzT4DCaDv9ZONUimIngYhP-UER4TA",
+      "source_description": "国际学校，如何带孩子玩转经济思维？"
+    },
+    {
+      "date": "2026-05-12",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "今年谁是学费王者？！",
+      "views": 2448,
+      "likes": 11,
+      "comments": 4,
+      "favorites": 0,
+      "shares": 4,
+      "followers": 0,
+      "recommendations": 2,
+      "chat_moments_shares": 4,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 8.5,
+      "completion_rate": 0.3043,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxN2hGFlwYTrjjMzT4DCaSGHc6w9gv3mrU2DrDNQmEg",
+      "source_description": "今年谁是学费王者？！#国际生#国际学校#国际教育#择校#学费#哈罗#上海惠灵顿国际学校#上海德威国际学校#家长必知"
+    },
+    {
+      "date": "2026-05-13",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "假如你不小心考上了上海英国学校！",
+      "views": 25022,
+      "likes": 228,
+      "comments": 62,
+      "favorites": 0,
+      "shares": 148,
+      "followers": 25,
+      "recommendations": 203,
+      "chat_moments_shares": 148,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 8.74,
+      "completion_rate": 0.232,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKiieEt6MVztjMzT4DCaI6aYodBeBItkIHqf90ZDvA",
+      "source_description": "假如你不小心考上了上海英国学校！#国际生#择校#国际学校#国际教育#国际部#上海英国学校#biss#家长必知#外籍学校"
+    },
+    {
+      "date": "2026-05-14",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "SAS狂揽1000+录取，上海外籍校今年升学，谁最“顶”？",
+      "views": 1801,
+      "likes": 11,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 17,
+      "followers": 0,
+      "recommendations": 5,
+      "chat_moments_shares": 17,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 13.79,
+      "completion_rate": 0.1338,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxIeiXCcuMlLsjMzT4DCajCR8OpQbq1Q4VzRYR2hjsQ",
+      "source_description": "SAS狂揽1000+录取，上海外籍校今年升学，谁最“顶”？#国际生#国际学校#国际教育#择校#上海美国学校#sas#上海惠灵顿国际学校#录取#大学#榜单"
+    },
+    {
+      "date": "2026-05-15",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "名校 / 学校标签",
+      "title": "谁才是上海国际学校的“老大”！",
+      "views": 32941,
+      "likes": 301,
+      "comments": 77,
+      "favorites": 0,
+      "shares": 159,
+      "followers": 11,
+      "recommendations": 211,
+      "chat_moments_shares": 159,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 10.13,
+      "completion_rate": 0.2729,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNChRH5VfA_vjMzT4DCatGcfqvn0D-wX0ttw17Sdeg",
+      "source_description": "谁才是上海国际学校的“老大”！#国际生#国际学校#国际教育#择校#上海惠灵顿外籍子女学校#上海美国学校#上海英国学校#家长必知"
+    },
+    {
+      "date": "2026-05-18",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "pov：当你在哈罗学校上学时",
+      "views": 41388,
+      "likes": 612,
+      "comments": 68,
+      "favorites": 0,
+      "shares": 227,
+      "followers": 44,
+      "recommendations": 473,
+      "chat_moments_shares": 227,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.85,
+      "completion_rate": 0.3183,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxI6iMCtMfx_rjMzT4DCag2ipfB0jdM2wH30Ms_IB8g",
+      "source_description": "pov：当你在哈罗学校上学时\n#国际生#国际学校#国际教育#择校#上海哈罗外籍子女学校#学费#初中生#幼升小\n"
+    },
+    {
+      "date": "2026-05-19",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "当你在上海某个国际学校读书时 bilike：",
+      "views": 6264,
+      "likes": 61,
+      "comments": 14,
+      "favorites": 0,
+      "shares": 20,
+      "followers": 2,
+      "recommendations": 62,
+      "chat_moments_shares": 20,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 8.58,
+      "completion_rate": 0.2476,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJiiFE0GMAHqjMzT4DCafCaxgvOJHyZfOCP4QS-TXQ",
+      "source_description": "当你在上海某个国际学校读书时 bilike：\n#择校#国际生#国际学校#国际教育#耀中国际学校#小升初#幼升小#家长必知#学费\n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "长宁已出！2026民办小初摇号结果最新公布！",
+      "views": 23512,
+      "likes": 20,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 54,
+      "followers": 4,
+      "recommendations": 1,
+      "chat_moments_shares": 54,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2973,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJiibHA0T0r0jMzT4DCaKDWC3mhG7I5w77Hm1N-WBg",
+      "source_description": "长宁已出！2026民办小初摇号结果最新公布！\n#民办摇号 #2026摇号 #民办小初摇号 #摇号结果 #摇号必中 #摇号 \n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "虹口已出！2026年民办小学，民办初中摇号结果最新出出炉！",
+      "views": 1555,
+      "likes": 1,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 9,
+      "followers": 0,
+      "recommendations": 0,
+      "chat_moments_shares": 9,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2693,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxJyidBA4PUv0jMzT4DCaYY-cgXIC5tJZYCjk0FuKOA",
+      "source_description": "虹口已出！2026年民办小学，民办初中摇号结果最新出出炉！\n虹口小初全部触发摇号！！！\n今日待出：徐汇区！\n#民办摇号 #虹口摇号 #摇号结果 #民办摇号结果 #摇号必中 #小升初摇号 #幼升小摇号 \n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "今天这个号就摇到这儿！",
+      "views": 1473,
+      "likes": 5,
+      "comments": 3,
+      "favorites": 0,
+      "shares": 11,
+      "followers": 0,
+      "recommendations": 1,
+      "chat_moments_shares": 11,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.284,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK2iFGQze0j0jMzT4DCad95hASr0oiUQIBFZRAGLgw",
+      "source_description": "今天这个号就摇到这儿！\n徐汇已出！\n全部触发摇号！\n#2026摇号结果 #徐汇摇号名单 #摇号名单PDF #摇号 #摇号必中 \n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "宝山区出啦！2026民办摇号初中结果出炉！",
+      "views": 8826,
+      "likes": 8,
+      "comments": 1,
+      "favorites": 0,
+      "shares": 12,
+      "followers": 4,
+      "recommendations": 3,
+      "chat_moments_shares": 12,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3108,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK2iHCACRDb1jMzT4DCahP9ERXRBbFmkL21qsVaXYg",
+      "source_description": "宝山区出啦！2026民办摇号初中结果出炉！#初中摇号 #民办摇号 #摇号结果 #2026民办摇号 "
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "学费 / 成本焦虑",
+      "title": "假如你不小心考上了上海哈罗学校！",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 0,
+      "followers": 0,
+      "recommendations": 0,
+      "chat_moments_shares": 0,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 4.0,
+      "completion_rate": 0,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK6iHC4fNVz0jMzT4DCaykegNCsbmj6Ksl7NuasJxQ",
+      "source_description": "假如你不小心考上了上海哈罗学校！\n#择校#国际生#国际学校#国际教育#哈罗国际学校#家长必知#小升初#教育#学费\n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "嘉定已出！2026年上海民办小学，民办初中摇号结果出炉！",
+      "views": 18600,
+      "likes": 15,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 40,
+      "followers": 6,
+      "recommendations": 3,
+      "chat_moments_shares": 40,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2626,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK6iLEVmbVH0jMzT4DCakBsy249bS6O5pU14V5J5JQ",
+      "source_description": "嘉定已出！2026年上海民办小学，民办初中摇号结果出炉！#民办摇号 #嘉定摇号 #2026摇号结果 #幼升小摇号 #小升初摇号 #摇号必中 "
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "宝山已出！2026民办摇号小学和初中结果出炉！",
+      "views": 9447,
+      "likes": 13,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 23,
+      "followers": 1,
+      "recommendations": 4,
+      "chat_moments_shares": 23,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.277,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKeiTGF9VSD1jMzT4DCaytISSYrFuxsUmKFJGBWO-g",
+      "source_description": "宝山已出！2026民办摇号小学和初中结果出炉！\n今日剩余摇号区：黄浦区、徐汇区、长宁区、虹口区、嘉定区、金山区、青浦区、\n崇明区！\n明日摇号区：浦东新区、静安区、普陀区、杨浦区、闵行区、松江区、奉贤区！\n#民办摇号 #宝山摇号 #摇号结果 #2026摇号 #民办幼升小 #民办小升初 \n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "2026民办摇号结果新鲜出炉！黄浦区已更新！",
+      "views": 22619,
+      "likes": 19,
+      "comments": 1,
+      "favorites": 0,
+      "shares": 89,
+      "followers": 10,
+      "recommendations": 6,
+      "chat_moments_shares": 89,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3396,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxN2hOFsvZVD0jMzT4DCaeMtl0xThCrP8cYrQ7oDb7A",
+      "source_description": "2026民办摇号结果新鲜出炉！黄浦区已更新！\n今日剩余摇号区：徐汇区、长宁区、虹口区、嘉定区、青浦区！\n明日摇号区：浦东新区、静安区、普陀区、杨浦区、闵行区、松江区、奉贤区！\n#黄浦摇号 #2026民办摇号 #摇号结果 #幼升小摇号 #小升初摇号 \n"
+    },
+    {
+      "date": "2026-05-20",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "崇明已出！2026民办摇号小学和初中结果出炉！",
+      "views": 8661,
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 6,
+      "followers": 0,
+      "recommendations": 1,
+      "chat_moments_shares": 6,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.34,
       "completion_rate": 0.2145,
       "profile_visits": 0,
       "consultations": 0,
@@ -661,762 +1329,8 @@ window.DASHBOARD_DATA = {
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxKqyNcoFiyCU3MzT4DCaovWLkmQtdGl8q6WXP5699A",
-      "source_description": "一年22w值得进的上海民办学校吗？#择校#国际生#国际学校#国际教育#家长必知#协和双语学校#双语学校#学费\n"
-    },
-    {
-      "date": "2026-05-03",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
-      "title": "上海哈罗外籍学校又迎来升学季啦！",
-      "views": 7237,
-      "likes": 22,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 17,
-      "followers": 3,
-      "recommendations": 23,
-      "chat_moments_shares": 17,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 6.48,
-      "completion_rate": 0.5688,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxKZRUVuhg1anpsXT4DCaDIc1op8P2YH-WCRy-APFQA",
-      "source_description": "上海哈罗外籍学校又迎来升学季啦！#择校#国际生#国际学校#国际教育#哈罗外籍人员子女学校#家长必知#本科申请#大学\n"
-    },
-    {
-      "date": "2026-05-05",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "留子回国进厂，是天坑吗？",
-      "views": 481,
-      "likes": 0,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 4,
-      "followers": 0,
-      "recommendations": 1,
-      "chat_moments_shares": 4,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 3.96,
-      "completion_rate": 0.0868,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxGZB5QmeJ-Rq2cXT4DCaNYkvBJPG30wcPd4DWWh7JA",
-      "source_description": "留子回国进厂，是天坑吗？#择校#国际生#留学生#家长必知#毕业生#就业#回国#大厂#国际学校\n"
-    },
-    {
-      "date": "2026-05-07",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "我也不想管啊，但是他只要21w就能读上海协和古北....",
-      "views": 7976,
-      "likes": 26,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 37,
-      "followers": 4,
-      "recommendations": 41,
-      "chat_moments_shares": 37,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.45,
-      "completion_rate": 0.241,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxGvxNgXe45-F2sXT4DCaMvzdjsZQMpTC7OmKk5zH0Q",
-      "source_description": "我也不想管啊，但是他只要21w就能读上海协和古北....#择校#国际生#国际学校#国际教育#家长必知#协和古北#协和双语学校#学费\n"
-    },
-    {
-      "date": "2026-05-07",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "想进上海美国学校，你得要知道这些！",
-      "views": 13403,
-      "likes": 20,
-      "comments": 6,
-      "favorites": 0,
-      "shares": 71,
-      "followers": 9,
-      "recommendations": 67,
-      "chat_moments_shares": 71,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 5.08,
-      "completion_rate": 0.3385,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxOhnTdlq94F12sXT4DCa518nd8WDIqZgQlhC6B1nHA",
-      "source_description": "想进上海美国学校，你得要知道这些！#择校#国际学校#国际教育#家长必知#美国学校#国际生#升学#上海美国学校\n"
-    },
-    {
-      "date": "2026-05-08",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "上海中考300分，普高无望，如何另寻出路？",
-      "views": 3062,
-      "likes": 12,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 8,
-      "followers": 0,
-      "recommendations": 14,
-      "chat_moments_shares": 8,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 10.15,
-      "completion_rate": 0.2357,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxJACeybc3loR78XT4DCahQCxHjV7c77j4osqmtvfwA",
-      "source_description": "上海中考300分，普高无望，如何另寻出路？#择校#国际生#中考#国际学校#家长必知#分数#中考升学规划#普通高中\n"
-    },
-    {
-      "date": "2026-05-08",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "上海初中生，普娃在上海如何上岸？",
-      "views": 3383,
-      "likes": 38,
-      "comments": 2,
-      "favorites": 0,
-      "shares": 23,
-      "followers": 2,
-      "recommendations": 2,
-      "chat_moments_shares": 23,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 14.8,
-      "completion_rate": 0.3726,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxMJB0ZaKNp0O78XT4DCa-EEOvXJ9PuKIVa1kZQUCQw",
-      "source_description": "上海初中生，普娃在上海如何上岸？#择校#国际生#国际学校#家长必知#中考#中考升学规划#教育#上海\n"
-    },
-    {
-      "date": "2026-05-09",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "上海没钱中考读国际高中的出路！",
-      "views": 1665,
-      "likes": 30,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 5,
-      "followers": 1,
-      "recommendations": 2,
-      "chat_moments_shares": 5,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 7.6,
-      "completion_rate": 0.2549,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxOqc0K7s0R1a7sXT4DCaA2xrmp3ErEqeB1Dw3wTjsQ",
-      "source_description": "上海没钱中考读国际高中的出路！#择校#国际生#国际学校#家长必知#中考#普通家庭#中考升学规划#上海\n"
-    },
-    {
-      "date": "2026-05-09",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "中考留学已成新趋势？",
-      "views": 1594,
-      "likes": 16,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 8,
-      "followers": 0,
-      "recommendations": 3,
-      "chat_moments_shares": 8,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.99,
-      "completion_rate": 0.2157,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxNtLxWC2S71D7sXT4DCaue39jb4c2ljTn5VKd1O4Gg",
-      "source_description": "中考留学已成新趋势？#择校#国际生#国际学校#家长必知#中考#留学#中考升学规划#初升高\n"
-    },
-    {
-      "date": "2026-05-10",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "没有上海户口，孩子中考怎么办？",
-      "views": 3461,
-      "likes": 11,
-      "comments": 2,
-      "favorites": 0,
-      "shares": 18,
-      "followers": 4,
-      "recommendations": 5,
-      "chat_moments_shares": 18,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 7.02,
-      "completion_rate": 0.2333,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxGFUfBrG6nky78XT4DCaUL9oqD0E6xfpXSavzlpA8g",
-      "source_description": "没有上海户口，孩子中考怎么办？#择校#国际生#国际学校#家长必知#上海户口#户口#中考升学规划#中考\n"
-    },
-    {
-      "date": "2026-05-10",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "中考后，什么样的孩子适合国际学校",
-      "views": 5021,
-      "likes": 23,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 19,
-      "followers": 0,
-      "recommendations": 18,
-      "chat_moments_shares": 19,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 9.18,
-      "completion_rate": 0.291,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxIhasCOmWTBg7sXT4DCa10i9RNIbbk5FjNISw8FNug",
-      "source_description": "中考后，什么样的孩子适合国际学校#择校#国际生#国际学校#国际教育#家长必知#中考#中考升学规划#初升高\n"
-    },
-    {
-      "date": "2026-05-11",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "中考难度最大的一年已经来了！",
-      "views": 1100,
-      "likes": 10,
-      "comments": 1,
-      "favorites": 0,
-      "shares": 2,
-      "followers": 0,
-      "recommendations": 4,
-      "chat_moments_shares": 2,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 7.37,
-      "completion_rate": 0.1615,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxMJeQlzz_sTG6cXT4DCaPhbwDpCJ73ZEo0e8sRQDcw",
-      "source_description": "中考难度最大的一年已经来了！#择校#国际生#国际学校#家长必知#中考#教育#上海中考#小升初\n"
-    },
-    {
-      "date": "2026-05-11",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "上海中考，小白也能听懂的升学路径",
-      "views": 3213,
-      "likes": 18,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 14,
-      "followers": 2,
-      "recommendations": 3,
-      "chat_moments_shares": 14,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 10.77,
-      "completion_rate": 0.281,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxO_Mp3N0v8Dk6cXT4DCaW0Bv4TiUK1QWcqYFr2V1qw",
-      "source_description": "上海中考，小白也能听懂的升学路径#择校#国际生#国际学校#国际教育#家长必知#中考升学规划#中考#国际高中\n"
-    },
-    {
-      "date": "2026-05-12",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "上海300分可以去哪读高中？",
-      "views": 941,
-      "likes": 20,
-      "comments": 1,
-      "favorites": 0,
-      "shares": 5,
-      "followers": 2,
-      "recommendations": 2,
-      "chat_moments_shares": 5,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.4,
-      "completion_rate": 0.197,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxMFgMwC2RohA6MXT4DCahMk3fwF2viItuL05acL31g",
-      "source_description": "上海300分可以去哪读高中？#择校#国际生#国际学校#家长必知#分数#中考升学规划#小升初#上海中考\n"
-    },
-    {
-      "date": "2026-05-12",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "注意！中考后再转国际学校就晚了！",
-      "views": 2396,
-      "likes": 5,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 10,
-      "followers": 2,
-      "recommendations": 8,
-      "chat_moments_shares": 10,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 7.71,
-      "completion_rate": 0.2486,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxLKRywPj9hBt6MXT4DCakNBO5lVAvypqsbD7yqfFmw",
-      "source_description": "注意！中考后再转国际学校就晚了！#择校#国际生#国际学校#国际教育#家长必知#中考#转轨#中考升学规划\n"
-    },
-    {
-      "date": "2026-05-13",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "中考后转轨国际赛道，适合你的孩子吗？",
-      "views": 901,
-      "likes": 2,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 3,
-      "followers": 1,
-      "recommendations": 2,
-      "chat_moments_shares": 3,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.66,
-      "completion_rate": 0.1127,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxHJcN09aIlss6MXT4DCaQfcaJFHZJd7jMjOTp4mZGg",
-      "source_description": "中考后转轨国际赛道，适合你的孩子吗？#择校#国际生#国际学校#国际教育#家长必知#转轨#中考#中考升学规划\n"
-    },
-    {
-      "date": "2026-05-13",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "国际路线到底适合什么样的孩子？",
-      "views": 661,
-      "likes": 8,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 5,
-      "followers": 0,
-      "recommendations": 1,
-      "chat_moments_shares": 5,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 7.31,
-      "completion_rate": 0.3658,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxGge8nfWD9KK6MXT4DCauoPMCOFcr0kzlveXZAIOUQ",
-      "source_description": "国际路线到底适合什么样的孩子？#择校#国际生#国际学校#家长必知#普通家庭#留学#小升初#国际高中\n"
-    },
-    {
-      "date": "2026-05-14",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "国际高中的升学路径，家长必看！",
-      "views": 1041,
-      "likes": 4,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 6,
-      "followers": 0,
-      "recommendations": 4,
-      "chat_moments_shares": 6,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 9.63,
-      "completion_rate": 0.2741,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxJTBI60tbgOT5sXT4DCaUSYA6fVQs7KFe3Z6YJENAw",
-      "source_description": "国际高中的升学路径，家长必看！#择校#国际生#国际学校#国际教育#家长必知#国际学校升学路径#升学#小升初\n"
-    },
-    {
-      "date": "2026-05-14",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "普通家庭怎么低成本上国际高中？",
-      "views": 2145,
-      "likes": 12,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 14,
-      "followers": 1,
-      "recommendations": 9,
-      "chat_moments_shares": 14,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 11.82,
-      "completion_rate": 0.3354,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxMfp69FNZw0N5sXT4DCaC3zZqZeAEvMBSnbY_woBbw",
-      "source_description": "普通家庭怎么低成本上国际高中？#择校#国际生#国际学校#家长必知#普通家庭#学费#中考#转轨\n"
-    },
-    {
-      "date": "2026-05-15",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "普通家庭花小钱就能上国际高中",
-      "views": 437,
-      "likes": 6,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 2,
-      "followers": 0,
-      "recommendations": 0,
-      "chat_moments_shares": 2,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 8.16,
-      "completion_rate": 0.2363,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxH4Kz0br6_Wm5sXT4DCaKU4dl0uSUCUPOF0MPJSxjw",
-      "source_description": "普通家庭花小钱就能上国际高中#择校#国际生#国际学校#家长必知#国际高中#普通家庭#低成本#学费\n"
-    },
-    {
-      "date": "2026-05-15",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "上海国际学校学费太贵？这几所一年20w不到！",
-      "views": 2043,
-      "likes": 17,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 15,
-      "followers": 2,
-      "recommendations": 6,
-      "chat_moments_shares": 15,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 6.28,
-      "completion_rate": 0.188,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxK86ezT2SccX5sXT4DCa7LZoCStl80jQx02o4lIxiA",
-      "source_description": "上海国际学校学费太贵？这几所一年20w不到！#择校#国际生#国际学校#国际教育#家长必知#学费#双语学校#国际高中\n"
-    },
-    {
-      "date": "2026-05-16",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "国际高中升学，家长要提前知道的真相",
-      "views": 330,
-      "likes": 0,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 3,
-      "followers": 0,
-      "recommendations": 1,
-      "chat_moments_shares": 3,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 6.88,
-      "completion_rate": 0.1834,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxDGfStWDc8kz5MXT4DCaOsw-yg6IcmgsLgyOvUD8aQ",
-      "source_description": "国际高中升学，家长要提前知道的真相#择校#国际生#国际学校#家长必知#国际学校升学路径#升学规划#小升初#升学\n"
-    },
-    {
-      "date": "2026-05-16",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
-      "title": "上海外籍学校到底谁能进？",
-      "views": 516,
-      "likes": 4,
-      "comments": 1,
-      "favorites": 0,
-      "shares": 6,
-      "followers": 1,
-      "recommendations": 1,
-      "chat_moments_shares": 6,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.92,
-      "completion_rate": 0.246,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxMi2YI1azd_D5MXT4DCab5m2Fi4EqTXFJOwtux29hQ",
-      "source_description": "上海外籍学校到底谁能进？#择校#国际生#外籍学校#家长必知#身份#小升初#国际学校#国际学校申请\n"
-    },
-    {
-      "date": "2026-05-17",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
-      "title": "上海国际学校，怎么选才不踩坑？",
-      "views": 2715,
-      "likes": 24,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 13,
-      "followers": 1,
-      "recommendations": 5,
-      "chat_moments_shares": 13,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 11.51,
-      "completion_rate": 0.4112,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxJg7ceOu6-Md5MXT4DCaIIA2nldzHlLKioVbUsIJ1w",
-      "source_description": "上海国际学校，怎么选才不踩坑？#择校#国际生#国际学校#家长必知#国际学校申请#教育#小升初#升学\n"
-    },
-    {
-      "date": "2026-05-17",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "国际高中三年，家长最容易忽略什么？",
-      "views": 2947,
-      "likes": 11,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 15,
-      "followers": 0,
-      "recommendations": 8,
-      "chat_moments_shares": 15,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 9.34,
-      "completion_rate": 0.2565,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxGb7zIUBMolK5MXT4DCav4ROxJlvLu7Bht7u4PR_ow",
-      "source_description": "国际高中三年，家长最容易忽略什么？#择校#国际生#国际学校#家长必知#国际高中#国际课程#升学规划#教育\n"
-    },
-    {
-      "date": "2026-05-19",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
-      "title": "上海民办摇号结束，哪些学校最热门？",
-      "views": 8683,
-      "likes": 29,
-      "comments": 0,
-      "favorites": 0,
-      "shares": 39,
-      "followers": 4,
-      "recommendations": 31,
-      "chat_moments_shares": 39,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.49,
-      "completion_rate": 0.1696,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxOdb3PFXgS3X6MXT4DCaS7BaY2hsn5uGtLSMXvS5Jw",
-      "source_description": "上海民办摇号结束，哪些学校最热门？#择校#国际生#民办学校#家长必知#摇号#小升初#幼升小#上海摇号\n"
-    },
-    {
-      "date": "2026-05-19",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "有一个班级，63%都是外籍，到底是哪所学校？",
-      "views": 27694,
-      "likes": 89,
-      "comments": 4,
-      "favorites": 0,
-      "shares": 68,
-      "followers": 12,
-      "recommendations": 137,
-      "chat_moments_shares": 68,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.13,
-      "completion_rate": 0.1463,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxK3u_BWFKAE9smXT4DCa7UCwu9Q9FWWJhUcdAknDuw",
-      "source_description": "有一个班级，63%都是外籍，到底是哪所学校？#择校#国际生#国际学校#家长必知#国际教育#民办学校#小升初#外籍人员子女学校\n"
+      "source_video_id": "export/UzFfBgAAxN2haFAHGVj0jMzT4DCaaztO9foPLVoubMv52kNUiw",
+      "source_description": "崇明已出！2026民办摇号小学和初中结果出炉！\n今日剩余摇号区：黄浦区、徐汇区、长宁区、虹口区、嘉定区、金山区、青浦区！\n明日摇号区：浦东新区、静安区、普陀区、杨浦区、闵行区、松江区、奉贤区！\n#民办摇号 #2026摇号结果 #小升初摇号 #幼升小摇号 #摇号结果 #崇明区摇号 #最新摇号结果 #上海民办摇号 \n"
     },
     {
       "date": "2026-05-20",
@@ -1430,138 +1344,80 @@ window.DASHBOARD_DATA = {
       "favorites": 0,
       "shares": 392,
       "followers": 41,
-      "recommendations": 268,
+      "recommendations": 22,
       "chat_moments_shares": 392,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 3.39,
-      "completion_rate": 0.1093,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.4092,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxFwxsz9eQSxNsmXT4DCagxIk7COyzE3KFIvbnCiPBQ",
-      "source_description": "2026年民办摇号结果新鲜出炉！宝山区幼升小！#择校#国际生#民办学校#家长必知#幼升小#摇号#上海摇号#宝山区\n"
+      "source_video_id": "export/UzFfBgAAxNOhBF08BTH1jMzT4DCaliWCC1tZ2xtIVAUhVTWJzA",
+      "source_description": "2026年民办摇号结果新鲜出炉！宝山区幼升小！#2026摇号 #宝山区摇号 #摇号结果 #民办摇号 "
     },
     {
       "date": "2026-05-20",
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "转轨 / 择校决策",
-      "title": "2026年民办摇号结果新鲜出炉！虹口区幼升小！",
-      "views": 21587,
-      "likes": 34,
-      "comments": 3,
+      "title": "金山已出！2026民办摇号小学和初中结果出炉！",
+      "views": 30873,
+      "likes": 25,
+      "comments": 0,
       "favorites": 0,
       "shares": 71,
-      "followers": 7,
-      "recommendations": 62,
+      "followers": 14,
+      "recommendations": 7,
       "chat_moments_shares": 71,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 3.67,
-      "completion_rate": 0.1567,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3464,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxLF-EGNrNDb8t2XT4DCacDfp0rcqfB3mJKrFiEE-GQ",
-      "source_description": "2026年民办摇号结果新鲜出炉！虹口区幼升小！#择校#国际生#民办学校#家长必知#幼升小#摇号#上海摇号#虹口区\n"
+      "source_video_id": "export/UzFfBgAAxNWhTHwTAyD1jMzT4DCarrXUYZwB9iDZdSXv6Py_WA",
+      "source_description": "金山已出！2026民办摇号小学和初中结果出炉！\n今日剩余摇号区：黄浦区、徐汇区、长宁区、虹口区、嘉定区、青浦区、\n崇明区！\n明日摇号区：浦东新区、静安区、普陀区、杨浦区、闵行区、松江区、奉贤区！\n#民办摇号 #摇号结果 #2026摇号 #2026摇号结果 #金山区摇号 #民办幼升小 #民办小升初 #摇号必中 \n"
     },
     {
-      "date": "2026-05-21",
+      "date": "2026-05-20",
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "转轨 / 择校决策",
-      "title": "2026年16区上海民办小学摇号率汇总！",
-      "views": 273204,
-      "likes": 248,
-      "comments": 54,
+      "title": "青浦已出！2026年民办摇号最新结果出炉！",
+      "views": 15335,
+      "likes": 10,
+      "comments": 0,
       "favorites": 0,
-      "shares": 877,
-      "followers": 109,
-      "recommendations": 1377,
-      "chat_moments_shares": 877,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.15,
-      "completion_rate": 0.2191,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxJ9EZ_NAZ6ldt2XT4DCaH-CpA4llGu6mNctmi27Dcg",
-      "source_description": "2026年16区上海民办小学摇号率汇总！#择校#国际生#民办学校#家长必知#摇号#上海摇号#小升初#幼升小\n"
-    },
-    {
-      "date": "2026-05-21",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "转轨 / 择校决策",
-      "title": "上海幼升小崩盘？民办全面摇号，家长该怎么办？",
-      "views": 38670,
-      "likes": 102,
-      "comments": 10,
-      "favorites": 0,
-      "shares": 83,
-      "followers": 19,
-      "recommendations": 117,
-      "chat_moments_shares": 83,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 6.41,
-      "completion_rate": 0.2887,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxIlyuUCmwkBgt2XT4DCasU9RWyx6T2XEpaOYwgNIiA",
-      "source_description": "上海幼升小崩盘？民办全面摇号，家长该怎么办？#择校#民办学校#国际学校#家长必知#幼升小#摇号#上海摇号#小升初\n"
-    },
-    {
-      "date": "2026-05-21",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
-      "title": "上海双语小学摇号开启，谁是今年大热门？",
-      "views": 10316,
-      "likes": 71,
-      "comments": 1,
-      "favorites": 0,
-      "shares": 18,
+      "shares": 54,
       "followers": 5,
-      "recommendations": 59,
-      "chat_moments_shares": 18,
+      "recommendations": 1,
+      "chat_moments_shares": 54,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 5.95,
-      "completion_rate": 0.2727,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2757,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxAkBkMyPjyJwt2XT4DCayO0eKwV0oQWTK6cUYam2mA",
-      "source_description": "上海双语小学摇号开启，谁是今年大热门？#择校#民办学校#国际学校#家长必知#摇号#上海摇号#双语学校#小升初\n"
+      "source_video_id": "export/UzFfBgAAxNqhbGlQAlf0jMzT4DCabxYM0epTgFk0jtdpQTNCKA",
+      "source_description": "青浦已出！2026年民办摇号最新结果出炉！\n今日剩余摇号区：徐汇+长宁！\n#民办摇号 #青浦摇号 #青浦幼升小 #青浦小升初 #摇号结果  #摇号必中 \n"
     },
     {
       "date": "2026-05-21",
@@ -1575,51 +1431,196 @@ window.DASHBOARD_DATA = {
       "favorites": 0,
       "shares": 213,
       "followers": 18,
-      "recommendations": 93,
+      "recommendations": 12,
       "chat_moments_shares": 213,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 3.64,
-      "completion_rate": 0.1854,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2627,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxL-xXtGfwtcYt2XT4DCa10stF1FsE076Q92BOBDX3Q",
-      "source_description": "摇号结束！浦东已出！2026上海民办摇号彻底结束！#择校#民办学校#国际学校#家长必知#摇号#上海摇号#小升初#幼升小\n"
+      "source_video_id": "export/UzFfBgAAxIyiEHRGA2z3jMzT4DCa1Zu2cIVMMWBRIG3PNp_xkw",
+      "source_description": "摇号结束！浦东已出！2026上海民办摇号彻底结束！\n#浦东摇号率 #上海摇号 #摇号名单  #摇号结束  #摇号  #浦东幼升小  #摇中率 \n"
     },
     {
       "date": "2026-05-21",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "上海民办学校要砸200万？真相来了！",
-      "views": 20195,
-      "likes": 144,
-      "comments": 13,
+      "content_type": "转轨 / 择校决策",
+      "title": "上海16区初中摇号率汇总来啦！",
+      "views": 46177,
+      "likes": 37,
+      "comments": 9,
       "favorites": 0,
-      "shares": 88,
-      "followers": 12,
-      "recommendations": 71,
-      "chat_moments_shares": 88,
+      "shares": 116,
+      "followers": 7,
+      "recommendations": 15,
+      "chat_moments_shares": 116,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 7.97,
-      "completion_rate": 0.2364,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.4086,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxFd6LJzdGH7JtmXT4DCa9RCDXfbkn0OyCQarYNK7eg",
-      "source_description": "上海民办学校要砸200万？真相来了！#择校#民办学校#家长必知#上海摇号#摇号#国际学校#学费#教育\n"
+      "source_video_id": "export/UzFfBgAAxJqiaGMxMRj3jMzT4DCa8ShkWg_xYyeI-Hs_YRsIOA",
+      "source_description": "上海16区初中摇号率汇总来啦！#上海摇号  #摇号率  #民办摇号  #摇号必中  #2026最新摇号数据  #民办幼升小摇号  #小升初摇号   #摇号名单   "
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "普陀已出！2026民办学校摇号接近尾声！摇号结果全部出炉！",
+      "views": 1064,
+      "likes": 2,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 4,
+      "followers": 0,
+      "recommendations": 0,
+      "chat_moments_shares": 4,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2735,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK2iIFkvXHT3jMzT4DCagrzM7i5Pm7fUS47Y0JJXnA",
+      "source_description": "普陀已出！2026民办学校摇号接近尾声！摇号结果全部出炉！\n#2026民办摇号  #普陀摇号  #民办摇号  #摇号率  #摇中率  #幼升小摇号  #小升初摇号  \n"
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "闵行初中摇号名单已出！",
+      "views": 27721,
+      "likes": 19,
+      "comments": 6,
+      "favorites": 0,
+      "shares": 98,
+      "followers": 9,
+      "recommendations": 1,
+      "chat_moments_shares": 98,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2042,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxK6iHGUCFHz3jMzT4DCalhnBGY_I1fOyFWnEsJtTww",
+      "source_description": "闵行初中摇号名单已出！\n#上海民办摇号 #民办摇号率 #摇中率 #2026年民办摇号 #闵行摇号  #闵行摇号名单  #闵行幼升小  #小升初摇号  #摇号率  \n"
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "浦东初中摇号结果出炉！上海2026年民办学校摇号彻底结束！全部名单已出！",
+      "views": 30075,
+      "likes": 26,
+      "comments": 3,
+      "favorites": 0,
+      "shares": 111,
+      "followers": 19,
+      "recommendations": 4,
+      "chat_moments_shares": 111,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2561,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKGiYBAVVm33jMzT4DCaslh-UfI2pXc023e3VzoPmA",
+      "source_description": "浦东初中摇号结果出炉！上海2026年民办学校摇号彻底结束！全部名单已出！\n#浦东摇号  #民办摇号  #幼升小摇号  #小升初摇号  #浦东摇中率  #浦东摇号率  \n"
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "闵行出啦！2026年闵行区民办摇号名单出炉！闵行家长的心终于可以安了！",
+      "views": 5506,
+      "likes": 7,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 27,
+      "followers": 1,
+      "recommendations": 1,
+      "chat_moments_shares": 27,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.2526,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKmiIHUSL3z3jMzT4DCa4_CQd1a--RGKx8u4Q1ochw",
+      "source_description": "闵行出啦！2026年闵行区民办摇号名单出炉！闵行家长的心终于可以安了！\n#2026摇号 #2026民办摇号 #摇号结果  #幼升小摇号  #小升初摇号 #闵行区摇号名单 #闵行区摇号 #摇号必中 \n"
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "静安已出！千呼万唤始出来！全部触发摇号！",
+      "views": 16120,
+      "likes": 10,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 40,
+      "followers": 6,
+      "recommendations": 3,
+      "chat_moments_shares": 40,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.4002,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxKmifCEgS3f3jMzT4DCa63wXN2iT0DFUJeTVJ-EsOw",
+      "source_description": "静安已出！千呼万唤始出来！全部触发摇号！\n#静安摇号 #静安民办摇号  #2026民办摇号  #摇号名单   #摇中率  #摇号率 \n"
     },
     {
       "date": "2026-05-21",
@@ -1633,254 +1634,283 @@ window.DASHBOARD_DATA = {
       "favorites": 0,
       "shares": 274,
       "followers": 18,
-      "recommendations": 187,
+      "recommendations": 10,
       "chat_moments_shares": 274,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 2.91,
-      "completion_rate": 0.1509,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.3231,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxLwqvrY5Aw0UtmXT4DCakl7E5ReZJQbMxfzR4WpQ2A",
-      "source_description": "杨浦已出！初中全部触发摇号！#择校#民办学校#国际学校#家长必知#杨浦区#摇号#上海摇号#小升初\n"
+      "source_video_id": "export/UzFfBgAAxN2hMGBEQUL3jMzT4DCafReN4dxNnExYQApPRrNiEw",
+      "source_description": "杨浦已出！初中全部触发摇号！\n2026年上海民办小初摇号结果公布！\n#民办摇号 #2026摇号 #摇号结果  #杨浦摇号 #摇号名单  #摇号必中 #幼升小摇号 #小升初摇号 \n"
     },
     {
-      "date": "2026-05-22",
+      "date": "2026-05-21",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "上海国际学校一年要花多少钱？",
-      "views": 14302,
-      "likes": 49,
-      "comments": 2,
+      "content_type": "转轨 / 择校决策",
+      "title": "松江已出！2026年民办摇号结果新鲜出炉！",
+      "views": 2484,
+      "likes": 1,
+      "comments": 0,
       "favorites": 0,
-      "shares": 107,
-      "followers": 6,
-      "recommendations": 63,
-      "chat_moments_shares": 107,
+      "shares": 7,
+      "followers": 0,
+      "recommendations": 0,
+      "chat_moments_shares": 7,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.24,
+      "completion_rate": 0.1993,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNChDAN4Pk33jMzT4DCaOJHDbzhyx7AA4g72VwupAw",
+      "source_description": "松江已出！2026年民办摇号结果新鲜出炉！\n#松江摇号 #2026年民办摇号 #摇号结果 #摇号结果出炉 #上海摇号 #2026摇号 #摇号必中 \n"
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "奉贤已出！2026年上海民办摇号结果新鲜出炉！",
+      "views": 1300,
+      "likes": 0,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 1,
+      "followers": 0,
+      "recommendations": 0,
+      "chat_moments_shares": 1,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 7.34,
+      "completion_rate": 0.1946,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNSheFR1Yk33jMzT4DCaorKtVl0WMPVVdZBSteC_bQ",
+      "source_description": "奉贤已出！2026年上海民办摇号结果新鲜出炉！\n#最新消息 #摇号结果 #民办摇号 #奉贤摇号 #摇号必中 #幼升小 #小升初 \n"
+    },
+    {
+      "date": "2026-05-21",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "2026年16区上海民办小学摇号率汇总！",
+      "views": 273204,
+      "likes": 248,
+      "comments": 54,
+      "favorites": 0,
+      "shares": 877,
+      "followers": 109,
+      "recommendations": 98,
+      "chat_moments_shares": 877,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
       "avg_watch_time": 5.2,
-      "completion_rate": 0.2519,
+      "completion_rate": 0.3801,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxPmXjw_NZZtfv2XT4DCa-p04oGf6OW2qitb2FIGrAg",
-      "source_description": "上海国际学校一年要花多少钱？#择校#国际生#国际学校#家长必知#学费#教育#国际学校费用#国际课程\n"
+      "source_video_id": "export/UzFfBgAAxNyhHD5bAhv3jMzT4DCaRY3j_7srecOXDrmFs_7fwA",
+      "source_description": "2026年16区上海民办小学摇号率汇总！\n#民办摇号 #2026摇号  #摇号率 #16区摇号数据  #摇号结果  #摇号  #上海摇号  \n"
     },
     {
-      "date": "2026-05-23",
+      "date": "2026-05-22",
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "转轨 / 择校决策",
-      "title": "华二紫竹居然28.2w？！",
-      "views": 7024,
-      "likes": 23,
-      "comments": 0,
+      "title": "上海16区6年民办小学摇号率数据汇总！",
+      "views": 8246,
+      "likes": 10,
+      "comments": 2,
       "favorites": 0,
-      "shares": 46,
-      "followers": 4,
-      "recommendations": 36,
-      "chat_moments_shares": 46,
+      "shares": 11,
+      "followers": 0,
+      "recommendations": 1,
+      "chat_moments_shares": 11,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 5.27,
-      "completion_rate": 0.2159,
+      "avg_watch_time": 5.85,
+      "completion_rate": 0.3219,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxBCZGLmR5OW2sZHT4DCa3N9Su-GxQAEzvY9iHYC17Q",
-      "source_description": "华二紫竹居然28.2w？！#择校#国际生#华二紫竹#学费#家长必知#教育#上海民办学校#升学规划\n"
+      "source_video_id": "export/UzFfBgAAxIeiVDp8Nmr2jMzT4DCa5rNakL6-L-VfD7I3iuyybA",
+      "source_description": "上海16区6年民办小学摇号率数据汇总！\n#摇号率 #6年摇号率 #摇号结果 #摇号分析  #上海民办摇号 \n"
+    },
+    {
+      "date": "2026-05-22",
+      "platform": "视频号",
+      "account": "登顶升学圈",
+      "content_type": "转轨 / 择校决策",
+      "title": "6年初中16区摇号率数据大汇总！",
+      "views": 9284,
+      "likes": 10,
+      "comments": 0,
+      "favorites": 0,
+      "shares": 14,
+      "followers": 3,
+      "recommendations": 3,
+      "chat_moments_shares": 14,
+      "ringtone_sets": 0,
+      "status_sets": 0,
+      "moments_cover_sets": 0,
+      "exposure": 0,
+      "avg_watch_time": 5.85,
+      "completion_rate": 0.2665,
+      "profile_visits": 0,
+      "consultations": 0,
+      "leads": 0,
+      "comment_note": "",
+      "consultation_note": "",
+      "review_note": "",
+      "source_video_id": "export/UzFfBgAAxNqhQHFgDG72jMzT4DCa4wK3QbPwG8TOszaoeLYKKA",
+      "source_description": "6年初中16区摇号率数据大汇总！\n#摇号率 #初中摇号率  #16区摇号率  #民办摇号  #小升初摇号 \n"
     },
     {
       "date": "2026-05-23",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "上海惠灵顿，是怎样一所神仙学校？",
-      "views": 6466,
-      "likes": 55,
-      "comments": 4,
+      "content_type": "名校 / 学校标签",
+      "title": "pov：当你在上海中学国际部读书",
+      "views": 2274,
+      "likes": 6,
+      "comments": 0,
       "favorites": 0,
-      "shares": 37,
-      "followers": 4,
-      "recommendations": 35,
-      "chat_moments_shares": 37,
+      "shares": 7,
+      "followers": 0,
+      "recommendations": 5,
+      "chat_moments_shares": 7,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 5.24,
-      "completion_rate": 0.2848,
+      "avg_watch_time": 10.21,
+      "completion_rate": 0.2476,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxHg0-DkFLQ6IsZHT4DCa1_a9VLfhusC28YwpzEq9Zw",
-      "source_description": "上海惠灵顿，是怎样一所神仙学校？#择校#国际生#国际学校#国际教育#家长必知#学费#上海惠灵顿国际学校#上海惠灵顿外籍人员子女学校\n"
+      "source_video_id": "export/UzFfBgAAxICiCEteeSLxjMzT4DCalQ8YtXPwEMucb7CUeBLmhA",
+      "source_description": "pov：当你在上海中学国际部读书\n#择校#国际生#国际学校#国际教育#上海中学#国际部#家长必知#小升初#幼升小\n"
     },
     {
       "date": "2026-05-24",
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "学费 / 成本焦虑",
-      "title": "年薪多少，才能负担上海民办学校？",
-      "views": 4292,
-      "likes": 51,
-      "comments": 1,
+      "title": "上海国际学校今年最贵的是谁？",
+      "views": 13167,
+      "likes": 131,
+      "comments": 55,
       "favorites": 0,
-      "shares": 62,
-      "followers": 3,
-      "recommendations": 32,
-      "chat_moments_shares": 62,
+      "shares": 97,
+      "followers": 6,
+      "recommendations": 98,
+      "chat_moments_shares": 97,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 10.46,
-      "completion_rate": 0.2975,
+      "avg_watch_time": 10.12,
+      "completion_rate": 0.2947,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxNr6EZAZNkcByZHT4DCa1Q-Vti6bI-PWDnl6aYGORA",
-      "source_description": "年薪多少，才能负担上海民办学校？#择校#国际生#民办学校#家长必知#学费#教育#小升初#升学\n"
-    },
-    {
-      "date": "2026-05-24",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "国际学校，如何带娃过六一？",
-      "views": 4325,
-      "likes": 60,
-      "comments": 1,
-      "favorites": 0,
-      "shares": 99,
-      "followers": 3,
-      "recommendations": 31,
-      "chat_moments_shares": 99,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 18.96,
-      "completion_rate": 0.4086,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxOGD7FcvF4YnyZHT4DCa8b9U8LJrT_9QCPvrS6Cfcg",
-      "source_description": "国际学校，如何带娃过六一？#择校#国际生#国际学校#家长必知#六一儿童节#儿童节#国际教育#教育\n"
+      "source_video_id": "export/UzFfBgAAxNahUHhzEU_zjMzT4DCa-MMUtfGgwjsx0jLcZVsEwg",
+      "source_description": "上海国际学校今年最贵的是谁？\n#国际生#择校#国际学校#国际教育#上海哈罗国际学校#学费#家长必知\n"
     },
     {
       "date": "2026-05-25",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "一年25w，谁在读国际学校？",
-      "views": 3961,
-      "likes": 20,
-      "comments": 2,
+      "content_type": "名校 / 学校标签",
+      "title": "当你考上了上海德威国际学校：",
+      "views": 15505,
+      "likes": 145,
+      "comments": 41,
       "favorites": 0,
-      "shares": 32,
-      "followers": 3,
-      "recommendations": 23,
-      "chat_moments_shares": 32,
+      "shares": 86,
+      "followers": 9,
+      "recommendations": 163,
+      "chat_moments_shares": 86,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 6.21,
-      "completion_rate": 0.2944,
+      "avg_watch_time": 9.8,
+      "completion_rate": 0.2525,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxBQQuOMoTb8GzJHT4DCadW4kZAeIqt00gYE-iR7ZVA",
-      "source_description": "一年25w，谁在读国际学校？#择校#国际生#国际学校#家长必知#国际教育#学费#教育#小升初\n"
-    },
-    {
-      "date": "2026-05-25",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "这是上海民办学校？真的有点贵！",
-      "views": 6719,
-      "likes": 48,
-      "comments": 1,
-      "favorites": 0,
-      "shares": 12,
-      "followers": 3,
-      "recommendations": 29,
-      "chat_moments_shares": 12,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 4.51,
-      "completion_rate": 0.2441,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxM5yNm5WsjcgzJHT4DCamAJ4TZZT4XP96vRpWXPFsA",
-      "source_description": "这是上海民办学校？真的有点贵！#择校#民办学校#家长必知#学费#国际学校#教育#国际教育#小升初\n"
+      "source_video_id": "export/UzFfBgAAxJyiCBFMPhvyjMzT4DCaqhIWiV2f3QUZr-Yv_zilQQ",
+      "source_description": "当你考上了上海德威国际学校：\n#择校#国际生#国际学校#国际教育#上海德威国际学校#国际部#家长必知#小升初\n"
     },
     {
       "date": "2026-05-26",
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "学费 / 成本焦虑",
-      "title": "上海民办学校学费，真的越来越贵了？",
-      "views": 9678,
-      "likes": 64,
-      "comments": 17,
+      "title": "这里是上海惠灵顿国际幼儿园，一年仅需30w！",
+      "views": 14758,
+      "likes": 35,
+      "comments": 7,
       "favorites": 0,
-      "shares": 85,
-      "followers": 5,
-      "recommendations": 60,
-      "chat_moments_shares": 85,
+      "shares": 58,
+      "followers": 9,
+      "recommendations": 33,
+      "chat_moments_shares": 58,
       "ringtone_sets": 0,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 6.12,
-      "completion_rate": 0.239,
+      "avg_watch_time": 5.2,
+      "completion_rate": 0.5016,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxPgvDgWW7OP53ZHT4DCaB3UCweJ4P5Gp7_8_YmKmdw",
-      "source_description": "上海民办学校学费，真的越来越贵了？#择校#国际生#民办学校#家长必知#学费#国际学校#教育#小升初\n"
+      "source_video_id": "export/UzFfBgAAxI6idFFhAzP9jMzT4DCafPqm_0ZsmphdhmoYAs-Rpg",
+      "source_description": "这里是上海惠灵顿国际幼儿园，一年仅需30w！\n#国际生#国际学校#国际幼儿园#上海惠灵顿外籍子女学校#学费#择校#家长必知\n"
     },
     {
       "date": "2026-05-27",
@@ -1916,35 +1946,35 @@ window.DASHBOARD_DATA = {
       "platform": "视频号",
       "account": "登顶升学圈",
       "content_type": "学费 / 成本焦虑",
-      "title": "上海民办学校学费，真的越来越贵了？",
-      "views": 37075,
-      "likes": 751,
-      "comments": 119,
+      "title": "上海国际学校一年到底多少钱？！",
+      "views": 6094,
+      "likes": 38,
+      "comments": 8,
       "favorites": 0,
-      "shares": 273,
-      "followers": 42,
-      "recommendations": 491,
-      "chat_moments_shares": 273,
-      "ringtone_sets": 0,
+      "shares": 23,
+      "followers": 3,
+      "recommendations": 33,
+      "chat_moments_shares": 22,
+      "ringtone_sets": 1,
       "status_sets": 0,
       "moments_cover_sets": 0,
       "exposure": 0,
-      "avg_watch_time": 4.38,
-      "completion_rate": 0.3146,
+      "avg_watch_time": 9.32,
+      "completion_rate": 0.3228,
       "profile_visits": 0,
       "consultations": 0,
       "leads": 0,
       "comment_note": "",
       "consultation_note": "",
       "review_note": "",
-      "source_video_id": "export/UzFfBgAAxA3jSNpKOs4yjMzT4DCaJCidJvDXcaa8W5SSLMXAHg",
-      "source_description": "上海民办学校学费，真的越来越贵了？#择校#国际生#民办学校#家长必知#学费#国际学校#教育#小升初"
+      "source_video_id": "export/UzFfBgAAxN-hTEVmb2r-jMzT4DCa3xf3jyEgm_tgiuf7Pibq_A",
+      "source_description": "上海国际学校一年到底多少钱？！#择校#学费#国际生#国际学校#国际教育#国际部#家长必知#上海惠灵顿外籍人员子女学校#上海德威外籍人员子女学校#上海哈罗外籍人员子女学校"
     },
     {
       "date": "2026-05-29",
       "platform": "视频号",
       "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
+      "content_type": "转轨 / 择校决策",
       "title": "上海英国学校BISS高中生毕业啦！",
       "views": 3484,
       "likes": 22,
@@ -1968,64 +1998,6 @@ window.DASHBOARD_DATA = {
       "review_note": "",
       "source_video_id": "export/UzFfBgAAxISiCGh8axz5jMzT4DCa_HxOqvE42Tmh97qfwfLl1A",
       "source_description": "上海英国学校BISS高中生毕业啦！#择校#国际生#国际学校#国际教育#上海英国外籍子女人员学校#国际课程#IB#升学规划"
-    },
-    {
-      "date": "2026-05-29",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "名校 / 学校标签",
-      "title": "上海英国学校BISS高中生毕业啦！",
-      "views": 121060,
-      "likes": 3224,
-      "comments": 313,
-      "favorites": 0,
-      "shares": 950,
-      "followers": 228,
-      "recommendations": 2264,
-      "chat_moments_shares": 950,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 13.57,
-      "completion_rate": 0.253,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxHFfp72x4JbVjMzT4DCaAX0YV8Rke4qorIrR0tu3Zg",
-      "source_description": "上海英国学校BISS高中生毕业啦！#择校#国际生#国际学校#国际教育#上海英国外籍子女人员学校#国际课程#IB#升学规划"
-    },
-    {
-      "date": "2026-05-29",
-      "platform": "视频号",
-      "account": "登顶升学圈",
-      "content_type": "学费 / 成本焦虑",
-      "title": "17w一年，这是上海民办双语学校？",
-      "views": 41020,
-      "likes": 278,
-      "comments": 10,
-      "favorites": 0,
-      "shares": 247,
-      "followers": 33,
-      "recommendations": 191,
-      "chat_moments_shares": 247,
-      "ringtone_sets": 0,
-      "status_sets": 0,
-      "moments_cover_sets": 0,
-      "exposure": 0,
-      "avg_watch_time": 6.23,
-      "completion_rate": 0.1759,
-      "profile_visits": 0,
-      "consultations": 0,
-      "leads": 0,
-      "comment_note": "",
-      "consultation_note": "",
-      "review_note": "",
-      "source_video_id": "export/UzFfBgAAxMOHCrHW-mzljMzT4DCaYkIKuimqfyeHTTrtDWc7Yg",
-      "source_description": "17w一年，这是上海民办双语学校？#择校#国际生#民办学校#双语学校#国际教育#小升初#家长必知#学费"
     }
   ],
   "daily_account": [
@@ -2040,210 +2012,210 @@ window.DASHBOARD_DATA = {
     },
     {
       "date": "2026-05-02",
-      "views": 3540,
-      "recommendations": 25,
-      "likes": 29,
-      "comments": 1,
-      "shares": 47,
-      "followers": 2
+      "views": 14962,
+      "recommendations": 121,
+      "likes": 129,
+      "comments": 8,
+      "shares": 92,
+      "followers": 12
     },
     {
       "date": "2026-05-03",
-      "views": 7237,
-      "recommendations": 23,
-      "likes": 22,
-      "comments": 0,
-      "shares": 17,
-      "followers": 3
+      "views": 11534,
+      "recommendations": 84,
+      "likes": 112,
+      "comments": 12,
+      "shares": 65,
+      "followers": 11
     },
     {
       "date": "2026-05-04",
-      "views": 0,
-      "recommendations": 0,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "followers": 0
+      "views": 9315,
+      "recommendations": 54,
+      "likes": 75,
+      "comments": 15,
+      "shares": 53,
+      "followers": 4
     },
     {
       "date": "2026-05-05",
-      "views": 481,
-      "recommendations": 1,
-      "likes": 0,
-      "comments": 0,
-      "shares": 4,
-      "followers": 0
+      "views": 7547,
+      "recommendations": 51,
+      "likes": 62,
+      "comments": 8,
+      "shares": 49,
+      "followers": 7
     },
     {
       "date": "2026-05-06",
-      "views": 0,
-      "recommendations": 0,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "followers": 0
+      "views": 5555,
+      "recommendations": 35,
+      "likes": 36,
+      "comments": 6,
+      "shares": 50,
+      "followers": 4
     },
     {
       "date": "2026-05-07",
-      "views": 21379,
-      "recommendations": 108,
-      "likes": 46,
-      "comments": 6,
-      "shares": 108,
-      "followers": 13
-    },
-    {
-      "date": "2026-05-08",
-      "views": 6445,
-      "recommendations": 16,
-      "likes": 50,
-      "comments": 2,
-      "shares": 31,
-      "followers": 2
-    },
-    {
-      "date": "2026-05-09",
-      "views": 3259,
-      "recommendations": 5,
-      "likes": 46,
-      "comments": 0,
-      "shares": 13,
-      "followers": 1
-    },
-    {
-      "date": "2026-05-10",
-      "views": 8482,
-      "recommendations": 23,
-      "likes": 34,
-      "comments": 2,
-      "shares": 37,
-      "followers": 4
-    },
-    {
-      "date": "2026-05-11",
-      "views": 4313,
-      "recommendations": 7,
-      "likes": 28,
-      "comments": 1,
-      "shares": 16,
-      "followers": 2
-    },
-    {
-      "date": "2026-05-12",
-      "views": 3337,
-      "recommendations": 10,
-      "likes": 25,
-      "comments": 1,
-      "shares": 15,
-      "followers": 4
-    },
-    {
-      "date": "2026-05-13",
-      "views": 1562,
-      "recommendations": 3,
-      "likes": 10,
-      "comments": 0,
-      "shares": 8,
-      "followers": 1
-    },
-    {
-      "date": "2026-05-14",
-      "views": 3186,
-      "recommendations": 13,
-      "likes": 16,
-      "comments": 0,
-      "shares": 20,
-      "followers": 1
-    },
-    {
-      "date": "2026-05-15",
-      "views": 2480,
-      "recommendations": 6,
-      "likes": 23,
-      "comments": 0,
-      "shares": 17,
-      "followers": 2
-    },
-    {
-      "date": "2026-05-16",
-      "views": 846,
-      "recommendations": 2,
-      "likes": 4,
-      "comments": 1,
-      "shares": 9,
-      "followers": 1
-    },
-    {
-      "date": "2026-05-17",
-      "views": 5662,
-      "recommendations": 13,
-      "likes": 35,
-      "comments": 0,
-      "shares": 28,
-      "followers": 1
-    },
-    {
-      "date": "2026-05-18",
-      "views": 0,
-      "recommendations": 0,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "followers": 0
-    },
-    {
-      "date": "2026-05-19",
-      "views": 36377,
-      "recommendations": 168,
-      "likes": 118,
-      "comments": 4,
-      "shares": 107,
-      "followers": 16
-    },
-    {
-      "date": "2026-05-20",
-      "views": 160955,
-      "recommendations": 330,
-      "likes": 130,
-      "comments": 20,
-      "shares": 463,
-      "followers": 48
-    },
-    {
-      "date": "2026-05-21",
-      "views": 475745,
-      "recommendations": 1904,
-      "likes": 613,
-      "comments": 103,
-      "shares": 1553,
-      "followers": 201
-    },
-    {
-      "date": "2026-05-22",
-      "views": 14302,
-      "recommendations": 63,
-      "likes": 49,
-      "comments": 2,
-      "shares": 107,
-      "followers": 6
-    },
-    {
-      "date": "2026-05-23",
-      "views": 13490,
-      "recommendations": 71,
-      "likes": 78,
-      "comments": 4,
-      "shares": 83,
+      "views": 5846,
+      "recommendations": 30,
+      "likes": 45,
+      "comments": 9,
+      "shares": 35,
       "followers": 8
     },
     {
-      "date": "2026-05-24",
-      "views": 8617,
-      "recommendations": 63,
-      "likes": 111,
-      "comments": 2,
-      "shares": 161,
+      "date": "2026-05-08",
+      "views": 6347,
+      "recommendations": 37,
+      "likes": 45,
+      "comments": 12,
+      "shares": 33,
       "followers": 6
+    },
+    {
+      "date": "2026-05-09",
+      "views": 7533,
+      "recommendations": 73,
+      "likes": 88,
+      "comments": 0,
+      "shares": 60,
+      "followers": 7
+    },
+    {
+      "date": "2026-05-10",
+      "views": 8766,
+      "recommendations": 66,
+      "likes": 69,
+      "comments": 16,
+      "shares": 62,
+      "followers": 8
+    },
+    {
+      "date": "2026-05-11",
+      "views": 5258,
+      "recommendations": 31,
+      "likes": 51,
+      "comments": 6,
+      "shares": 51,
+      "followers": 6
+    },
+    {
+      "date": "2026-05-12",
+      "views": 5790,
+      "recommendations": 32,
+      "likes": 53,
+      "comments": 7,
+      "shares": 40,
+      "followers": 12
+    },
+    {
+      "date": "2026-05-13",
+      "views": 7458,
+      "recommendations": 35,
+      "likes": 54,
+      "comments": 6,
+      "shares": 35,
+      "followers": 3
+    },
+    {
+      "date": "2026-05-14",
+      "views": 12158,
+      "recommendations": 76,
+      "likes": 115,
+      "comments": 19,
+      "shares": 79,
+      "followers": 11
+    },
+    {
+      "date": "2026-05-15",
+      "views": 12985,
+      "recommendations": 101,
+      "likes": 148,
+      "comments": 29,
+      "shares": 91,
+      "followers": 9
+    },
+    {
+      "date": "2026-05-16",
+      "views": 27688,
+      "recommendations": 193,
+      "likes": 293,
+      "comments": 67,
+      "shares": 130,
+      "followers": 13
+    },
+    {
+      "date": "2026-05-17",
+      "views": 14587,
+      "recommendations": 87,
+      "likes": 123,
+      "comments": 26,
+      "shares": 81,
+      "followers": 6
+    },
+    {
+      "date": "2026-05-18",
+      "views": 10847,
+      "recommendations": 72,
+      "likes": 93,
+      "comments": 36,
+      "shares": 73,
+      "followers": 5
+    },
+    {
+      "date": "2026-05-19",
+      "views": 14082,
+      "recommendations": 107,
+      "likes": 148,
+      "comments": 19,
+      "shares": 68,
+      "followers": 13
+    },
+    {
+      "date": "2026-05-20",
+      "views": 217630,
+      "recommendations": 84,
+      "likes": 262,
+      "comments": 39,
+      "shares": 650,
+      "followers": 69
+    },
+    {
+      "date": "2026-05-21",
+      "views": 298836,
+      "recommendations": 96,
+      "likes": 313,
+      "comments": 57,
+      "shares": 1138,
+      "followers": 108
+    },
+    {
+      "date": "2026-05-22",
+      "views": 203710,
+      "recommendations": 127,
+      "likes": 252,
+      "comments": 65,
+      "shares": 629,
+      "followers": 75
+    },
+    {
+      "date": "2026-05-23",
+      "views": 90607,
+      "recommendations": 98,
+      "likes": 179,
+      "comments": 15,
+      "shares": 259,
+      "followers": 28
+    },
+    {
+      "date": "2026-05-24",
+      "views": 19787,
+      "recommendations": 56,
+      "likes": 87,
+      "comments": 11,
+      "shares": 72,
+      "followers": 11
     },
     {
       "date": "2026-05-25",
@@ -2319,213 +2291,213 @@ window.DASHBOARD_DATA = {
     },
     {
       "date": "2026-05-02",
-      "net_followers": 2,
-      "new_followers": 2,
-      "unfollows": 0,
-      "total_followers": 8284
+      "net_followers": 12,
+      "new_followers": 13,
+      "unfollows": 1,
+      "total_followers": 8294
     },
     {
       "date": "2026-05-03",
-      "net_followers": 3,
-      "new_followers": 3,
+      "net_followers": 11,
+      "new_followers": 11,
       "unfollows": 0,
-      "total_followers": 8287
+      "total_followers": 8305
     },
     {
       "date": "2026-05-04",
-      "net_followers": 0,
-      "new_followers": 0,
-      "unfollows": 0,
-      "total_followers": 8287
-    },
-    {
-      "date": "2026-05-05",
-      "net_followers": 0,
-      "new_followers": 0,
-      "unfollows": 0,
-      "total_followers": 8287
-    },
-    {
-      "date": "2026-05-06",
-      "net_followers": 0,
-      "new_followers": 0,
-      "unfollows": 0,
-      "total_followers": 8287
-    },
-    {
-      "date": "2026-05-07",
-      "net_followers": 13,
-      "new_followers": 13,
-      "unfollows": 0,
-      "total_followers": 8300
-    },
-    {
-      "date": "2026-05-08",
-      "net_followers": 2,
-      "new_followers": 2,
-      "unfollows": 0,
-      "total_followers": 8302
-    },
-    {
-      "date": "2026-05-09",
-      "net_followers": 1,
-      "new_followers": 1,
-      "unfollows": 0,
-      "total_followers": 8303
-    },
-    {
-      "date": "2026-05-10",
       "net_followers": 4,
       "new_followers": 4,
-      "unfollows": 0,
-      "total_followers": 8307
-    },
-    {
-      "date": "2026-05-11",
-      "net_followers": 2,
-      "new_followers": 2,
       "unfollows": 0,
       "total_followers": 8309
     },
     {
-      "date": "2026-05-12",
+      "date": "2026-05-05",
+      "net_followers": 7,
+      "new_followers": 7,
+      "unfollows": 0,
+      "total_followers": 8316
+    },
+    {
+      "date": "2026-05-06",
       "net_followers": 4,
       "new_followers": 4,
       "unfollows": 0,
-      "total_followers": 8313
+      "total_followers": 8320
     },
     {
-      "date": "2026-05-13",
-      "net_followers": 1,
-      "new_followers": 1,
-      "unfollows": 0,
-      "total_followers": 8314
-    },
-    {
-      "date": "2026-05-14",
-      "net_followers": 1,
-      "new_followers": 1,
-      "unfollows": 0,
-      "total_followers": 8315
-    },
-    {
-      "date": "2026-05-15",
-      "net_followers": 2,
-      "new_followers": 2,
-      "unfollows": 0,
-      "total_followers": 8317
-    },
-    {
-      "date": "2026-05-16",
-      "net_followers": 1,
-      "new_followers": 1,
-      "unfollows": 0,
-      "total_followers": 8318
-    },
-    {
-      "date": "2026-05-17",
-      "net_followers": 1,
-      "new_followers": 1,
-      "unfollows": 0,
-      "total_followers": 8319
-    },
-    {
-      "date": "2026-05-18",
-      "net_followers": 0,
-      "new_followers": 0,
-      "unfollows": 0,
-      "total_followers": 8319
-    },
-    {
-      "date": "2026-05-19",
-      "net_followers": 16,
-      "new_followers": 16,
-      "unfollows": 0,
-      "total_followers": 8335
-    },
-    {
-      "date": "2026-05-20",
-      "net_followers": 47,
-      "new_followers": 49,
-      "unfollows": 2,
-      "total_followers": 8382
-    },
-    {
-      "date": "2026-05-21",
-      "net_followers": 201,
-      "new_followers": 204,
-      "unfollows": 3,
-      "total_followers": 8583
-    },
-    {
-      "date": "2026-05-22",
-      "net_followers": 6,
-      "new_followers": 6,
-      "unfollows": 0,
-      "total_followers": 8589
-    },
-    {
-      "date": "2026-05-23",
+      "date": "2026-05-07",
       "net_followers": 8,
       "new_followers": 8,
       "unfollows": 0,
-      "total_followers": 8597
+      "total_followers": 8328
     },
     {
-      "date": "2026-05-24",
+      "date": "2026-05-08",
+      "net_followers": 6,
+      "new_followers": 6,
+      "unfollows": 0,
+      "total_followers": 8334
+    },
+    {
+      "date": "2026-05-09",
+      "net_followers": 7,
+      "new_followers": 7,
+      "unfollows": 0,
+      "total_followers": 8341
+    },
+    {
+      "date": "2026-05-10",
+      "net_followers": 8,
+      "new_followers": 8,
+      "unfollows": 0,
+      "total_followers": 8349
+    },
+    {
+      "date": "2026-05-11",
       "net_followers": 6,
       "new_followers": 7,
       "unfollows": 1,
-      "total_followers": 8603
+      "total_followers": 8355
+    },
+    {
+      "date": "2026-05-12",
+      "net_followers": 12,
+      "new_followers": 12,
+      "unfollows": 0,
+      "total_followers": 8367
+    },
+    {
+      "date": "2026-05-13",
+      "net_followers": 3,
+      "new_followers": 3,
+      "unfollows": 0,
+      "total_followers": 8370
+    },
+    {
+      "date": "2026-05-14",
+      "net_followers": 11,
+      "new_followers": 11,
+      "unfollows": 0,
+      "total_followers": 8381
+    },
+    {
+      "date": "2026-05-15",
+      "net_followers": 9,
+      "new_followers": 9,
+      "unfollows": 0,
+      "total_followers": 8390
+    },
+    {
+      "date": "2026-05-16",
+      "net_followers": 13,
+      "new_followers": 14,
+      "unfollows": 1,
+      "total_followers": 8403
+    },
+    {
+      "date": "2026-05-17",
+      "net_followers": 6,
+      "new_followers": 6,
+      "unfollows": 0,
+      "total_followers": 8409
+    },
+    {
+      "date": "2026-05-18",
+      "net_followers": 5,
+      "new_followers": 5,
+      "unfollows": 0,
+      "total_followers": 8414
+    },
+    {
+      "date": "2026-05-19",
+      "net_followers": 13,
+      "new_followers": 13,
+      "unfollows": 0,
+      "total_followers": 8427
+    },
+    {
+      "date": "2026-05-20",
+      "net_followers": 69,
+      "new_followers": 75,
+      "unfollows": 6,
+      "total_followers": 8496
+    },
+    {
+      "date": "2026-05-21",
+      "net_followers": 108,
+      "new_followers": 111,
+      "unfollows": 3,
+      "total_followers": 8604
+    },
+    {
+      "date": "2026-05-22",
+      "net_followers": 75,
+      "new_followers": 77,
+      "unfollows": 2,
+      "total_followers": 8679
+    },
+    {
+      "date": "2026-05-23",
+      "net_followers": 28,
+      "new_followers": 30,
+      "unfollows": 2,
+      "total_followers": 8707
+    },
+    {
+      "date": "2026-05-24",
+      "net_followers": 11,
+      "new_followers": 13,
+      "unfollows": 2,
+      "total_followers": 8718
     },
     {
       "date": "2026-05-25",
       "net_followers": 6,
       "new_followers": 7,
       "unfollows": 1,
-      "total_followers": 8609
+      "total_followers": 8724
     },
     {
       "date": "2026-05-26",
       "net_followers": 5,
       "new_followers": 5,
       "unfollows": 0,
-      "total_followers": 8614
+      "total_followers": 8729
     },
     {
       "date": "2026-05-27",
       "net_followers": 33,
       "new_followers": 35,
       "unfollows": 2,
-      "total_followers": 8647
+      "total_followers": 8762
     },
     {
       "date": "2026-05-28",
       "net_followers": 42,
       "new_followers": 42,
       "unfollows": 0,
-      "total_followers": 8689
+      "total_followers": 8804
     },
     {
       "date": "2026-05-29",
       "net_followers": 228,
       "new_followers": 229,
       "unfollows": 1,
-      "total_followers": 8917
+      "total_followers": 9032
     },
     {
       "date": "2026-05-30",
       "net_followers": 103,
       "new_followers": 106,
       "unfollows": 3,
-      "total_followers": 9020
+      "total_followers": 9135
     },
     {
       "date": "2026-05-31",
       "net_followers": 8,
       "new_followers": 9,
       "unfollows": 1,
-      "total_followers": 9028
+      "total_followers": 9143
     }
   ]
 };
@@ -2800,129 +2772,204 @@ function fullTooltip(video, extras = "") {
 }
 
 function makeChart(id) {
-  return echarts.init(document.getElementById(id));
-}
-
-function renderRankChart(id, data, key, label, format = (v) => fmt.format(v)) {
-  const chart = makeChart(id);
-  const theme = chartTheme();
-  const rows = [...data].sort((a, b) => metricValue(b, key) - metricValue(a, key)).slice(0, 10).reverse();
-  chart.setOption({
-    ...theme,
-    tooltip: {
-      ...theme.tooltip,
-      trigger: "item",
-      formatter(params) {
-        return fullTooltip(params.data.video, `<div style="margin-top:6px;color:#5d4035;">${label}：<b>${format(params.value)}</b></div>`);
-      }
-    },
-    xAxis: { ...theme.xAxis, type: "value" },
-    yAxis: {
-      ...theme.yAxis,
-      type: "category",
-      data: rows.map((r) => shortTitle(r.title, 12)),
-      axisLabel: { color: "#7b7167", width: 96, overflow: "truncate" },
-    },
-    series: [{
-      name: label,
-      type: "bar",
-      barWidth: 14,
-      data: rows.map((row) => ({ value: metricValue(row, key), video: row })),
-      itemStyle: { borderRadius: [0, 9, 9, 0], color: "#9b6b55" },
-    }]
-  });
+  const el = document.getElementById(id);
+  const chart = echarts.init(el, null, { renderer: "canvas" });
+  window.addEventListener("resize", () => chart.resize());
+  return chart;
 }
 
 function renderTrendChart(id, data, config) {
   const chart = makeChart(id);
   const theme = chartTheme();
-  const labels = data.map((v) => `${v.date.slice(5)} ${shortTitle(v.title, 6)}`);
+  const labels = data.map((v, i) => `第${i + 1}条\n${v.date.slice(5)} · ${shortTitle(v.title, 8)}`);
+  const maxIndex = data.reduce((best, v, i) => metricValue(v, config.markMaxKey) > metricValue(data[best], config.markMaxKey) ? i : best, 0);
+  const series = config.series.map((s) => ({
+    name: s.name,
+    type: s.type,
+    smooth: s.type === "line",
+    symbolSize: 8,
+    barWidth: s.type === "bar" ? 16 : undefined,
+    data: data.map((v, i) => ({
+      value: metricValue(v, s.key),
+      video: v,
+      itemStyle: i === maxIndex ? { color: "#d65f45" } : undefined,
+      symbolSize: i === maxIndex ? 14 : 8,
+    })),
+    lineStyle: { width: 3 },
+    markPoint: s.key === config.markMaxKey ? {
+      symbol: "pin",
+      symbolSize: 54,
+      itemStyle: { color: "#d65f45" },
+      label: { formatter: "最高", color: "#fff", fontWeight: 800 },
+      data: [{ type: "max", name: "最高" }]
+    } : undefined,
+  }));
   chart.setOption({
     ...theme,
-    legend: { top: 0, right: 4, textStyle: { color: "#7b7167" } },
     tooltip: {
       ...theme.tooltip,
-      trigger: "axis",
       formatter(params) {
         const first = Array.isArray(params) ? params[0] : params;
         const video = first.data.video;
-        const metrics = (Array.isArray(params) ? params : [params]).map((p) => {
-          const value = config.percent ? pct(p.value) : (config.watch ? formatWatch(p.value) : fmt.format(p.value));
+        const rows = (Array.isArray(params) ? params : [params]).map((p) => {
+          const value = config.valueFormatter ? config.valueFormatter(p.value) : fmt.format(p.value);
           return `<div>${p.marker}${p.seriesName}：<b>${value}</b></div>`;
         }).join("");
-        return fullTooltip(video, `<div style="margin-top:6px;">${metrics}</div>`);
+        return fullTooltip(video, `<div style="margin-top:8px;">${rows}</div>`);
       }
     },
+    legend: { top: 0, right: 4, textStyle: { color: "#7b7167" } },
     xAxis: { ...theme.xAxis, type: "category", data: labels },
-    yAxis: { ...theme.yAxis, type: "value", axisLabel: { formatter: config.percent ? (v) => pct(v) : undefined } },
-    dataZoom: [{ type: "inside", start: 0, end: 100 }, { type: "slider", height: 16, bottom: 18 }],
-    series: config.series.map((s) => ({
-      name: s.name,
-      type: s.type || "line",
-      smooth: true,
-      symbolSize: 7,
-      data: data.map((video) => ({ value: metricValue(video, s.key), video })),
-      lineStyle: { width: 3 },
-      itemStyle: { borderRadius: s.type === "bar" ? [8, 8, 0, 0] : 0 },
-    }))
+    yAxis: {
+      ...theme.yAxis,
+      type: "value",
+      axisLabel: { color: "#7b7167", formatter: config.percentAxis ? (v) => pct(v) : undefined },
+    },
+    dataZoom: [{ type: "inside", start: 0, end: 100 }],
+    series
   });
 }
 
-function renderTypeChart(id, groups, valueKey, label) {
+function renderRankChart(id, data, valueKey, title, formatter = (v) => fmt.format(v)) {
   const chart = makeChart(id);
   const theme = chartTheme();
-  const rows = [...groups].sort((a, b) => b[valueKey] - a[valueKey]).reverse();
+  const top = [...data].sort((a, b) => metricValue(b, valueKey) - metricValue(a, valueKey)).slice(0, 10).reverse();
   chart.setOption({
     ...theme,
+    grid: { left: 136, right: 28, top: 20, bottom: 30 },
     tooltip: {
       ...theme.tooltip,
       trigger: "item",
-      formatter(params) {
-        const row = params.data.row;
-        return `<div style="font-weight:800;margin-bottom:6px;">${row.type}</div><div>${label}：<b>${fmt.format(params.value)}</b></div><div>视频数：${row.count}</div><div>总播放：${fmt.format(row.views)}</div><div>总转发：${fmt.format(row.shares)}</div>`;
+      formatter(param) {
+        return fullTooltip(param.data.video, `<div style="margin-top:8px;">${title}：<b>${formatter(param.value)}</b></div>`);
       }
     },
-    xAxis: { ...theme.xAxis, type: "value" },
-    yAxis: { ...theme.yAxis, type: "category", data: rows.map((r) => r.type) },
+    xAxis: { ...theme.xAxis, type: "value", axisLabel: { formatter } },
+    yAxis: { ...theme.yAxis, type: "category", data: top.map((v) => shortTitle(v.title, 10)) },
     series: [{
-      name: label,
+      name: title,
       type: "bar",
-      barWidth: 18,
-      data: rows.map((row) => ({ value: row[valueKey], row })),
-      itemStyle: { borderRadius: [0, 10, 10, 0], color: "#6f8d6a" },
+      barWidth: 15,
+      data: top.map((v, i) => ({ value: metricValue(v, valueKey), video: v, itemStyle: { color: i === top.length - 1 ? "#d65f45" : "#9b6b55" } })),
+      label: { show: true, position: "right", formatter: (p) => formatter(p.value), color: "#5f574f", fontWeight: 700 },
+    }]
+  });
+}
+
+function renderTypeChart(id, groups, key, title, formatter = (v) => fmt.format(v)) {
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  const sorted = [...groups].sort((a, b) => safe(b[key]) - safe(a[key])).reverse();
+  chart.setOption({
+    ...theme,
+    grid: { left: 160, right: 36, top: 22, bottom: 28 },
+    tooltip: {
+      ...theme.tooltip,
+      trigger: "item",
+      formatter(param) {
+        const g = param.data.group;
+        return `
+          <div style="font-weight:800;margin-bottom:6px;">${g.type}</div>
+          <div>发布条数：${g.count}</div>
+          <div>总播放：${fmt.format(g.views)} ｜ 平均播放：${fmt.format(g.avgViews)}</div>
+          <div>总转发：${fmt.format(g.shares)} ｜ 平均播放时长：${formatWatch(g.avgWatch)}</div>
+          <div>${title}：<b>${formatter(param.value)}</b></div>
+        `;
+      }
+    },
+    xAxis: { ...theme.xAxis, type: "value", axisLabel: { formatter } },
+    yAxis: { ...theme.yAxis, type: "category", data: sorted.map((g) => g.type) },
+    series: [{
+      name: title,
+      type: "bar",
+      barWidth: 16,
+      data: sorted.map((g) => ({ value: safe(g[key]), group: g })),
+      label: { show: true, position: "right", formatter: (p) => formatter(p.value), color: "#5f574f", fontWeight: 700 },
+    }]
+  });
+}
+
+function renderSmallMetricChart(id, labels, values, sourceVideo, percent = false) {
+  const chart = makeChart(id);
+  const theme = chartTheme();
+  chart.setOption({
+    ...theme,
+    grid: { left: 70, right: 22, top: 12, bottom: 22 },
+    tooltip: {
+      ...theme.tooltip,
+      trigger: "item",
+      formatter(param) {
+        return fullTooltip(sourceVideo, `<div style="margin-top:8px;">${param.name}：<b>${percent ? pct(param.value) : fmt.format(param.value)}</b></div>`);
+      }
+    },
+    xAxis: { ...theme.xAxis, type: "value", axisLabel: { formatter: percent ? (v) => pct(v) : undefined } },
+    yAxis: { ...theme.yAxis, type: "category", data: labels },
+    series: [{
+      type: "bar",
+      barWidth: 13,
+      data: values,
+      label: { show: true, position: "right", formatter: (p) => percent ? pct(p.value) : fmt.format(p.value), color: "#5f574f" },
     }]
   });
 }
 
 function renderTrends(data) {
+  const labels = data.map((v) => `${v.date.slice(5)} · ${shortTitle(v.title, 8)}`);
   renderTrendChart("viewsTrend", data, {
-    series: [{ name: "播放量", key: "views", type: "line" }]
+    title: "播放量",
+    series: [{ name: "播放量", key: "views", type: "line" }],
+    markMaxKey: "views",
+    valueFormatter: (v) => fmt.format(v),
   });
   renderTrendChart("watchTrend", data, {
-    watch: true,
+    title: "平均播放时长",
     series: [{ name: "平均播放时长", key: "avg_watch_time", type: "line" }],
+    markMaxKey: "avg_watch_time",
+    valueFormatter: (v) => formatWatch(v),
   });
   renderTrendChart("shareTrend", data, {
-    series: [
-      { name: "分享", key: "shares", type: "bar" },
-      { name: "评论", key: "comments", type: "line" },
-    ]
+    title: "转发 / 分享",
+    series: [{ name: "转发 / 分享", key: "shares", type: "bar" }],
+    markMaxKey: "shares",
+    valueFormatter: (v) => fmt.format(v),
   });
   renderTrendChart("rateTrend", data, {
-    percent: true,
+    title: "互动率 / 完播率",
     series: [
       { name: "互动率", key: "interact_rate", type: "line" },
       { name: "完播率", key: "completion_rate", type: "line" },
-    ]
+    ],
+    markMaxKey: "interact_rate",
+    valueFormatter: (v) => pct(v),
+    percentAxis: true,
   });
-  const tabs = document.getElementById("videoTabs");
-  tabs.innerHTML = data.map((v, i) => `<button data-index="${i}" class="${i === data.length - 1 ? "active" : ""}">${v.date.slice(5)} ${shortTitle(v.title, 7)}</button>`).join("");
-  tabs.addEventListener("click", (event) => {
-    const btn = event.target.closest("button");
-    if (!btn) return;
-    [...tabs.children].forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-  });
+  document.getElementById("videoTabs").innerHTML = data.map((v, i) => `<span class="tab-chip">第${i + 1}条 ${v.date} · ${shortTitle(v.title, 14)}</span>`).join("");
+}
+
+function renderTop(data) {
+  const top = [...data].sort((a, b) => score(b) - score(a)).slice(0, 5);
+  document.getElementById("topList").innerHTML = top.map((v, i) => `
+    <article class="top-item">
+      <div class="rank">${i + 1}</div>
+      <div>
+        <div class="top-meta">${v.content_type} · ${v.date}</div>
+        <div class="top-title">${v.title}</div>
+      </div>
+      <div class="mini-metrics">
+        ${mini("播放", fmt.format(v.views))}
+        ${mini("点赞", fmt.format(v.likes))}
+        ${mini("评论", fmt.format(v.comments))}
+        ${mini("转发", fmt.format(v.shares))}
+        ${mini("时长", formatWatch(v.avg_watch_time))}
+        ${mini("综合分", fmt.format(Math.round(score(v))))}
+      </div>
+      <span class="badge">${tagFor(v)}</span>
+    </article>
+  `).join("");
+}
+
+function mini(label, value) {
+  return `<div class="mini"><span>${label}</span><strong>${value}</strong></div>`;
 }
 
 function groupTypes(data) {
@@ -2937,73 +2984,105 @@ function groupTypes(data) {
     g.shares += v.shares;
     g.watch += v.avg_watch_time;
   });
-  return [...map.values()].map((g) => ({ ...g, avgViews: g.views / g.count, avgWatch: g.watch / g.count }));
-}
-
-function renderDeepCharts(data) {
-  renderRankChart("topViewsChart", data, "views", "播放量");
-  renderRankChart("topSharesChart", data, "shares", "转发量");
-  renderRankChart("topWatchChart", data, "avg_watch_time", "平均播放时长", (v) => formatWatch(v));
-  const groups = groupTypes(data);
-  renderTypeChart("typeAvgViewsChart", groups, "avgViews", "平均播放量");
-  renderTypeChart("typeTotalSharesChart", groups, "shares", "总转发");
-}
-
-function renderTop(data) {
-  const top = [...data].sort((a, b) => score(b) - score(a)).slice(0, 5);
-  document.getElementById("topList").innerHTML = top.map((v, i) => `
-    <article class="top-item">
-      <div class="top-rank">${i + 1}</div>
-      <div class="top-title">${v.title}</div>
-      <div class="top-meta">${v.content_type} · ${v.date}</div>
-      <div class="top-metrics">
-        <div>播放 ${fmt.format(v.views)}</div>
-        <div>转发 ${fmt.format(v.shares)} · 评论 ${fmt.format(v.comments)}</div>
-        <div>完播 ${pct(v.completion_rate)} · 停留 ${formatWatch(v.avg_watch_time)}</div>
-      </div>
-    </article>
-  `).join("");
+  return [...map.values()].map((g) => ({ ...g, avgViews: g.views / g.count, avgWatch: g.watch / g.count })).sort((a, b) => b.views - a.views);
 }
 
 function renderTypes(data) {
-  const groups = groupTypes(data).sort((a, b) => b.views - a.views);
-  const max = Math.max(...groups.map((g) => g.views), 1);
+  const groups = groupTypes(data);
+  const maxViews = Math.max(...groups.map((g) => g.views), 1);
+  const best = groups[0];
   document.getElementById("typeBars").innerHTML = groups.map((g) => `
     <div class="type-row">
       <strong>${g.type}</strong>
-      <div class="bar-track"><div class="bar-fill" style="width:${g.views / max * 100}%"></div></div>
-      <span>${fmt.format(g.views)}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.max(4, g.views / maxViews * 100)}%"></div></div>
+      <div class="type-num">${g.count}条 · ${fmt.format(g.views)}播放 · ${fmt.format(g.shares)}转发</div>
     </div>
   `).join("");
-  const best = groups[0];
   document.getElementById("typeSummary").innerHTML = `
-    <h3>${best.type}</h3>
-    <p>当前贡献最高，累计 ${fmt.format(best.views)} 播放，占本月发布视频播放量的 ${pct(best.views / sum(data, "views"))}。</p>
-    <p>该类型共 ${best.count} 条视频，平均播放 ${fmt.format(best.avgViews)}，总转发 ${fmt.format(best.shares)}，平均播放时长 ${formatWatch(best.avgWatch)}。</p>
-    <p>建议下月继续围绕这个方向做系列化选题，同时在结尾增加明确咨询动作。</p>
+    <p class="eyebrow">BEST TYPE</p>
+    <h3>最值得加码：${best.type}</h3>
+    <p>该类型累计播放 <span class="strong">${fmt.format(best.views)}</span>，平均每条 ${fmt.format(Math.round(best.avgViews))}，累计转发 ${fmt.format(best.shares)}。</p>
+    <p>建议继续围绕高播放类型扩展，但要在结尾加入“预算 / 择校 / 清单 / 规划”承接，补足咨询转化。</p>
   `;
 }
 
-function miniChart(el, video) {
-  const chart = echarts.init(el);
-  const theme = chartTheme();
-  chart.setOption({
-    ...theme,
-    grid: { left: 36, right: 16, top: 20, bottom: 30 },
-    tooltip: { ...theme.tooltip, trigger: "item" },
-    xAxis: { ...theme.xAxis, type: "category", data: ["点赞", "评论", "转发", "关注"] },
-    yAxis: { ...theme.yAxis, type: "value" },
-    series: [{
-      type: "bar",
-      barWidth: 22,
-      data: [video.likes, video.comments, video.shares, video.followers],
-      itemStyle: { borderRadius: [9, 9, 0, 0], color: "#9b6b55" },
-    }]
+function renderDeepCharts(data) {
+  const groups = groupTypes(data);
+  renderRankChart("topViewsChart", data, "views", "播放量", (v) => fmt.format(v));
+  renderRankChart("topSharesChart", data, "shares", "转发量", (v) => fmt.format(v));
+  renderRankChart("topWatchChart", data, "avg_watch_time", "平均播放时长", (v) => formatWatch(v));
+  renderTypeChart("typeAvgViewsChart", groups, "avgViews", "平均播放量", (v) => fmt.format(v));
+  renderTypeChart("typeTotalSharesChart", groups, "shares", "总转发", (v) => fmt.format(v));
+}
+
+function renderVideoCards(data) {
+  document.getElementById("videoCards").innerHTML = data.map((v, i) => `
+    <article class="video-card" data-card>
+      <div class="video-head">
+        <div>
+          <div class="top-meta">${v.content_type} · ${v.date}</div>
+          <div class="video-title">${v.title}</div>
+          <div class="video-stats">
+            ${mini("播放", fmt.format(v.views))}
+            ${mini("点赞", fmt.format(v.likes))}
+            ${mini("评论", fmt.format(v.comments))}
+            ${mini("转发", fmt.format(v.shares))}
+            ${mini("时长", formatWatch(v.avg_watch_time))}
+            ${mini("完播", pct(v.completion_rate))}
+            ${mini("关注", fmt.format(v.followers))}
+          </div>
+          <div class="video-tabs">
+            <span class="badge">${tagFor(v)}</span>
+            <span class="badge">点赞率 ${pct(rate(v, "like"))}</span>
+            <span class="badge">评论率 ${pct(rate(v, "comment"))}</span>
+            <span class="badge">转发率 ${pct(rate(v, "share"))}</span>
+            <span class="badge">互动率 ${pct(rate(v, "interact"))}</span>
+          </div>
+        </div>
+        <button class="toggle" data-toggle>展开复盘</button>
+      </div>
+      <div class="details">
+        <div class="edit-grid">
+          ${input("浏览量 / 播放量", v.views)}
+          ${input("点赞", v.likes)}
+          ${input("评论", v.comments)}
+          ${input("转发 / 分享", v.shares)}
+          ${input("平均播放时长", v.avg_watch_time)}
+          ${input("完播率", pct(v.completion_rate))}
+          ${input("新增关注", v.followers)}
+          ${area("评论质量备注", v.comment_note || "记录评论里有没有认可、争议或专业判断。")}
+          ${area("复盘备注", autoNote(v))}
+        </div>
+        <div class="detail-charts">
+          <div class="small-panel"><h3>单条互动构成</h3><div id="mix-${i}" class="chart"></div></div>
+          <div class="small-panel"><h3>效率指标</h3><div id="eff-${i}" class="chart"></div></div>
+        </div>
+      </div>
+    </article>
+  `).join("");
+  document.querySelectorAll("[data-toggle]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest("[data-card]");
+      card.classList.toggle("open");
+      btn.textContent = card.classList.contains("open") ? "收起" : "展开复盘";
+      card.querySelectorAll(".chart").forEach((el) => {
+        const chart = echarts.getInstanceByDom(el);
+        if (chart) setTimeout(() => chart.resize(), 40);
+      });
+    });
+  });
+  data.forEach((v, i) => {
+    renderSmallMetricChart(`mix-${i}`, ["关注", "转发", "评论", "点赞"], [v.followers, v.shares, v.comments, v.likes], v, false);
+    renderSmallMetricChart(`eff-${i}`, ["互动率", "完播率", "转发率", "评论率", "点赞率"], [rate(v, "interact"), v.completion_rate, rate(v, "share"), rate(v, "comment"), rate(v, "like")], v, true);
   });
 }
 
 function input(label, value) {
   return `<label>${label}<input value="${value}" /></label>`;
+}
+
+function area(label, value) {
+  return `<label>${label}<textarea>${value}</textarea></label>`;
 }
 
 function autoNote(v) {
