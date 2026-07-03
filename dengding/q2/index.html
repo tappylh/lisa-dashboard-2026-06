@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>登顶视频号第二季度爆款数据看板</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --panel: #fffaf2;
+      --panel-strong: #fff7ea;
+      --ink: #211f1b;
+      --muted: #7e766b;
+      --line: #e2d8c9;
+      --accent: #9b5f4d;
+      --accent-2: #315c57;
+      --gold: #c89642;
+      --red: #b64d3b;
+      --shadow: 0 22px 55px rgba(84, 68, 48, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.78), transparent 32rem),
+        linear-gradient(135deg, #f8f2e9 0%, #eee3d5 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .shell {
+      width: min(1440px, calc(100% - 52px));
+      margin: 0 auto;
+      padding: 58px 0 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 7vw, 104px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .copy {
+      max-width: 920px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .period-card,
+    .kpi-card,
+    .panel,
+    .month-card {
+      background: rgba(255, 250, 242, 0.90);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .period-card {
+      padding: 28px;
+    }
+
+    .period-card span {
+      display: block;
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 850;
+      margin-bottom: 10px;
+    }
+
+    .period-card strong {
+      display: block;
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    .period-card em {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .kpi-card {
+      min-height: 270px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi-card::after {
+      content: "";
+      position: absolute;
+      inset: auto 26px 24px auto;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      border: 22px solid rgba(155, 95, 77, 0.08);
+      pointer-events: none;
+    }
+
+    .kpi-card .label {
+      color: var(--muted);
+      font-size: 20px;
+      font-weight: 850;
+    }
+
+    .kpi-card .value {
+      margin-top: 18px;
+      font-size: clamp(64px, 7vw, 108px);
+      line-height: 0.9;
+      font-weight: 950;
+      letter-spacing: 0;
+    }
+
+    .kpi-card .unit {
+      margin-left: 8px;
+      font-size: 28px;
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    .kpi-card .hint {
+      max-width: 430px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .accent-gold { color: var(--gold); }
+    .accent-red { color: var(--red); }
+    .accent-green { color: var(--accent-2); }
+
+    .note {
+      margin: 0 0 28px;
+      padding: 18px 22px;
+      color: var(--muted);
+      background: rgba(255, 247, 234, 0.82);
+      border: 1px dashed #d8c6ad;
+      border-radius: 16px;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .panel {
+      padding: 28px;
+      overflow: hidden;
+    }
+
+    .panel h2 {
+      margin: 0 0 18px;
+      font-size: 36px;
+      line-height: 1.15;
+    }
+
+    .month-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .month-card {
+      padding: 20px;
+      box-shadow: none;
+    }
+
+    .month-row {
+      display: grid;
+      grid-template-columns: 64px 1fr 80px;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .month-name {
+      color: var(--accent);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .bar {
+      height: 18px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #ede1d0;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .month-count {
+      text-align: right;
+      font-size: 24px;
+      font-weight: 950;
+    }
+
+    .metric-line {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 750;
+    }
+
+    .metric-line strong {
+      display: block;
+      color: var(--ink);
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .share-stack {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .share-item {
+      display: grid;
+      grid-template-columns: 92px 1fr 86px;
+      gap: 14px;
+      align-items: center;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .share-item b {
+      color: var(--ink);
+      font-size: 20px;
+    }
+
+    .table-panel {
+      margin-top: 22px;
+    }
+
+    .table-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .table-head h2 {
+      margin: 0;
+      font-size: 38px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: #efe3d2;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th, td {
+      padding: 15px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    td {
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    td.num {
+      font-size: 20px;
+      font-weight: 950;
+      white-space: nowrap;
+    }
+
+    .rank {
+      width: 52px;
+      color: var(--accent);
+      font-weight: 950;
+    }
+
+    .month-col { width: 70px; }
+    .views-col { width: 120px; }
+    .eng-col { width: 110px; }
+
+    .scroll-table {
+      max-height: 580px;
+      overflow: auto;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 1040px) {
+      .hero,
+      .section-grid,
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+      .period-card {
+        max-width: 420px;
+      }
+      .kpi-card {
+        min-height: 220px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 28px, 1440px);
+        padding-top: 34px;
+      }
+      h1 { font-size: 48px; }
+      .copy { font-size: 18px; }
+      .metric-line,
+      .share-item,
+      .month-row {
+        grid-template-columns: 1fr;
+      }
+      table { min-width: 760px; }
+      .scroll-table { overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DENGDING WECHAT CHANNELS · Q2 BOOM REVIEW</p>
+        <h1>登顶视频号二季度爆款数据看板</h1>
+        <p class="copy">聚焦 2026 年 4、5、6 月发布作品，快速看清发布规模、10 万以上大爆款，以及 1.5 万到 10 万的小爆款储备。</p>
+      </div>
+      <aside class="period-card">
+        <span>数据区间</span>
+        <strong>Q2</strong>
+        <em>2026-04-01 至 2026-06-28</em>
+      </aside>
+    </section>
+
+    <section class="kpi-grid" aria-label="三个关键数据">
+      <article class="kpi-card">
+        <div class="label">季度发布视频数量</div>
+        <div class="value">108<span class="unit">条</span></div>
+        <div class="hint">短视频 + 长视频合计发布数。当前视频号导出没有“视频总时长”字段，所以暂不能真实拆分短视频 / 超过 1 分钟长视频。</div>
+      </article>
+      <article class="kpi-card">
+        <div class="label">浏览量大于 10 万的大爆款</div>
+        <div class="value accent-red">10<span class="unit">条</span></div>
+        <div class="hint">大爆款合计贡献 1,918,489 播放，占季度发布作品播放量的 56.8%。</div>
+      </article>
+      <article class="kpi-card">
+        <div class="label">1.5 万到 10 万的小爆款</div>
+        <div class="value accent-green">38<span class="unit">条</span></div>
+        <div class="hint">小爆款合计贡献 1,195,572 播放，是持续放大选题方向的主要样本池。</div>
+      </article>
+    </section>
+
+    <p class="note">口径说明：本页只使用用户提供的视频号官方“动态数据明细”CSV。爆款阈值按单条视频播放量计算：大爆款为播放量 &gt; 100,000；小爆款为 15,000 &lt; 播放量 &lt; 100,000。视频号导出字段包含“平均播放时长”，但不等同于视频总时长，因此不用于判定长视频。</p>
+
+    <section class="section-grid">
+      <article class="panel">
+        <p class="eyebrow">PUBLISH VOLUME</p>
+        <h2>季度发布分布</h2>
+        <div class="month-grid" id="monthGrid"></div>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">TRAFFIC MIX</p>
+        <h2>播放贡献结构</h2>
+        <div class="share-stack" id="shareStack"></div>
+      </article>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="table-head">
+        <div>
+          <p class="eyebrow">SUPER HITS</p>
+          <h2>浏览量大于 10 万的大爆款</h2>
+        </div>
+        <span class="pill">10 条 · 按播放量排序</span>
+      </div>
+      <div class="scroll-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rank">#</th>
+              <th class="month-col">月份</th>
+              <th>视频标题</th>
+              <th class="views-col">播放量</th>
+              <th class="eng-col">点赞</th>
+              <th class="eng-col">评论</th>
+              <th class="eng-col">分享</th>
+            </tr>
+          </thead>
+          <tbody id="bigRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="table-head">
+        <div>
+          <p class="eyebrow">SEED HITS</p>
+          <h2>浏览量 1.5 万到 10 万的小爆款</h2>
+        </div>
+        <span class="pill">38 条 · 按播放量排序</span>
+      </div>
+      <div class="scroll-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rank">#</th>
+              <th class="month-col">月份</th>
+              <th>视频标题</th>
+              <th class="views-col">播放量</th>
+              <th class="eng-col">点赞</th>
+              <th class="eng-col">评论</th>
+              <th class="eng-col">分享</th>
+            </tr>
+          </thead>
+          <tbody id="smallRows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const fmt = new Intl.NumberFormat("zh-CN");
+    const monthData = [
+      { month: "四月", count: 26, views: 586841, big: 2, small: 8 },
+      { month: "五月", count: 45, views: 1264475, big: 4, small: 16 },
+      { month: "六月", count: 37, views: 1528728, big: 4, small: 14 },
+    ];
+
+    const bigHits = [
+      ["六月", "2026-06-19", "惠灵顿学费一天仅需2285.71块，少爷们可以冲了！", 380766, 2392, 291, 2554],
+      ["五月", "2026-05-27", "这一些国际学校直冲400w！有大佬在读吗？", 280010, 6124, 666, 1737],
+      ["五月", "2026-05-21", "2026年16区上海民办小学摇号率汇总！", 273204, 248, 54, 877],
+      ["六月", "2026-06-21", "这里是上海惠灵顿幼儿园，孩子从小就接触财商，一年也仅需40W!", 233555, 838, 187, 1843],
+      ["六月", "2026-06-15", "这就是校服比LV还贵的上海惠灵顿国际学校！", 167929, 1161, 529, 2017],
+      ["五月", "2026-05-20", "2026年民办摇号结果新鲜出炉！宝山区幼升小！", 139368, 96, 17, 392],
+      ["六月", "2026-06-13", "这里是上海惠灵顿国际学校，一年仅需40W！", 132165, 559, 143, 365],
+      ["六月", "2026-06-07", "真的没想到上海国际学校已经到这个地步了....", 108181, 1511, 208, 476],
+      ["四月", "2026-04-14", "惠灵顿学费又涨了！一天仅需2285.71块啦！", 101765, 567, 96, 634],
+      ["四月", "2026-04-07", "当你在上海惠灵顿上学，你将获得~", 101546, 1481, 150, 474],
+    ];
+
+    const smallHits = [
+      ["四月", "2026-04-16", "我真的没想到！英系学校这么贵！", 98215, 1865, 309, 774],
+      ["六月", "2026-06-06", "有没有人告诉我这是不是真的啊？", 67583, 370, 176, 409],
+      ["五月", "2026-05-21", "摇号结束！浦东已出！2026上海民办摇号彻底结束！", 57317, 39, 11, 213],
+      ["六月", "2026-06-05", "这就是上海国际学校毕业的牌面吗！", 49590, 312, 33, 544],
+      ["五月", "2026-05-21", "杨浦已出！初中全部触发摇号！2026年上海民办小初摇号结果公布！", 48043, 49, 14, 274],
+      ["五月", "2026-05-21", "上海16区初中摇号率汇总来啦！", 46177, 37, 9, 116],
+      ["四月", "2026-04-24", "当你在英国学校读书belike：", 44148, 585, 83, 253],
+      ["五月", "2026-05-18", "pov：当你在哈罗学校上学时", 41388, 612, 68, 227],
+      ["四月", "2026-04-27", "这个学校幸福吗？", 37918, 502, 160, 390],
+      ["六月", "2026-06-10", "2026上海惠灵顿国际学校的学生们毕业啦！", 36029, 200, 35, 282],
+      ["六月", "2026-06-02", "恭喜上海SAS国际学校2026年毕业快乐！！", 36000, 261, 4, 119],
+      ["四月", "2026-04-28", "当你在上海哈罗学校读书：", 34995, 528, 35, 293],
+      ["六月", "2026-06-11", "Angelababy儿子就读的上中国际，到底有多恐怖？！", 34147, 117, 13, 561],
+      ["五月", "2026-05-15", "谁才是上海国际学校的“老大”！", 32941, 301, 77, 159],
+      ["四月", "2026-04-22", "郊区一块地，挂个洋名字，学费就能收20W!", 32599, 119, 15, 481],
+      ["四月", "2026-04-23", "这个真的是一不小心了....", 31817, 260, 49, 124],
+      ["五月", "2026-05-20", "金山已出！2026民办摇号小学和初中结果出炉！", 30873, 25, 0, 71],
+      ["五月", "2026-05-21", "浦东初中摇号结果出炉！上海2026年民办学校摇号彻底结束！全部名单已出！", 30075, 26, 3, 111],
+      ["五月", "2026-05-21", "闵行初中摇号名单已出！", 27721, 19, 6, 98],
+      ["六月", "2026-06-14", "这事你怎么看？", 26162, 240, 63, 126],
+      ["五月", "2026-05-13", "假如你不小心考上了上海英国学校！", 25022, 228, 62, 148],
+      ["六月", "2026-06-01", "pov：当你在民办学校读书时，毕业典礼是这样的...", 23594, 136, 17, 97],
+      ["五月", "2026-05-20", "长宁已出！2026民办小初摇号结果最新公布！", 23512, 20, 0, 54],
+      ["六月", "2026-06-23", "谁才是外籍学校天花板？？！", 23465, 334, 52, 128],
+      ["五月", "2026-05-20", "2026民办摇号结果新鲜出炉！黄浦区已更新！", 22619, 19, 1, 89],
+      ["六月", "2026-06-16", "一年40万，孩子过成这样？", 20836, 278, 55, 78],
+      ["六月", "2026-06-16", "2026-2027年US.News世界大学排名，清华大学进入前十行列！", 20565, 131, 39, 156],
+      ["四月", "2026-04-29", "pov：真的很潇洒了！", 20523, 276, 19, 133],
+      ["六月", "2026-06-04", "当你在国际学校上学时....", 19697, 333, 78, 64],
+      ["六月", "2026-06-17", "别看他们现在过的舒服，以后还得给他们打工！！", 19391, 101, 33, 238],
+      ["五月", "2026-05-20", "嘉定已出！2026年上海民办小学，民办初中摇号结果出炉！", 18600, 15, 0, 40],
+      ["六月", "2026-06-15", "？你装监控了吗", 18092, 261, 62, 54],
+      ["六月", "2026-06-24", "这里是上海惠灵顿国际幼儿园，从小读到到仅需431W!", 16900, 40, 10, 66],
+      ["四月", "2026-04-30", "假如你不小心考上了：", 16886, 127, 16, 55],
+      ["五月", "2026-05-21", "静安已出！千呼万唤始出来！全部触发摇号！", 16120, 10, 0, 40],
+      ["五月", "2026-05-25", "当你考上了上海德威国际学校：", 15505, 145, 41, 86],
+      ["五月", "2026-05-20", "青浦已出！2026年民办摇号最新结果出炉！", 15335, 10, 0, 54],
+      ["四月", "2026-04-15", "你滑到哪个学校了？", 15172, 160, 116, 72],
+    ];
+
+    function renderMonthGrid() {
+      const max = Math.max(...monthData.map((item) => item.count));
+      document.getElementById("monthGrid").innerHTML = monthData.map((item) => `
+        <div class="month-card">
+          <div class="month-row">
+            <div class="month-name">${item.month}</div>
+            <div class="bar"><span style="width:${Math.round(item.count / max * 100)}%"></span></div>
+            <div class="month-count">${item.count} 条</div>
+          </div>
+          <div class="metric-line">
+            <span><strong>${fmt.format(item.views)}</strong>发布作品播放</span>
+            <span><strong>${item.big}</strong>大爆款</span>
+            <span><strong>${item.small}</strong>小爆款</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderShareStack() {
+      const totalViews = 3380044;
+      const rows = [
+        ["大爆款播放", 1918489, "accent-red"],
+        ["小爆款播放", 1195572, "accent-green"],
+        ["其他播放", totalViews - 1918489 - 1195572, "accent-gold"],
+      ];
+      document.getElementById("shareStack").innerHTML = rows.map(([label, value, cls]) => `
+        <div class="share-item">
+          <b>${label}</b>
+          <div class="bar"><span class="${cls}" style="width:${Math.round(value / totalViews * 100)}%; background: currentColor;"></span></div>
+          <span>${fmt.format(value)}</span>
+        </div>
+      `).join("");
+    }
+
+    function renderRows(id, rows) {
+      document.getElementById(id).innerHTML = rows.map((row, index) => `
+        <tr>
+          <td class="rank">${index + 1}</td>
+          <td>${row[0]}</td>
+          <td>${row[2]}</td>
+          <td class="num">${fmt.format(row[3])}</td>
+          <td class="num">${fmt.format(row[4])}</td>
+          <td class="num">${fmt.format(row[5])}</td>
+          <td class="num">${fmt.format(row[6])}</td>
+        </tr>
+      `).join("");
+    }
+
+    renderMonthGrid();
+    renderShareStack();
+    renderRows("bigRows", bigHits);
+    renderRows("smallRows", smallHits);
+  </script>
+</body>
+</html>
